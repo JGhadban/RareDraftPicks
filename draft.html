@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Draft</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="draft.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Live Draft</h1>
+    <div class="topbar-actions">
+      <span id="progress" class="deadline" hidden></span>
+      <button id="undo" type="button" hidden>↶ Undo last pick</button>
+      <button id="to-setup" type="button" hidden>Players</button>
+      <button id="reset" type="button" class="link">Reset draft</button>
+    </div>
+  </header>
+
+  <!-- ------------------------------------------------------------ setup -->
+  <main id="setup" class="view" hidden>
+    <section class="pane">
+      <h2>1. Load the results export</h2>
+      <p class="hint">The CSV from Supabase <code>picks_flat</code> (columns <code>name, rank, card_name, updated_at, submission_id</code>). You can also drop the file anywhere on this page.</p>
+      <input id="csv" type="file" accept=".csv,text/csv">
+      <span id="csv-status" class="status" role="status"></span>
+    </section>
+
+    <section class="pane">
+      <h2>2. Players</h2>
+      <p class="hint">Lower rating picks first. Use ▲/▼ to break ties. Players drop out of the rotation once they've used their picks.</p>
+      <table class="players">
+        <thead>
+          <tr><th>Order</th><th>Name</th><th>Ranked</th><th>Rating</th><th>Picks</th><th></th></tr>
+        </thead>
+        <tbody id="player-rows"></tbody>
+      </table>
+      <p id="no-players" class="empty">No players yet. Load a CSV or add someone.</p>
+      <div class="row">
+        <button id="add-player" type="button">+ Add player</button>
+        <button id="sort-rating" type="button">Sort by rating</button>
+      </div>
+      <ul id="warnings" class="warnings"></ul>
+      <div class="row">
+        <button id="start" class="primary" type="button">Start draft</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ------------------------------------------------------------ draft -->
+  <main id="draft" class="view" hidden>
+    <section class="upnext" aria-label="Up next">
+      <span class="muted">Up next:</span>
+      <ol id="upnext"></ol>
+    </section>
+
+    <div class="draft-cols">
+      <section class="pane clock" aria-label="On the clock">
+        <div class="clock-head">
+          <div>
+            <div class="muted small">On the clock</div>
+            <h2 id="clock-name"></h2>
+            <div id="clock-meta" class="muted"></div>
+          </div>
+          <div class="confirm-box">
+            <div id="selected" class="selected muted">Select a card</div>
+            <button id="confirm" class="primary big" type="button" disabled>Confirm pick</button>
+          </div>
+        </div>
+
+        <h3>Highest available from their list</h3>
+        <div id="prefs" class="grid big-grid"></div>
+        <p id="prefs-empty" class="empty" hidden>Nothing from their list is left.</p>
+        <button id="more" type="button" class="link" hidden></button>
+
+        <h3>Other card…</h3>
+        <input id="pool-search" type="search" placeholder="Search the remaining pool by name or type…">
+        <div id="pool" class="grid pool-grid"></div>
+        <p id="pool-shown" class="muted small"></p>
+      </section>
+
+      <aside class="pane log" aria-label="Drafted so far">
+        <h2>Drafted</h2>
+        <div id="log"></div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ------------------------------------------------------------ results -->
+  <main id="done" class="view" hidden>
+    <section class="pane">
+      <div class="row spread">
+        <h2>Draft complete</h2>
+        <div class="row">
+          <button id="back-to-draft" type="button">↶ Undo last pick</button>
+          <button id="export" class="primary" type="button">Export CSV</button>
+        </div>
+      </div>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <dialog id="zoom">
+    <div class="zoom-imgs"></div>
+    <form method="dialog"><button class="primary">Close</button></form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="draft.js"></script>
+</body>
+</html>

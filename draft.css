@@ -1,0 +1,98 @@
+/* Live draft page. Builds on styles.css (theme tokens, buttons, .tile, .badge, .qty, .zoom, dialog). */
+
+.topbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+
+.view { padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.view[hidden] { display: none; }
+.view h2 { margin: 0 0 4px; font-size: 18px; }
+.view h3 { margin: 18px 0 8px; font-size: 15px; }
+.small { font-size: 13px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+.row.spread { justify-content: space-between; margin-top: 0; }
+code { font-size: 13px; }
+
+/* ---------------------------------------------------------------- setup */
+
+#setup { max-width: 900px; }
+
+.players { width: 100%; border-collapse: collapse; margin-top: 6px; }
+.players th { text-align: left; font-size: 13px; color: var(--muted); font-weight: 600; padding: 4px 6px; }
+.players td { padding: 4px 6px; border-top: 1px solid var(--border); }
+.players .order { white-space: nowrap; }
+.players .order .rank { display: inline-block; width: 24px; }
+.players .icon { padding: 2px 6px; margin-left: 2px; }
+.players .pname { width: 100%; min-width: 120px; }
+.players .num { width: 80px; }
+.players input[type=number] {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px;
+}
+
+.warnings { margin: 12px 0 0; padding-left: 20px; color: var(--warn); font-size: 14px; }
+.warnings:empty { display: none; }
+
+@media (max-width: 600px) {
+  .players th:nth-child(3), .players td:nth-child(3) { display: none; }
+  .players .num { width: 56px; }
+  .players td, .players th { padding: 4px 3px; }
+  .players .pname { min-width: 0; }
+  .players .order .icon { display: block; margin: 2px 0; }
+}
+
+/* ---------------------------------------------------------------- draft */
+
+.upnext {
+  display: flex; align-items: center; gap: 8px;
+  overflow-x: auto; white-space: nowrap;
+  padding: 8px 12px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.upnext ol { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.turn { padding: 3px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 14px; }
+.turn.new-round { border-left: 3px solid var(--accent); }
+
+.draft-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .draft-cols { grid-template-columns: minmax(0, 1fr); }
+}
+
+.clock-head {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+#clock-name { font-size: 30px; margin: 0; color: var(--accent); }
+.confirm-box { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 100%; }
+.selected { font-size: 15px; text-align: right; }
+.sel-name { font-weight: 700; }
+button.big { padding: 10px 20px; font-size: 16px; }
+
+.big-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.pool-grid, .result-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+@media (max-width: 420px) {
+  .big-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pool-grid, .result-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.rank-badge { top: 11%; left: 6px; right: auto; }
+.tile.sel { box-shadow: 0 0 0 4px var(--accent); transform: translateY(-3px); }
+.tile.sel img { filter: brightness(1.05); }
+
+#pool-search { width: 100%; margin-bottom: 10px; }
+#more { margin-top: 8px; }
+
+.log { position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow-y: auto; }
+@media (max-width: 900px) { .log { position: static; max-height: none; } }
+.log-player { padding: 8px 0; border-top: 1px solid var(--border); }
+.log-player:first-child { border-top: none; }
+.log-player.active .log-head strong { color: var(--accent); }
+.log-cards { margin: 4px 0 0; padding-left: 22px; font-size: 13px; }
+.log-cards:empty { display: none; }
+
+/* ---------------------------------------------------------------- results */
+
+.results { display: grid; gap: 8px; }
+.result h3 { margin: 14px 0 8px; }

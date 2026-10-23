@@ -51,10 +51,23 @@ Push this folder to a GitHub repo. Then go to **Settings → Pages → Deploy fr
   from picks_flat group by card_name order by people desc, best_rank;
   ```
 
+## Running the draft
+Open `draft.html` (for example <http://localhost:8080/draft.html>, or `/draft.html` on your Pages site). It's for you only. It doesn't talk to Supabase, and everything is saved in that browser, so a refresh won't lose the draft.
+
+1. **Load** the `picks_flat` CSV export (choose the file or drop it on the page). Each submission becomes a player with their ranked list.
+2. **Set up players:** enter each player's **rating** (lower picks first) and how many **picks** they get, then click **Sort by rating**. Use ▲/▼ to break ties. **+ Add player** adds someone who didn't submit a list.
+3. **Draft:** the page shows who's on the clock and their highest still-available cards (with each card's rank on their list), plus who's up next. Click their choice, or search **Other card…** for anything in the pool, then click **Confirm pick**. That copy is removed from everyone's lists.
+   - The order snakes: when a round ends it reverses, so the last player picks twice in a row. Players who've used all their picks are skipped.
+   - **Undo last pick** (or Ctrl+Z) takes back mistakes. **Players** lets you change pick counts mid-draft.
+4. When every pick is made (or the pool is empty), the results page shows everyone's cards. **Export CSV** gives `pick_no, round, player, card, list_rank`.
+
+**Reset draft** clears all picks but keeps the players, ratings and pick counts.
+
 ## Files
 | File | What it is |
 |---|---|
 | `index.html`, `app.js`, `styles.css` | The picker page |
+| `draft.html`, `draft.js`, `draft.css` | The live draft board (admin only) |
 | `config.js` | Supabase URL, key and page title |
 | `cards.txt` → `cards.json` | Your card list → card data from Scryfall |
 | `scripts/build-cards.ps1` | Builds `cards.json` |
