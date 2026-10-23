@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rare Draft Picks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Rare Draft Picks</h1>
+    <div id="deadline" class="deadline" hidden></div>
+  </header>
+
+  <section class="who">
+    <label for="name">Your name</label>
+    <input id="name" type="text" maxlength="60" placeholder="e.g. Jamie R." autocomplete="name">
+    <button id="save" class="primary" type="button">Save picks</button>
+    <span id="status" class="status" role="status"></span>
+    <button id="not-me" class="link" type="button" hidden>Not you? Start fresh</button>
+  </section>
+
+  <section id="edit-link" class="edit-link" hidden>
+    <strong>Your personal edit link. Bookmark it or copy it somewhere safe.</strong>
+    It's the only way to come back and change your picks.
+    <div class="edit-link-row">
+      <input id="edit-url" type="text" readonly>
+      <button id="copy" type="button">Copy</button>
+    </div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button type="button" role="tab" data-tab="browse" aria-selected="true">Browse cards</button>
+    <button type="button" role="tab" data-tab="list" aria-selected="false">My priorities (<span class="pick-count">0</span>)</button>
+  </nav>
+
+  <main class="panes" data-active="browse">
+    <section class="pane browse" aria-label="Card list">
+      <div class="filters">
+        <input id="search" type="search" placeholder="Search name or type…">
+        <div class="colors" id="colors">
+          <button type="button" data-c="W" class="pip W" title="White">W</button>
+          <button type="button" data-c="U" class="pip U" title="Blue">U</button>
+          <button type="button" data-c="B" class="pip B" title="Black">B</button>
+          <button type="button" data-c="R" class="pip R" title="Red">R</button>
+          <button type="button" data-c="G" class="pip G" title="Green">G</button>
+          <button type="button" data-c="C" class="pip C" title="Colorless">C</button>
+          <button type="button" data-c="M" class="pip M" title="Multicolor">M</button>
+        </div>
+        <select id="type"><option value="">All types</option></select>
+        <select id="rarity"><option value="">All rarities</option></select>
+        <span id="shown" class="muted"></span>
+      </div>
+      <p class="hint">Tap a card to add it to your priorities. Tap again to ask for another copy.</p>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section class="pane list" aria-label="My priorities">
+      <h2>My priorities <span class="muted">(<span class="pick-count">0</span>)</span></h2>
+      <p class="hint">#1 is the card you want most. Drag to reorder.</p>
+      <ol id="picks" class="picks"></ol>
+      <p id="empty" class="empty">No cards yet. Add some from the list.</p>
+    </section>
+  </main>
+
+  <dialog id="zoom">
+    <div class="zoom-imgs"></div>
+    <form method="dialog"><button class="primary">Close</button></form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

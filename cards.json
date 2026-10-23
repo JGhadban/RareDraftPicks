@@ -1,0 +1,160 @@
+[
+    {
+        "name":  "Sheoldred, the Apocalypse",
+        "set":  "DMU",
+        "rarity":  "mythic",
+        "type":  "Legendary Creature — Phyrexian Praetor",
+        "cmc":  4.0,
+        "colors":  [
+                       "B"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327",
+        "small":  "https://cards.scryfall.io/small/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327",
+        "back":  null
+    },
+    {
+        "name":  "The One Ring",
+        "set":  "LTR",
+        "rarity":  "mythic",
+        "type":  "Legendary Artifact",
+        "cmc":  4.0,
+        "colors":  [
+
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/d/5/d5806e68-1054-458e-866d-1f2470f682b2.jpg?1790212038",
+        "small":  "https://cards.scryfall.io/small/front/d/5/d5806e68-1054-458e-866d-1f2470f682b2.jpg?1790212038",
+        "back":  null
+    },
+    {
+        "name":  "Ragavan, Nimble Pilferer",
+        "set":  "MH2",
+        "rarity":  "mythic",
+        "type":  "Legendary Creature — Monkey Pirate",
+        "cmc":  1.0,
+        "colors":  [
+                       "R"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/a/9/a9738cda-adb1-47fb-9f4c-ecd930228c4d.jpg?1791803835",
+        "small":  "https://cards.scryfall.io/small/front/a/9/a9738cda-adb1-47fb-9f4c-ecd930228c4d.jpg?1791803835",
+        "back":  null
+    },
+    {
+        "name":  "Orcish Bowmasters",
+        "set":  "LTR",
+        "rarity":  "rare",
+        "type":  "Creature — Orc Archer",
+        "cmc":  2.0,
+        "colors":  [
+                       "B"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/7/c/7c024bae-5631-4e20-ac69-df392ac9e109.jpg?1783916299",
+        "small":  "https://cards.scryfall.io/small/front/7/c/7c024bae-5631-4e20-ac69-df392ac9e109.jpg?1783916299",
+        "back":  null
+    },
+    {
+        "name":  "Delver of Secrets // Insectile Aberration",
+        "set":  "INR",
+        "rarity":  "common",
+        "type":  "Creature — Human Wizard // Creature — Human Insect",
+        "cmc":  1.0,
+        "colors":  [
+                       "U"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1783908173",
+        "small":  "https://cards.scryfall.io/small/front/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1783908173",
+        "back":  "https://cards.scryfall.io/normal/back/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1783908173"
+    },
+    {
+        "name":  "Lightning Bolt",
+        "set":  "2X2",
+        "rarity":  "uncommon",
+        "type":  "Instant",
+        "cmc":  1.0,
+        "colors":  [
+                       "R"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/f/2/f29ba16f-c8fb-42fe-aabf-87089cb214a7.jpg?1783921885",
+        "small":  "https://cards.scryfall.io/small/front/f/2/f29ba16f-c8fb-42fe-aabf-87089cb214a7.jpg?1783921885",
+        "back":  null
+    },
+    {
+        "name":  "Wrenn and Six",
+        "set":  "2X2",
+        "rarity":  "mythic",
+        "type":  "Legendary Planeswalker — Wrenn",
+        "cmc":  2.0,
+        "colors":  [
+                       "G",
+                       "R"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/5/b/5bd498cc-a609-4457-9325-6888d59ca36f.jpg?1791803869",
+        "small":  "https://cards.scryfall.io/small/front/5/b/5bd498cc-a609-4457-9325-6888d59ca36f.jpg?1791803869",
+        "back":  null
+    },
+    {
+        "name":  "Solitude",
+        "set":  "MH2",
+        "rarity":  "mythic",
+        "type":  "Creature — Elemental Incarnation",
+        "cmc":  5.0,
+        "colors":  [
+                       "W"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/4/7/47a6234f-309f-4e03-9263-66da48b57153.jpg?1783926885",
+        "small":  "https://cards.scryfall.io/small/front/4/7/47a6234f-309f-4e03-9263-66da48b57153.jpg?1783926885",
+        "back":  null
+    },
+    {
+        "name":  "Urza\u0027s Saga",
+        "set":  "MH2",
+        "rarity":  "rare",
+        "type":  "Enchantment Land — Urza\u0027s Saga",
+        "cmc":  0.0,
+        "colors":  [
+
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791",
+        "small":  "https://cards.scryfall.io/small/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791",
+        "back":  null
+    },
+    {
+        "name":  "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+        "set":  "NEO",
+        "rarity":  "rare",
+        "type":  "Enchantment — Saga // Enchantment Creature — Goblin Shaman",
+        "cmc":  3.0,
+        "colors":  [
+                       "R"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/2/4/24c0d87b-0049-4beb-b9cb-6f813b7aa7dc.jpg?1783923875",
+        "small":  "https://cards.scryfall.io/small/front/2/4/24c0d87b-0049-4beb-b9cb-6f813b7aa7dc.jpg?1783923875",
+        "back":  "https://cards.scryfall.io/normal/back/2/4/24c0d87b-0049-4beb-b9cb-6f813b7aa7dc.jpg?1783923875"
+    },
+    {
+        "name":  "Brazen Borrower // Petty Theft",
+        "set":  "SOC",
+        "rarity":  "mythic",
+        "type":  "Creature — Faerie Rogue // Instant — Adventure",
+        "cmc":  3.0,
+        "colors":  [
+                       "U"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/2/5/25d309d6-9e56-441e-bd29-5c903d5221bf.jpg?1783903792",
+        "small":  "https://cards.scryfall.io/small/front/2/5/25d309d6-9e56-441e-bd29-5c903d5221bf.jpg?1783903792",
+        "back":  null
+    },
+    {
+        "name":  "Teferi, Time Raveler",
+        "set":  "RVR",
+        "rarity":  "mythic",
+        "type":  "Legendary Planeswalker — Teferi",
+        "cmc":  3.0,
+        "colors":  [
+                       "U",
+                       "W"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/6/6/662fe50f-d75c-422c-8c6c-1f9b5c4ba21f.jpg?1783913271",
+        "small":  "https://cards.scryfall.io/small/front/6/6/662fe50f-d75c-422c-8c6c-1f9b5c4ba21f.jpg?1783913271",
+        "back":  null
+    }
+]
