@@ -15,13 +15,14 @@ A static web page where people choose Magic cards from your list and rank them b
 
 ### 2. Card list
 1. Put your cards in `cards.txt`, one per line. You can pin a printing with `Name (SET)` or `Name (SET) 123`.
+   - **Quantities:** for more than one copy of a card, repeat the line or put a count in front (`3 Lightning Bolt` or `3x Lightning Bolt`). The page shows "3 available", and each person can rank that card at most 3 times. This limit is enforced by the page only, not the database.
 2. Build `cards.json`:
    ```powershell
    powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
    ```
    The script lists any names Scryfall didn't recognise. Fix them and re-run.
 
-> If you change the card list while people are submitting, existing picks are kept. Cards that were removed still show in people's lists, just without an image.
+> If you change the card list while people are submitting, existing picks are kept. Cards that were removed still show in people's lists, just without an image. If you lower a card's quantity, the next time someone opens their list the page drops their lowest-ranked extra copies and asks them to save.
 
 ### 3. Set the deadline
 In the SQL Editor:

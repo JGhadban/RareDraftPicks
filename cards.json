@@ -1,6 +1,7 @@
 [
     {
         "name":  "Sheoldred, the Apocalypse",
+        "qty":  2,
         "set":  "DMU",
         "rarity":  "mythic",
         "type":  "Legendary Creature — Phyrexian Praetor",
@@ -14,6 +15,7 @@
     },
     {
         "name":  "The One Ring",
+        "qty":  1,
         "set":  "LTR",
         "rarity":  "mythic",
         "type":  "Legendary Artifact",
@@ -27,6 +29,7 @@
     },
     {
         "name":  "Ragavan, Nimble Pilferer",
+        "qty":  1,
         "set":  "MH2",
         "rarity":  "mythic",
         "type":  "Legendary Creature — Monkey Pirate",
@@ -40,6 +43,7 @@
     },
     {
         "name":  "Orcish Bowmasters",
+        "qty":  1,
         "set":  "LTR",
         "rarity":  "rare",
         "type":  "Creature — Orc Archer",
@@ -53,6 +57,7 @@
     },
     {
         "name":  "Delver of Secrets // Insectile Aberration",
+        "qty":  1,
         "set":  "INR",
         "rarity":  "common",
         "type":  "Creature — Human Wizard // Creature — Human Insect",
@@ -66,6 +71,7 @@
     },
     {
         "name":  "Lightning Bolt",
+        "qty":  1,
         "set":  "2X2",
         "rarity":  "uncommon",
         "type":  "Instant",
@@ -79,6 +85,7 @@
     },
     {
         "name":  "Wrenn and Six",
+        "qty":  1,
         "set":  "2X2",
         "rarity":  "mythic",
         "type":  "Legendary Planeswalker — Wrenn",
@@ -93,6 +100,7 @@
     },
     {
         "name":  "Solitude",
+        "qty":  1,
         "set":  "MH2",
         "rarity":  "mythic",
         "type":  "Creature — Elemental Incarnation",
@@ -106,6 +114,7 @@
     },
     {
         "name":  "Urza\u0027s Saga",
+        "qty":  1,
         "set":  "MH2",
         "rarity":  "rare",
         "type":  "Enchantment Land — Urza\u0027s Saga",
@@ -119,6 +128,7 @@
     },
     {
         "name":  "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+        "qty":  1,
         "set":  "NEO",
         "rarity":  "rare",
         "type":  "Enchantment — Saga // Enchantment Creature — Goblin Shaman",
@@ -132,6 +142,7 @@
     },
     {
         "name":  "Brazen Borrower // Petty Theft",
+        "qty":  1,
         "set":  "SOC",
         "rarity":  "mythic",
         "type":  "Creature — Faerie Rogue // Instant — Adventure",
@@ -145,6 +156,7 @@
     },
     {
         "name":  "Teferi, Time Raveler",
+        "qty":  1,
         "set":  "RVR",
         "rarity":  "mythic",
         "type":  "Legendary Planeswalker — Teferi",
@@ -155,6 +167,20 @@
                    ],
         "img":  "https://cards.scryfall.io/normal/front/6/6/662fe50f-d75c-422c-8c6c-1f9b5c4ba21f.jpg?1783913271",
         "small":  "https://cards.scryfall.io/small/front/6/6/662fe50f-d75c-422c-8c6c-1f9b5c4ba21f.jpg?1783913271",
+        "back":  null
+    },
+    {
+        "name":  "Diviner of Victory // Unwind History",
+        "qty":  1,
+        "set":  "FRA",
+        "rarity":  "rare",
+        "type":  "Creature — Dwarf Wizard // Sorcery",
+        "cmc":  1.0,
+        "colors":  [
+                       "U"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
+        "small":  "https://cards.scryfall.io/small/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
         "back":  null
     }
 ]

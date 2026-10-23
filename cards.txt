@@ -1,6 +1,7 @@
 # Sample list - replace with your own cards, one per line, then run:
 #   powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
 Sheoldred, the Apocalypse
+Sheoldred, the Apocalypse
 The One Ring
 Ragavan, Nimble Pilferer
 Orcish Bowmasters
@@ -12,3 +13,4 @@ Urza's Saga
 Fable of the Mirror-Breaker
 Brazen Borrower
 Teferi, Time Raveler
+Diviner of Victory

@@ -10,6 +10,16 @@
     return n;
   };
 
+  // "Diviner of Victory // Unwind History": filter on the front face, show the rest muted.
+  const frontType = (card) => card.type.split(' // ')[0];
+  const frontName = (name) => name.split(' // ')[0];
+  function nameNode(name, cls) {
+    const [front, ...rest] = name.split(' // ');
+    const span = el('span', cls, front);
+    if (rest.length) span.append(el('span', 'alt', ` // ${rest.join(' // ')}`));
+    return span;
+  }
+
   const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const TYPES = ['Creature', 'Planeswalker', 'Instant', 'Sorcery', 'Artifact', 'Enchantment', 'Battle', 'Land'];
   const RARITIES = ['common', 'uncommon', 'rare', 'mythic', 'special', 'bonus'];
@@ -26,6 +36,13 @@
     dirty: false,
     colors: new Set(),
   };
+
+  // Copies available. Cards missing from cards.json (list changed) are uncapped.
+  const qtyOf = (name) => {
+    const card = state.byName.get(name);
+    return card ? card.qty || 1 : Infinity;
+  };
+  const countOf = (name) => state.picks.filter((n) => n === name).length;
 
   // ------------------------------------------------------------------ storage (best effort)
 
@@ -72,7 +89,7 @@
   // ------------------------------------------------------------------ card grid
 
   function buildFilters() {
-    const types = TYPES.filter((t) => state.cards.some((c) => c.type.includes(t)));
+    const types = TYPES.filter((t) => state.cards.some((c) => frontType(c).includes(t)));
     for (const t of types) $('#type').append(new Option(t, t));
     const rarities = RARITIES.filter((r) => state.cards.some((c) => c.rarity === r));
     for (const r of rarities) $('#rarity').append(new Option(r[0].toUpperCase() + r.slice(1), r));
@@ -109,7 +126,7 @@
     for (const tile of $('#grid').children) {
       const card = state.byName.get(tile.dataset.name);
       const ok = (!q || card.name.toLowerCase().includes(q) || card.type.toLowerCase().includes(q))
-        && (!type || card.type.includes(type))
+        && (!type || frontType(card).includes(type))
         && (!rarity || card.rarity === rarity)
         && matchesColor(card);
       tile.hidden = !ok;
@@ -124,7 +141,7 @@
       const tile = el('button', 'tile');
       tile.type = 'button';
       tile.dataset.name = card.name;
-      tile.title = `Add ${card.name}`;
+      tile.title = `Add ${frontName(card.name)}`;
 
       const img = el('img');
       img.src = card.img || '';
@@ -141,6 +158,7 @@
       zoom.setAttribute('role', 'button');
 
       tile.append(img, badge, zoom);
+      if ((card.qty || 1) > 1) tile.append(el('span', 'qty', `${card.qty} available`));
       grid.append(tile);
     }
 
@@ -171,9 +189,15 @@
     for (const n of state.picks) counts.set(n, (counts.get(n) || 0) + 1);
     for (const [name, badge] of state.badges) {
       const n = counts.get(name) || 0;
+      const qty = qtyOf(name);
+      const tile = badge.parentElement;
       badge.hidden = n === 0;
-      badge.textContent = n > 1 ? `×${n}` : '✓';
-      badge.parentElement.classList.toggle('picked', n > 0);
+      badge.textContent = qty > 1 ? `${n}/${qty}` : '✓';
+      tile.classList.toggle('picked', n > 0);
+      tile.classList.toggle('maxed', n >= qty);
+      tile.title = n >= qty
+        ? (qty > 1 ? `All ${qty} copies of ${frontName(name)} picked` : `${frontName(name)} picked`)
+        : `Add ${frontName(name)}`;
     }
   }
 
@@ -181,10 +205,34 @@
 
   function addPick(name) {
     if (state.locked) return;
+    const qty = qtyOf(name);
+    if (countOf(name) >= qty) {
+      setStatus(qty > 1
+        ? `You've already picked all ${qty} copies of ${frontName(name)}.`
+        : `${frontName(name)} is already in your list (only 1 available).`, 'error');
+      return;
+    }
     state.picks.push(name);
     renderPicks();
     markDirty();
-    setStatus(`Added ${name} at #${state.picks.length}. Unsaved changes`, 'warn');
+    setStatus(`Added ${frontName(name)} at #${state.picks.length}. Unsaved changes`, 'warn');
+  }
+
+  // Drop the lowest-ranked extras if someone holds more copies than exist (list changed).
+  function trimToQuantities() {
+    const seen = new Map();
+    const before = state.picks.length;
+    state.picks = state.picks.filter((name) => {
+      const n = (seen.get(name) || 0) + 1;
+      seen.set(name, n);
+      return n <= qtyOf(name);
+    });
+    const removed = before - state.picks.length;
+    if (removed) {
+      state.dirty = true;
+      saveDraft();
+      setStatus(`Removed ${removed} pick${removed > 1 ? 's' : ''} that exceeded the copies available. Save to keep this.`, 'warn');
+    }
   }
 
   function renderPicks() {
@@ -201,8 +249,10 @@
       thumb.src = (card && card.small) || '';
       thumb.alt = '';
       li.append(thumb);
-      const label = el('span', 'pick-name', name);
-      if (copy > 1) label.append(el('span', 'copy', ` copy ${copy}`));
+      const label = nameNode(name, 'pick-name');
+      const qty = qtyOf(name);
+      if (qty > 1 && qty !== Infinity) label.append(el('span', 'copy', ` copy ${copy} of ${qty}`));
+      else if (copy > 1) label.append(el('span', 'copy', ` copy ${copy}`));
       li.append(label);
 
       const top = el('button', 'icon', '⤒');
@@ -424,6 +474,8 @@
         setStatus('Restored your unsaved changes. Remember to save.', 'warn');
       }
     } catch { /* ignore bad draft */ }
+
+    if (!state.locked && !(state.deadline && state.deadline <= Date.now())) trimToQuantities();
 
     showEditLink();
     renderPicks();
