@@ -55,11 +55,12 @@ Push this folder to a GitHub repo. Then go to **Settings → Pages → Deploy fr
 Open `draft.html` (for example <http://localhost:8080/draft.html>, or `/draft.html` on your Pages site). It's for you only. It doesn't talk to Supabase, and everything is saved in that browser, so a refresh won't lose the draft.
 
 1. **Load** the `picks_flat` CSV export (choose the file or drop it on the page). Each submission becomes a player with their ranked list.
-2. **Set up players:** enter each player's **rating** (lower picks first) and how many **picks** they get, then click **Sort by rating**. Use ▲/▼ to break ties. **+ Add player** adds someone who didn't submit a list.
-3. **Draft:** the page shows who's on the clock and their highest still-available cards (with each card's rank on their list), plus who's up next. Click their choice, or search **Other card…** for anything in the pool, then click **Confirm pick**. That copy is removed from everyone's lists.
+2. **Optional: import from Google Sheet.** If ratings and pick counts live in a Google Sheet (one tab with names and a **Tokens** column, another with names and a **Rank** column), share it as *Anyone with the link can view*. Open each tab and paste its link (ending in `#gid=…`) into the two boxes, then click **Import from sheet**. The links are remembered on that browser. A review dialog matches sheet names to the submitted lists. Exact matches are ticked, close guesses ("Jamie R." ↔ "Jamie Robinson") are marked *check*, and anything unmatched becomes a new player with no list. Fix any wrong guesses and click **Apply**. Corrections are remembered, so a re-import matches straight away. Matched players take the sheet's spelling of their name.
+3. **Set up players:** enter each player's **rating** (lower picks first) and how many **picks** they get, then click **Sort by rating**. Use ▲/▼ to break ties. **+ Add player** adds someone who didn't submit a list.
+4. **Draft:** the page shows who's on the clock and their highest still-available cards (with each card's rank on their list), plus who's up next. Click their choice, or search **Other card…** for anything in the pool, then click **Confirm pick**. That copy is removed from everyone's lists.
    - The order snakes: when a round ends it reverses, so the last player picks twice in a row. Players who've used all their picks are skipped.
    - **Undo last pick** (or Ctrl+Z) takes back mistakes. **Players** lets you change pick counts mid-draft.
-4. When every pick is made (or the pool is empty), the results page shows everyone's cards. **Export CSV** gives `pick_no, round, player, card, list_rank`.
+5. When every pick is made (or the pool is empty), the results page shows everyone's cards. **Export CSV** gives `pick_no, round, player, card, list_rank`.
 
 **Reset draft** clears all picks but keeps the players, ratings and pick counts.
 

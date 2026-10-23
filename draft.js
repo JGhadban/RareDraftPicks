@@ -102,6 +102,57 @@
 
   const csvField = (v) => (/[",\r\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
 
+  // ------------------------------------------------------------------ name matching
+
+  const normalize = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+  function levenshtein(a, b) {
+    let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+
+  // 1 = same name, 0.9 = "Jamie" / "Jamie R." / "Jamie Robinson", otherwise edit-distance similarity.
+  function nameScore(a, b) {
+    const na = normalize(a), nb = normalize(b);
+    if (!na || !nb) return 0;
+    const sa = na.replace(/ /g, ''), sb = nb.replace(/ /g, '');
+    if (sa === sb) return 1;
+    const ta = na.split(' '), tb = nb.split(' ');
+    const [short, long] = ta.length <= tb.length ? [ta, tb] : [tb, ta];
+    if (short.every((t) => long.includes(t))) return 0.9;
+    if (ta.length > 1 && tb.length > 1 && ta[0] === tb[0] && ta[ta.length - 1][0] === tb[tb.length - 1][0]) return 0.9;
+    const sim = (x, y) => 1 - levenshtein(x, y) / Math.max(x.length, y.length);
+    return Math.max(sim(na, nb), sim(sa, sb));
+  }
+
+  // One-to-one, best scores first. Returns, per left index, { j, score } or null.
+  function matchNames(nLeft, nRight, score, threshold = 0.6) {
+    const pairs = [];
+    for (let i = 0; i < nLeft; i++) {
+      for (let j = 0; j < nRight; j++) {
+        const s = score(i, j);
+        if (s >= threshold) pairs.push({ i, j, s });
+      }
+    }
+    pairs.sort((x, y) => y.s - x.s);
+    const out = new Array(nLeft).fill(null);
+    const taken = new Set();
+    for (const { i, j, s } of pairs) {
+      if (out[i] || taken.has(j)) continue;
+      out[i] = { j, score: s };
+      taken.add(j);
+    }
+    return out;
+  }
+
   // ------------------------------------------------------------------ draft logic
 
   const allowedOf = (p) => Math.max(0, Math.floor(Number(p.allowed)) || 0);
@@ -194,8 +245,8 @@
 
   // ------------------------------------------------------------------ shared UI
 
-  function setStatus(msg, kind) {
-    const s = $('#csv-status');
+  function setStatus(msg, kind, target = '#csv-status') {
+    const s = $(target);
     s.textContent = msg || '';
     s.dataset.kind = kind || '';
     if (msg && state.phase === 'draft') alert(msg);
@@ -327,6 +378,11 @@
     $('#start').disabled = total === 0;
   }
 
+  function sortByRating() {
+    const key = (p) => (p.rating === '' || p.rating == null ? Infinity : Number(p.rating));
+    state.players.sort((a, b) => key(a) - key(b)); // stable: ties keep their order
+  }
+
   function setupSetup() {
     const tbody = $('#player-rows');
     tbody.addEventListener('input', (e) => {
@@ -361,8 +417,7 @@
     });
 
     $('#sort-rating').addEventListener('click', () => {
-      const key = (p) => (p.rating === '' || p.rating == null ? Infinity : Number(p.rating));
-      state.players.sort((a, b) => key(a) - key(b)); // stable: ties keep their order
+      sortByRating();
       save();
       renderSetup();
     });
@@ -405,6 +460,187 @@
     save();
     setStatus(`Loaded ${incoming.length} players from ${file.name}.`, 'ok');
     renderSetup();
+  }
+
+  // ------------------------------------------------------------------ Google Sheet import
+
+  const SHEET_KEY = 'rdp_sheet_cfg';
+  const ALIAS_KEY = 'rdp_name_aliases';
+  const SHARE_MSG = 'Couldn\'t read the sheet. Make sure it\'s shared as "Anyone with the link can view" and the link is for the right tab.';
+  const COLS = {
+    pName: ['picks', /name|player/],
+    pPicks: ['picks', /token|pick|count|#/],
+    rName: ['rank', /name|player/],
+    rRating: ['rank', /rank|rating|elo|seed|score/],
+  };
+  const loadJson = (k) => { try { return JSON.parse(store.get(k) || 'null') || {}; } catch { return {}; } };
+  const toNum = (v) => (v == null || String(v).trim() === '' || isNaN(Number(v)) ? '' : Number(v));
+
+  // Any sheet link with the tab open -> CSV for that tab (gviz sends CORS headers).
+  function sheetCsvUrl(link) {
+    const id = (link.match(/\/spreadsheets\/d\/([\w-]+)/) || [])[1];
+    if (!id) throw new Error('That doesn\'t look like a Google Sheets link.');
+    const gid = (link.match(/[#&?]gid=(\d+)/) || [])[1] || '0';
+    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&headers=1&gid=${gid}`;
+  }
+
+  async function fetchSheetTab(link) {
+    const url = sheetCsvUrl(link);
+    let text = '';
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (res.ok) text = await res.text();
+    } catch { /* private sheets fail CORS */ }
+    if (!text.trim() || text.trimStart().startsWith('<')) throw new Error(SHARE_MSG);
+    const [header, ...rows] = parseCsv(text);
+    return { header: header.map((h) => h.trim()), rows };
+  }
+
+  async function importSheet() {
+    const cfgSheet = loadJson(SHEET_KEY);
+    cfgSheet.picksLink = $('#sheet-picks').value.trim();
+    cfgSheet.rankLink = $('#sheet-rank').value.trim();
+    store.set(SHEET_KEY, JSON.stringify(cfgSheet));
+    if (!cfgSheet.picksLink || !cfgSheet.rankLink) {
+      return setStatus('Paste a link for each tab.', 'error', '#sheet-status');
+    }
+    $('#sheet-import').disabled = true;
+    setStatus('Reading the sheet…', '', '#sheet-status');
+    try {
+      const [picks, rank] = await Promise.all([fetchSheetTab(cfgSheet.picksLink), fetchSheetTab(cfgSheet.rankLink)]);
+      state.sheet = { picks, rank };
+      setStatus('', '', '#sheet-status');
+      buildColumnSelects();
+      renderReview();
+      $('#sheet-review').showModal();
+    } catch (err) {
+      setStatus(err.message, 'error', '#sheet-status');
+    } finally {
+      $('#sheet-import').disabled = false;
+    }
+  }
+
+  // Remembered column, else the first header matching the pattern, else the first column.
+  function buildColumnSelects() {
+    const saved = loadJson(SHEET_KEY).cols || {};
+    for (const [key, [tab, re]] of Object.entries(COLS)) {
+      const header = state.sheet[tab].header;
+      const sel = $(`#col-${key[0]}-${key.slice(1).toLowerCase()}`);
+      sel.replaceChildren(...header.map((h, i) => (h ? new Option(h, i) : null)).filter(Boolean));
+      const pick = [header.indexOf(saved[key]), header.findIndex((h) => re.test(h.toLowerCase()))].find((i) => i >= 0 && header[i]);
+      if (pick != null) sel.value = pick;
+    }
+  }
+
+  function columnChoice() {
+    const out = {};
+    for (const key of Object.keys(COLS)) out[key] = Number($(`#col-${key[0]}-${key.slice(1).toLowerCase()}`).value);
+    return out;
+  }
+
+  // Join the two tabs into one roster; ranking names are matched to pick-count names.
+  function sheetRoster() {
+    const c = columnChoice();
+    const cell = (r, i) => (r[i] || '').trim();
+    const roster = state.sheet.picks.rows
+      .map((r) => ({ name: cell(r, c.pName), allowed: toNum(cell(r, c.pPicks)), rating: '' }))
+      .filter((r) => r.name);
+    const ranks = state.sheet.rank.rows
+      .map((r) => ({ name: cell(r, c.rName), rating: toNum(cell(r, c.rRating)) }))
+      .filter((r) => r.name);
+    const m = matchNames(ranks.length, roster.length, (i, j) => nameScore(ranks[i].name, roster[j].name), 0.75);
+    const unpaired = [];
+    ranks.forEach((r, i) => (m[i] ? (roster[m[i].j].rating = r.rating) : unpaired.push(r.name)));
+    for (const r of roster) if (r.allowed !== '') r.allowed = Math.max(0, Math.floor(r.allowed));
+    return { roster, unpaired };
+  }
+
+  function renderReview() {
+    const { roster, unpaired } = sheetRoster();
+    const aliases = loadJson(ALIAS_KEY);
+    const ps = state.players;
+    const score = (i, j) => (aliases[normalize(roster[i].name)] === ps[j].id ? 1 : nameScore(roster[i].name, ps[j].name));
+    const m = matchNames(roster.length, ps.length, score);
+    const inProgress = state.log.length > 0;
+    state.review = roster.map((r, i) => ({ ...r, match: m[i] }));
+
+    $('#review-rows').replaceChildren(...state.review.map((r, i) => {
+      const tr = el('tr');
+      tr.dataset.i = i;
+      const sel = el('select');
+      sel.append(new Option(inProgress ? 'Skip (draft in progress)' : 'New player (no list)', inProgress ? 'skip' : 'new'));
+      if (!inProgress) sel.append(new Option('Skip', 'skip'));
+      for (const p of ps) sel.append(new Option(`${p.name} (${p.prefs.length} ranked)`, p.id));
+      sel.value = r.match ? ps[r.match.j].id : sel.options[0].value;
+      const status = !r.match ? ['new', ''] : r.match.score >= 1 ? ['✓ exact', 'ok'] : ['check', 'warn'];
+      const tdSel = el('td');
+      tdSel.append(sel);
+      const st = el('td', 'status', status[0]);
+      st.dataset.kind = status[1];
+      tr.classList.toggle('guess', status[1] === 'warn');
+      tr.append(el('td', '', r.name), el('td', '', String(r.rating)), el('td', '', String(r.allowed)), tdSel, st);
+      return tr;
+    }));
+
+    const notes = [];
+    const matched = new Set(m.filter(Boolean).map((x) => ps[x.j].id));
+    const orphans = ps.filter((p) => !matched.has(p.id));
+    if (orphans.length) notes.push(`Not in the sheet (rank and picks unchanged): ${orphans.map((p) => p.name).join(', ')}.`);
+    if (unpaired.length) notes.push(`On the ranking tab but not the pick counts tab (ignored): ${unpaired.join(', ')}.`);
+    const noRank = roster.filter((r) => r.rating === '');
+    if (noRank.length) notes.push(`No rank found for: ${noRank.map((r) => r.name).join(', ')}.`);
+    if (inProgress) notes.push('A draft is in progress: only ranks and pick counts of existing players will change, and the order is kept.');
+    $('#review-notes').replaceChildren(...notes.map((n) => el('li', '', n)));
+  }
+
+  function applyReview() {
+    const rows = [...document.querySelectorAll('#review-rows tr')];
+    const choices = rows.map((tr) => tr.querySelector('select').value);
+    const ids = choices.filter((v) => v !== 'new' && v !== 'skip');
+    const dup = ids.find((v, i) => ids.indexOf(v) !== i);
+    if (dup) return alert(`${playerById(dup).name} is matched to more than one sheet row. Fix that before applying.`);
+
+    const aliases = loadJson(ALIAS_KEY);
+    let updated = 0, added = 0;
+    state.review.forEach((r, i) => {
+      const choice = choices[i];
+      if (choice === 'skip') return;
+      if (choice === 'new') {
+        state.players.push({ id: 'p' + Date.now().toString(36) + i, name: r.name, rating: r.rating, allowed: r.allowed, prefs: [] });
+        added++;
+        return;
+      }
+      const p = playerById(choice);
+      if (normalize(p.name) !== normalize(r.name)) aliases[normalize(r.name)] = p.id;
+      Object.assign(p, { name: r.name, rating: r.rating, allowed: r.allowed });
+      updated++;
+    });
+    store.set(ALIAS_KEY, JSON.stringify(aliases));
+    store.set(SHEET_KEY, JSON.stringify({ ...loadJson(SHEET_KEY), cols: Object.fromEntries(
+      Object.entries(columnChoice()).map(([k, i]) => [k, state.sheet[COLS[k][0]].header[i]])) }));
+
+    if (!state.log.length) sortByRating();
+    save();
+    $('#sheet-review').close();
+    renderSetup();
+    setStatus(`Updated ${updated} player${updated === 1 ? '' : 's'}${added ? `, added ${added}` : ''} from the sheet.`, 'ok', '#sheet-status');
+  }
+
+  function setupSheet() {
+    const saved = loadJson(SHEET_KEY);
+    $('#sheet-picks').value = saved.picksLink || '';
+    $('#sheet-rank').value = saved.rankLink || '';
+    $('#sheet-import').addEventListener('click', importSheet);
+    $('#sheet-review .colmap').addEventListener('change', renderReview);
+    $('#review-rows').addEventListener('change', (e) => {
+      const tr = e.target.closest('tr');
+      const st = tr.querySelector('.status');
+      st.textContent = 'set';
+      st.dataset.kind = 'ok';
+      tr.classList.remove('guess');
+    });
+    $('#review-apply').addEventListener('click', applyReview);
+    $('#review-cancel').addEventListener('click', () => $('#sheet-review').close());
   }
 
   // ------------------------------------------------------------------ draft view
@@ -584,6 +820,7 @@
 
     restore();
     setupSetup();
+    setupSheet();
     setupDraft();
     render();
   }

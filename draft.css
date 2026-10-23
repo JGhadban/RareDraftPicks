@@ -38,6 +38,31 @@ code { font-size: 13px; }
   .players .order .icon { display: block; margin: 2px 0; }
 }
 
+/* ---------------------------------------------------------------- sheet import */
+
+.sheet-links { display: grid; gap: 8px; }
+.sheet-links label { display: grid; gap: 4px; font-weight: 600; font-size: 14px; }
+.sheet-links input { width: 100%; font-weight: normal; }
+
+dialog#sheet-review {
+  border: none; border-radius: var(--radius);
+  background: var(--panel); color: var(--text);
+  padding: 16px; width: min(96vw, 820px);
+}
+dialog#sheet-review::backdrop { background: rgba(0, 0, 0, .6); }
+dialog#sheet-review h2 { margin: 0 0 10px; font-size: 18px; }
+.colmap { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.colmap select { max-width: 160px; }
+.review-wrap { max-height: 55vh; overflow: auto; }
+.review select { width: 100%; min-width: 140px; }
+.review tr.guess td { background: color-mix(in srgb, var(--warn) 12%, transparent); }
+.review .status { white-space: nowrap; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .review th:nth-child(3), .review td:nth-child(3) { display: table-cell; }
+  .review select { min-width: 0; }
+}
+
 /* ---------------------------------------------------------------- draft */
 
 .upnext {

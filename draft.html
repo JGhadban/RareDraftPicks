@@ -28,6 +28,19 @@
     </section>
 
     <section class="pane">
+      <h2>Ratings &amp; pick counts from Google Sheet</h2>
+      <p class="hint">Optional. Share the sheet as <em>Anyone with the link can view</em>, then open each tab and paste its link (it ends in <code>#gid=…</code>). Load the results CSV first so names can be matched.</p>
+      <div class="sheet-links">
+        <label>Pick counts tab <input id="sheet-picks" type="text" placeholder="https://docs.google.com/spreadsheets/d/…#gid=…"></label>
+        <label>Ranking tab <input id="sheet-rank" type="text" placeholder="https://docs.google.com/spreadsheets/d/…#gid=…"></label>
+      </div>
+      <div class="row">
+        <button id="sheet-import" type="button">Import from sheet</button>
+        <span id="sheet-status" class="status" role="status"></span>
+      </div>
+    </section>
+
+    <section class="pane">
       <h2>2. Players</h2>
       <p class="hint">Lower rating picks first. Use ▲/▼ to break ties. Players drop out of the rotation once they've used their picks.</p>
       <table class="players">
@@ -100,6 +113,26 @@
       <div id="results" class="results"></div>
     </section>
   </main>
+
+  <dialog id="sheet-review">
+    <h2>Check the sheet import</h2>
+    <div class="colmap">
+      <span>Pick counts tab: name <select id="col-p-name"></select> picks <select id="col-p-picks"></select></span>
+      <span>Ranking tab: name <select id="col-r-name"></select> rank <select id="col-r-rating"></select></span>
+    </div>
+    <p class="hint">Rows marked <strong>check</strong> are best guesses. Pick the right submission or choose “New player” / “Skip”.</p>
+    <div class="review-wrap">
+      <table class="players review">
+        <thead><tr><th>Sheet name</th><th>Rank</th><th>Picks</th><th>Submitted list</th><th></th></tr></thead>
+        <tbody id="review-rows"></tbody>
+      </table>
+    </div>
+    <ul id="review-notes" class="warnings"></ul>
+    <div class="row">
+      <button id="review-apply" class="primary" type="button">Apply</button>
+      <button id="review-cancel" type="button">Cancel</button>
+    </div>
+  </dialog>
 
   <dialog id="zoom">
     <div class="zoom-imgs"></div>
