@@ -184,6 +184,13 @@
     $('#zoom').showModal();
   }
 
+  // Backdrop clicks target the dialog itself; the rect check keeps clicks on its padding open.
+  function closeOnBackdrop(e) {
+    const r = e.currentTarget.getBoundingClientRect();
+    const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    if (e.target === e.currentTarget && !inside) e.currentTarget.close();
+  }
+
   function updateBadges() {
     const counts = new Map();
     for (const n of state.picks) counts.set(n, (counts.get(n) || 0) + 1);
@@ -429,6 +436,7 @@
     $('#save').addEventListener('click', save);
     $('#copy').addEventListener('click', copyLink);
     $('#not-me').addEventListener('click', startFresh);
+    $('#zoom').addEventListener('click', closeOnBackdrop);
     $('#name').addEventListener('input', markDirty);
     window.addEventListener('beforeunload', (e) => {
       if (state.dirty) { e.preventDefault(); e.returnValue = ''; }

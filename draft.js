@@ -266,6 +266,13 @@
     $('#zoom').showModal();
   }
 
+  // Backdrop clicks target the dialog itself; the rect check keeps clicks on its padding open.
+  function closeOnBackdrop(e) {
+    const r = e.currentTarget.getBoundingClientRect();
+    const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    if (e.target === e.currentTarget && !inside) e.currentTarget.close();
+  }
+
   function tile(name, { rank, left, small }) {
     const card = state.byName.get(name);
     const t = el('button', 'tile');
@@ -725,6 +732,7 @@
   function setupDraft() {
     $('#prefs').addEventListener('click', onTileClick);
     $('#pool').addEventListener('click', onTileClick);
+    $('#zoom').addEventListener('click', closeOnBackdrop);
     $('#pool-search').addEventListener('input', renderDraft);
     $('#more').addEventListener('click', () => { state.showAll = !state.showAll; renderDraft(); });
     $('#confirm').addEventListener('click', makePick);
