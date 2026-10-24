@@ -482,6 +482,7 @@
     rRating: ['rank', [/^rating$/, /^rank$/, /rank|rating|elo|seed|score/]],
   };
   const loadJson = (k) => { try { return JSON.parse(store.get(k) || 'null') || {}; } catch { return {}; } };
+  const NEW_PLAYER_RATING = 3.5; // players with no rating yet (new to the group)
   const toNum = (v) => (v == null || String(v).trim() === '' || isNaN(Number(v)) ? '' : Number(v));
 
   // Any sheet link with the tab open -> CSV for that tab, read from headerRow down (gviz sends CORS headers).
@@ -574,6 +575,7 @@
     const unpaired = [];
     ranks.forEach((r, i) => (m[i] ? (roster[m[i].j].rating = r.rating) : unpaired.push(r.name)));
     for (const r of roster) if (r.allowed !== '') r.allowed = Math.max(0, Math.floor(r.allowed));
+    for (const r of roster) if (r.rating === '') Object.assign(r, { rating: NEW_PLAYER_RATING, defaulted: true });
     return { roster, unpaired };
   }
 
@@ -609,8 +611,8 @@
     const orphans = ps.filter((p) => !matched.has(p.id));
     if (orphans.length) notes.push(`Not in the sheet (rank and picks unchanged): ${orphans.map((p) => p.name).join(', ')}.`);
     if (unpaired.length) notes.push(`On the ranking tab but not the pick counts tab (ignored): ${unpaired.join(', ')}.`);
-    const noRank = roster.filter((r) => r.rating === '');
-    if (noRank.length) notes.push(`No rank found for: ${noRank.map((r) => r.name).join(', ')}.`);
+    const noRank = roster.filter((r) => r.defaulted);
+    if (noRank.length) notes.push(`No rating found for: ${noRank.map((r) => r.name).join(', ')}. Giving them the new-player default of ${NEW_PLAYER_RATING}.`);
     if (inProgress) notes.push('A draft is in progress: only ranks and pick counts of existing players will change, and the order is kept.');
     $('#review-notes').replaceChildren(...notes.map((n) => el('li', '', n)));
   }
