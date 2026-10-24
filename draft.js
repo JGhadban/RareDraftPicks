@@ -474,33 +474,47 @@
   const SHEET_KEY = 'rdp_sheet_cfg';
   const ALIAS_KEY = 'rdp_name_aliases';
   const SHARE_MSG = 'Couldn\'t read the sheet. Make sure it\'s shared as "Anyone with the link can view" and the link is for the right tab.';
+  // Header guesses in priority order: exact names first, so "Rating" beats e.g. "Set rank".
   const COLS = {
-    pName: ['picks', /name|player/],
-    pPicks: ['picks', /token|pick|count|#/],
-    rName: ['rank', /name|player/],
-    rRating: ['rank', /rank|rating|elo|seed|score/],
+    pName: ['picks', [/^(name|player)$/, /name|player/]],
+    pPicks: ['picks', [/^(picks|tokens|count)$/, /token|pick|count|#/]],
+    rName: ['rank', [/^(name|player)$/, /name|player/]],
+    rRating: ['rank', [/^rating$/, /^rank$/, /rank|rating|elo|seed|score/]],
   };
   const loadJson = (k) => { try { return JSON.parse(store.get(k) || 'null') || {}; } catch { return {}; } };
   const toNum = (v) => (v == null || String(v).trim() === '' || isNaN(Number(v)) ? '' : Number(v));
 
-  // Any sheet link with the tab open -> CSV for that tab (gviz sends CORS headers).
-  function sheetCsvUrl(link) {
+  // Any sheet link with the tab open -> CSV for that tab, read from headerRow down (gviz sends CORS headers).
+  function sheetCsvUrl(link, headerRow) {
     const id = (link.match(/\/spreadsheets\/d\/([\w-]+)/) || [])[1];
     if (!id) throw new Error('That doesn\'t look like a Google Sheets link.');
     const gid = (link.match(/[#&?]gid=(\d+)/) || [])[1] || '0';
-    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&headers=1&gid=${gid}`;
+    const range = headerRow > 1 ? `&range=A${headerRow}:ZZZ` : '';
+    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&headers=1&gid=${gid}${range}`;
   }
 
-  async function fetchSheetTab(link) {
-    const url = sheetCsvUrl(link);
+  async function fetchSheetRows(link, headerRow) {
     let text = '';
     try {
-      const res = await fetch(url, { cache: 'no-store' });
+      const res = await fetch(sheetCsvUrl(link, headerRow), { cache: 'no-store' });
       if (res.ok) text = await res.text();
     } catch { /* private sheets fail CORS */ }
     if (!text.trim() || text.trimStart().startsWith('<')) throw new Error(SHARE_MSG);
     const [header, ...rows] = parseCsv(text);
     return { header: header.map((h) => h.trim()), rows };
+  }
+
+  // Title rows above the headers are common, so look for the row that has every column this tab needs.
+  async function fetchSheetTab(link, tab) {
+    const needed = Object.values(COLS).filter(([t]) => t === tab).map(([, res]) => res[res.length - 1]);
+    const fits = (header) => needed.every((re) => header.some((h) => re.test(h.toLowerCase())));
+    const first = await fetchSheetRows(link, 1);
+    if (fits(first.header)) return first;
+    for (let row = 2; row <= 5; row++) {
+      const t = await fetchSheetRows(link, row);
+      if (fits(t.header)) return t;
+    }
+    return first;
   }
 
   async function importSheet() {
@@ -514,7 +528,7 @@
     $('#sheet-import').disabled = true;
     setStatus('Reading the sheet…', '', '#sheet-status');
     try {
-      const [picks, rank] = await Promise.all([fetchSheetTab(cfgSheet.picksLink), fetchSheetTab(cfgSheet.rankLink)]);
+      const [picks, rank] = await Promise.all([fetchSheetTab(cfgSheet.picksLink, 'picks'), fetchSheetTab(cfgSheet.rankLink, 'rank')]);
       state.sheet = { picks, rank };
       setStatus('', '', '#sheet-status');
       buildColumnSelects();
@@ -527,14 +541,15 @@
     }
   }
 
-  // Remembered column, else the first header matching the pattern, else the first column.
+  // Remembered column, else the first header matching the earliest pattern, else the first column.
   function buildColumnSelects() {
     const saved = loadJson(SHEET_KEY).cols || {};
-    for (const [key, [tab, re]] of Object.entries(COLS)) {
+    for (const [key, [tab, res]] of Object.entries(COLS)) {
       const header = state.sheet[tab].header;
       const sel = $(`#col-${key[0]}-${key.slice(1).toLowerCase()}`);
       sel.replaceChildren(...header.map((h, i) => (h ? new Option(h, i) : null)).filter(Boolean));
-      const pick = [header.indexOf(saved[key]), header.findIndex((h) => re.test(h.toLowerCase()))].find((i) => i >= 0 && header[i]);
+      const guesses = res.map((re) => header.findIndex((h) => re.test(h.toLowerCase())));
+      const pick = [header.indexOf(saved[key]), ...guesses].find((i) => i >= 0 && header[i]);
       if (pick != null) sel.value = pick;
     }
   }
