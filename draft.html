@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="draft.css">
   <script src="theme.js"></script>
+  <script src="cardsize.js"></script>
 </head>
 <body>
   <header class="topbar">
     <h1 id="title">Live Draft</h1>
     <div class="topbar-actions">
       <span id="progress" class="deadline" hidden></span>
+      <label class="card-size">Card size <input id="card-size" type="range" min="0.6" max="1.8" step="0.05" value="1"></label>
       <button id="undo" type="button" hidden>↶ Undo last pick</button>
       <button id="to-setup" type="button" hidden>Players</button>
       <button id="reset" type="button" class="link">Reset draft</button>

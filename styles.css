@@ -11,6 +11,7 @@
   --error: #b42318;
   --picked: #7a3cff;
   --radius: 10px;
+  --card-scale: 1; /* set by the card size slider (cardsize.js) */
   color-scheme: light;
 }
 
@@ -90,6 +91,8 @@ input[type=text], input[type=search], select {
 }
 .topbar h1 { margin: 0; font-size: 20px; }
 .topbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.card-size { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.card-size input { width: 110px; accent-color: var(--accent); }
 
 .deadline { font-size: 14px; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); }
 .deadline.soon { color: var(--warn); border-color: currentColor; }
@@ -188,11 +191,13 @@ input[type=text], input[type=search], select {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* Each grid sets its base column width in --card-min; the slider scales it. min() keeps one column from overflowing. */
+  --card-min: 180px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--card-min) * var(--card-scale))), 1fr));
   gap: 10px;
 }
 @media (max-width: 420px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .grid { --card-min: 160px; gap: 8px; }
 }
 
 .tile {

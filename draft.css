@@ -93,11 +93,11 @@ dialog#sheet-review h2 { margin: 0 0 10px; font-size: 18px; }
 .sel-name { font-weight: 700; }
 button.big { padding: 10px 20px; font-size: 16px; }
 
-.big-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
-.pool-grid, .result-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.big-grid { --card-min: 190px; }
+.pool-grid, .result-grid { --card-min: 110px; gap: 8px; }
 @media (max-width: 420px) {
-  .big-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pool-grid, .result-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .big-grid { --card-min: 160px; }
+  .pool-grid, .result-grid { --card-min: 100px; }
 }
 
 .rank-badge { top: 11%; left: 6px; right: auto; }
