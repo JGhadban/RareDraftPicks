@@ -1,16 +1,189 @@
 # Sample list - replace with your own cards, one per line, then run:
 #   powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
-Sheoldred, the Apocalypse
-Sheoldred, the Apocalypse
-The One Ring
-Ragavan, Nimble Pilferer
-Orcish Bowmasters
-Delver of Secrets
-Lightning Bolt (2X2)
-Wrenn and Six
-Solitude
-Urza's Saga
-Fable of the Mirror-Breaker
-Brazen Borrower
-Teferi, Time Raveler
+Ajani's Anguish
+Avatar of Burgeoning Echoes
+Bloodline Recollector
+Carnivorous Cultivator
+Carnivorous Cultivator
+Codie, Ravenous Codex
+Codie, Ravenous Codex
+Codie, Ravenous Codex
+Codie, Ravenous Codex
+Codie, Ravenous Codex
+Cruel Calculations
+Cruel Calculations
+Cruel Calculations
+Cruel Calculations
+Cruel Calculations
+Curse-Marred Demon
+Dark Matter Manipulator
+Darklight Phoenix
+Denzilore Fatehold
+Deserted Beach
+Deserted Beach
 Diviner of Victory
+Diviner of Victory
+Draconic Visitor
+Entrust the Spark
+Entrust the Spark
+Entrust the Spark
+Entrust the Spark
+Entrust the Spark
+Entrust the Spark
+Extrapolate the Impossible
+Extrapolate the Impossible
+Extrapolate the Impossible
+Extrapolate the Impossible
+Extrapolate the Impossible
+Extrapolate the Impossible
+Face Yourself
+Face Yourself
+Face Yourself
+Flickering Hound
+Flickering Hound
+Flickering Hound
+Frostbite Pyromental
+Frostbite Pyromental
+Frostbite Pyromental
+Frostbite Pyromental
+Frostbite Pyromental
+Frostbite Pyromental
+Gardenize
+Gardenize
+Germinate Recruits
+Germinate Recruits
+Germinate Recruits
+Germinate Recruits
+Germinate Recruits
+Germinate Recruits
+Gideon the Oathless
+Gideon the Oathless
+Gideon's Memorial
+Gideon's Memorial
+Gideon's Memorial
+Hall of Echoes
+Hungering Puppetbeast
+Hungering Puppetbeast
+Identity Echo
+Identity Echo
+Identity Echo
+Identity Echo
+Ingris Stingerquill
+Jace, Reality Sculptor
+Jace, Reality Sculptor
+Jace, Reality Sculptor
+Karn, Argent Defender
+Karn, Argent Defender
+karn, Argent Defender
+Karn, Argent Defender
+Karn, Argent Defender
+Karn, Gilded Guardian
+Karn, Gilded Guardian
+Karn, Gilded Guardian
+Karn, Gilded Guardian
+Karn, Gilded Guardian
+Lich's Relic
+Liliana the Repentant
+Liliana the Repentant
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Loyal Tutor
+Lyra, Archangel of Dawn
+Lyra, Archangel of Dawn
+Lyra, Archangel of Dawn
+Lyra, Archangel of Dawn
+Lyra, Archangel of Dawn
+Lyra, Tolarian Archangel
+Lyra, Tolarian Archangel
+Necrodominance
+Null Summoner
+Null Summoner
+Null Summoner
+Null Summoner
+Null Summoner
+Null Summoner
+Null Summoner
+Omnipresence
+Omnipresence
+Omnipresence
+Overgrown Farmland
+Pompous Battlemage
+Pompous Battlemage
+Pompous Battlemage
+Proctor of Potential
+Proctor of Potential
+Proctor of Potential
+Proctor of Potential
+Proctor of Potential
+Proctor of Potential
+Puppet Crafting
+Puppet Crafting
+Puppet Crafting
+Puppet Crafting
+Puppet Crafting
+Pyre Rhymer
+Pyre Rhymer
+Pyre Rhymer
+Pyre Rhymer
+Repurposed Enforcer
+Repurposed Enforcer
+Return to the Light Realms
+Rise of the Deathbringer
+Rockfall Vale
+Rockfall Vale
+Roiling Canopy
+Roiling Canopy
+Roiling Canopy
+Roiling Canopy
+Roiling Canopy
+Roiling Canopy
+Root Maze
+Samut, Hazoret's Champion
+Samut, Hazoret's Champion
+Samut, Hazoret's Champion
+Samut, Tyrant of Naktamun
+Shipwreck Marsh
+Shipwreck Marsh
+Simulacrum Shaper
+Simulacrum Shaper
+Solarium Sentry
+Solarium Sentry
+Solarium Sentry
+Solarium Sentry
+Solitary Cell
+Solitary Cell
+Solitary Cell
+Solitary Cell
+Sphinx of False Conclusions
+Stinging Vitriol
+Tam, the Possibility
+Tam, the Possibility
+Tam, the Possibility
+Tam, the Possibility
+Tam, the Possibility
+Tarmogoyf
+Tarmogoyf
+Tenured Tethermage
+Theorist's Proxy
+Theorist's Proxy
+Theorist's Sanctum
+Theorist's Sanctum
+Variable Chaser
+Variable Chaser
+Vindictive Triumph
+Vindictive Triumph
+Vraska, Soul of Stone
+Vraska, Soul of Stone
+Vraska, Soul of Stone
+Vraska, Soul of Stone
+Vraska, Soul of Stone
+Vraska, the Cutting Glare
+Vraska, the Cutting Glare
+Vraska, the Cutting Glare
+Vraska's Final Mercy
+Vraska's Final Mercy
