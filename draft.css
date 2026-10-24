@@ -1,7 +1,5 @@
 /* Live draft page. Builds on styles.css (theme tokens, buttons, .tile, .badge, .qty, .zoom, dialog). */
 
-.topbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
-
 .view { padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .view[hidden] { display: none; }
 .view h2 { margin: 0 0 4px; font-size: 18px; }

@@ -14,8 +14,9 @@
   color-scheme: light;
 }
 
+/* Dark tokens apply when the OS prefers dark (unless the toggle forced light), or when the toggle forced dark. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #141317;
     --panel: #1d1c22;
     --text: #ecebf0;
@@ -29,6 +30,20 @@
     --picked: #9b6bff;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #141317;
+  --panel: #1d1c22;
+  --text: #ecebf0;
+  --muted: #9c99a6;
+  --border: #34323c;
+  --accent: #9b6bff;
+  --accent-text: #ffffff;
+  --ok: #57c27a;
+  --warn: #e7a83c;
+  --error: #ff7b72;
+  --picked: #9b6bff;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -74,6 +89,7 @@ input[type=text], input[type=search], select {
   background: var(--panel);
 }
 .topbar h1 { margin: 0; font-size: 20px; }
+.topbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
 
 .deadline { font-size: 14px; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); }
 .deadline.soon { color: var(--warn); border-color: currentColor; }
