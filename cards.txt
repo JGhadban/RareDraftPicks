@@ -25,6 +25,7 @@ Deserted Beach
 Diviner of Victory
 Diviner of Victory
 Draconic Visitor
+Draconic Visitor
 Entrust the Spark
 Entrust the Spark
 Entrust the Spark
@@ -37,6 +38,8 @@ Extrapolate the Impossible
 Extrapolate the Impossible
 Extrapolate the Impossible
 Extrapolate the Impossible
+Face Yourself
+Face Yourself
 Face Yourself
 Face Yourself
 Face Yourself
@@ -51,6 +54,7 @@ Frostbite Pyromental
 Frostbite Pyromental
 Gardenize
 Gardenize
+Germinate Recruits
 Germinate Recruits
 Germinate Recruits
 Germinate Recruits
