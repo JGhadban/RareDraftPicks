@@ -210,7 +210,7 @@
   },
   {
     "name": "Face Yourself",
-    "qty": 5,
+    "qty": 4,
     "set": "FRA",
     "rarity": "rare",
     "type": "Sorcery",
@@ -853,7 +853,7 @@
   },
   {
     "name": "Variable Chaser // Arc of Fortune",
-    "qty": 2,
+    "qty": 3,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Human Wizard // Sorcery",
