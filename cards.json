@@ -657,15 +657,15 @@
   {
     "name": "Root Maze",
     "qty": 1,
-    "set": "10E",
-    "rarity": "rare",
+    "set": "SPG",
+    "rarity": "mythic",
     "type": "Enchantment",
     "cmc": 1.0,
     "colors": [
       "G"
     ],
-    "img": "https://cards.scryfall.io/normal/front/7/2/727c757a-2ae5-45fd-9832-646a355a5710.jpg?1783942994",
-    "small": "https://cards.scryfall.io/small/front/7/2/727c757a-2ae5-45fd-9832-646a355a5710.jpg?1783942994",
+    "img": "https://cards.scryfall.io/normal/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
+    "small": "https://cards.scryfall.io/small/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
     "back": null
   },
   {
