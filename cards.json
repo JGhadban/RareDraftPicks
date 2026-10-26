@@ -167,7 +167,7 @@
   },
   {
     "name": "Draconic Visitor",
-    "qty": 1,
+    "qty": 2,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Dragon",
@@ -210,7 +210,7 @@
   },
   {
     "name": "Face Yourself",
-    "qty": 3,
+    "qty": 5,
     "set": "FRA",
     "rarity": "rare",
     "type": "Sorcery",
@@ -267,7 +267,7 @@
   },
   {
     "name": "Germinate Recruits",
-    "qty": 6,
+    "qty": 7,
     "set": "FRA",
     "rarity": "rare",
     "type": "Instant",
