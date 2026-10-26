@@ -141,7 +141,7 @@
   },
   {
     "name": "Deserted Beach",
-    "qty": 2,
+    "qty": 3,
     "set": "FRA",
     "rarity": "rare",
     "type": "Land",
@@ -196,7 +196,7 @@
   },
   {
     "name": "Extrapolate the Impossible",
-    "qty": 6,
+    "qty": 7,
     "set": "FRA",
     "rarity": "rare",
     "type": "Sorcery",
@@ -783,7 +783,7 @@
   },
   {
     "name": "Tam, the Possibility",
-    "qty": 5,
+    "qty": 7,
     "set": "FRA",
     "rarity": "rare",
     "type": "Legendary Creature — Gorgon Wizard",
@@ -798,7 +798,7 @@
   },
   {
     "name": "Tarmogoyf",
-    "qty": 2,
+    "qty": 3,
     "set": "FRA",
     "rarity": "mythic",
     "type": "Creature — Lhurgoyf",
