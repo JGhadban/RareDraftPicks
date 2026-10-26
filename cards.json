@@ -479,15 +479,15 @@
   {
     "name": "Necrodominance",
     "qty": 1,
-    "set": "MH3",
+    "set": "SPG",
     "rarity": "mythic",
     "type": "Legendary Enchantment",
     "cmc": 3.0,
     "colors": [
       "B"
     ],
-    "img": "https://cards.scryfall.io/normal/front/f/f/ffc0109c-f939-4424-820e-d6e60cacd794.jpg?1783911278",
-    "small": "https://cards.scryfall.io/small/front/f/f/ffc0109c-f939-4424-820e-d6e60cacd794.jpg?1783911278",
+    "img": "https://cards.scryfall.io/normal/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
+    "small": "https://cards.scryfall.io/small/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
     "back": null
   },
   {
