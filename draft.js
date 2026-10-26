@@ -27,7 +27,8 @@
     cards: [],
     byName: new Map(),
     players: [],         // { id, name, rating, allowed, prefs }; array order = pick order
-    log: [],             // { playerId, card } in pick order
+    log: [],             // { playerId, card } in pick order; card is null for a skipped pick
+    passes: [],          // { playerId, at }: from pick index `at` on, their picks move to the end
     phase: 'setup',      // 'setup' | 'draft'  ('done' is derived)
     selected: null,
     showAll: false,
@@ -42,7 +43,7 @@
   };
 
   function save() {
-    store.set(STATE_KEY, JSON.stringify({ players: state.players, log: state.log, phase: state.phase }));
+    store.set(STATE_KEY, JSON.stringify({ players: state.players, log: state.log, passes: state.passes, phase: state.phase }));
   }
 
   function restore() {
@@ -51,6 +52,7 @@
       if (!s || !Array.isArray(s.players)) return;
       state.players = s.players;
       state.log = Array.isArray(s.log) ? s.log : [];
+      state.passes = Array.isArray(s.passes) ? s.passes : [];
       state.phase = s.phase === 'draft' ? 'draft' : 'setup';
     } catch { /* ignore bad state */ }
   }
@@ -161,33 +163,47 @@
   // Copies left in the pool. Cards missing from cards.json are never available.
   function remainingMap() {
     const rem = new Map(state.cards.map((c) => [c.name, c.qty || 1]));
-    for (const { card } of state.log) rem.set(card, (rem.get(card) || 0) - 1);
+    for (const { card } of state.log) if (card) rem.set(card, (rem.get(card) || 0) - 1);
     return rem;
   }
 
-  // Snake order: forward, then backward, ...; players out of picks are skipped.
+  const passedAt = (id) => {
+    const p = state.passes.find((x) => x.playerId === id);
+    return p ? p.at : Infinity;
+  };
+
+  // Snake order: forward, then backward, ...; players out of picks are skipped. Players who
+  // passed drop out from that pick on and take their remaining picks, in snake order, once
+  // everyone else is done (flagged `leftover`).
   function turnSequence() {
     const used = state.players.map(() => 0);
     const seq = [];
-    for (let round = 0; state.players.some((p, i) => used[i] < allowedOf(p)); round++) {
-      const idx = [...state.players.keys()];
-      if (round % 2) idx.reverse();
-      for (const i of idx) {
-        if (used[i] >= allowedOf(state.players[i])) continue;
-        used[i]++;
-        seq.push({ player: state.players[i], round });
+    const snake = (canPick, extra) => {
+      for (let round = seq.length ? seq[seq.length - 1].round + 1 : 0, dir = 0;
+        state.players.some((p, i) => canPick(i)); round++, dir++) {
+        const idx = [...state.players.keys()];
+        if (dir % 2) idx.reverse();
+        for (const i of idx) {
+          if (!canPick(i)) continue;
+          used[i]++;
+          seq.push({ player: state.players[i], round, ...extra });
+        }
       }
-    }
+    };
+    const hasPicks = (i) => used[i] < allowedOf(state.players[i]);
+    snake((i) => hasPicks(i) && seq.length < passedAt(state.players[i].id));
+    snake(hasPicks, { leftover: true });
     return seq;
   }
 
+  // Includes skipped picks (null), which still use up one of the player's picks.
   const draftedBy = (id) => state.log.filter((l) => l.playerId === id).map((l) => l.card);
 
   // The player's list minus entries already filled by cards they drafted, keeping only
   // entries the pool can still cover (a card listed twice needs two copies left).
   function availablePrefs(player, rem) {
     const mine = new Map();
-    for (const c of draftedBy(player.id)) mine.set(c, (mine.get(c) || 0) + 1);
+    for (const c of draftedBy(player.id)) if (c) mine.set(c, (mine.get(c) || 0) + 1);
     const left = new Map(rem);
     const out = [];
     player.prefs.forEach((name, i) => {
@@ -204,6 +220,7 @@
   function draftedWithRanks(player) {
     const seen = new Map();
     return draftedBy(player.id).map((card) => {
+      if (!card) return { card, rank: null };
       const n = seen.get(card) || 0;
       seen.set(card, n + 1);
       let hit = -1;
@@ -235,10 +252,38 @@
     render();
   }
 
+  // For a card taken outside the app (e.g. one missing from cards.json): uses up the turn and one pick.
+  function skipPick() {
+    const { turn } = current();
+    if (!turn) return;
+    if (!confirm(`Skip this pick for ${turn.player.name}? It uses up one of their picks without taking a card from the pool.`)) return;
+    state.log.push({ playerId: turn.player.id, card: null });
+    state.selected = null;
+    state.showAll = false;
+    $('#pool-search').value = '';
+    save();
+    render();
+  }
+
+  // For a player with nothing left on their list: their remaining picks wait until everyone else is done.
+  function passToEnd() {
+    const { turn } = current();
+    if (!turn || turn.leftover) return;
+    if (!confirm(`Pass ${turn.player.name} to the end? They'll take their remaining picks from the leftovers after everyone else has finished.`)) return;
+    state.passes.push({ playerId: turn.player.id, at: state.log.length });
+    state.selected = null;
+    save();
+    render();
+  }
+
+  // A pass made since the last pick is the most recent action, so it's undone first.
   function undo() {
-    if (!state.log.length) return;
-    const last = state.log.pop();
-    state.selected = last.card;
+    const lastPass = state.passes.length - 1;
+    if (lastPass >= 0 && state.passes[lastPass].at >= state.log.length) {
+      state.passes.pop();
+    } else if (state.log.length) {
+      state.selected = state.log.pop().card;
+    } else return;
     save();
     render();
   }
@@ -675,13 +720,15 @@
     const k = state.log.length;
     const p = turn.player;
 
-    $('#progress').textContent = `Round ${turn.round + 1} ${turn.round % 2 ? '←' : '→'} · Pick ${k + 1} of ${seq.length}`;
+    $('#progress').textContent = turn.leftover
+      ? `Leftovers · Pick ${k + 1} of ${seq.length}`
+      : `Round ${turn.round + 1} ${turn.round % 2 ? '←' : '→'} · Pick ${k + 1} of ${seq.length}`;
 
     // up next
     $('#upnext').replaceChildren(...seq.slice(k + 1, k + 1 + UPNEXT_N).map((t, i, arr) => {
       const prev = i ? arr[i - 1] : turn;
       const li = el('li', t.round !== prev.round ? 'turn new-round' : 'turn', t.player.name);
-      if (t.round !== prev.round) li.title = `Round ${t.round + 1}`;
+      if (t.round !== prev.round) li.title = t.leftover ? 'Leftovers' : `Round ${t.round + 1}`;
       return li;
     }));
     if (!$('#upnext').children.length) $('#upnext').append(el('li', 'turn muted', 'Last pick!'));
@@ -725,6 +772,7 @@
     selBox.classList.toggle('muted', !sel);
     $('#confirm').disabled = !sel;
     $('#confirm').textContent = sel ? `Confirm pick for ${p.name}` : 'Confirm pick';
+    $('#pass').hidden = !!turn.leftover;
 
     renderLog(p);
   }
@@ -734,10 +782,12 @@
       const box = el('section', p === active ? 'log-player active' : 'log-player');
       const head = el('div', 'log-head');
       head.append(el('strong', '', p.name), el('span', 'muted', ` ${draftedBy(p.id).length}/${allowedOf(p)}`));
+      if (passedAt(p.id) <= state.log.length) head.append(el('span', 'muted', ' · passed to end'));
       box.append(head);
       const ol = el('ol', 'log-cards');
       for (const { card, rank } of draftedWithRanks(p)) {
         const li = el('li');
+        if (!card) { li.append(el('em', 'muted', 'Skipped')); ol.append(li); continue; }
         li.append(nameNode(card, ''), el('span', 'muted', rank ? ` #${rank}` : ' unranked'));
         ol.append(li);
       }
@@ -753,6 +803,8 @@
     $('#pool-search').addEventListener('input', renderDraft);
     $('#more').addEventListener('click', () => { state.showAll = !state.showAll; renderDraft(); });
     $('#confirm').addEventListener('click', makePick);
+    $('#skip').addEventListener('click', skipPick);
+    $('#pass').addEventListener('click', passToEnd);
     $('#undo').addEventListener('click', undo);
     $('#back-to-draft').addEventListener('click', undo);
     $('#to-setup').addEventListener('click', () => { state.phase = 'setup'; save(); render(); });
@@ -760,6 +812,7 @@
     $('#reset').addEventListener('click', () => {
       if (!confirm('Clear all picks and go back to setup? Players, ratings and pick counts are kept.')) return;
       state.log = [];
+      state.passes = [];
       state.phase = 'setup';
       state.selected = null;
       save();
@@ -777,9 +830,11 @@
     $('#progress').textContent = `Complete · ${state.log.length} picks`;
     $('#results').replaceChildren(...state.players.map((p) => {
       const box = el('section', 'result');
-      box.append(el('h3', '', `${p.name} (${draftedBy(p.id).length})`));
+      const skipped = draftedBy(p.id).filter((c) => !c).length;
+      box.append(el('h3', '', `${p.name} (${draftedBy(p.id).length - skipped}${skipped ? `, ${skipped} skipped` : ''})`));
       const grid = el('div', 'grid result-grid');
       for (const { card, rank } of draftedWithRanks(p)) {
+        if (!card) continue;
         const t = tile(card, { rank, small: true });
         if (!rank) t.append(el('span', 'qty', 'unranked'));
         grid.append(t);
@@ -799,7 +854,7 @@
       const n = used.get(l.playerId) || 0;
       used.set(l.playerId, n + 1);
       const r = ranks.get(l.playerId)[n].rank;
-      lines.push([i + 1, seq[i] ? seq[i].round + 1 : '', p ? p.name : l.playerId, l.card, r || '']);
+      lines.push([i + 1, seq[i] ? seq[i].round + 1 : '', p ? p.name : l.playerId, l.card || '(skipped)', r || '']);
     });
     const blob = new Blob([lines.map((r) => r.map(csvField).join(',')).join('\r\n')], { type: 'text/csv' });
     const a = el('a');
@@ -818,7 +873,7 @@
     $('#draft').hidden = !drafting || done;
     $('#done').hidden = !done;
     $('#progress').hidden = !drafting;
-    $('#undo').hidden = !drafting || done || !state.log.length;
+    $('#undo').hidden = !drafting || done || !(state.log.length || state.passes.length);
     $('#to-setup').hidden = !drafting;
     $('#reset').hidden = !state.log.length && !drafting;
     if (!drafting) renderSetup();
