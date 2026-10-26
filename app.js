@@ -160,10 +160,24 @@
     const cs = card.colors || [];
     return cs.length === 0 ? 6 : cs.length > 1 ? 5 : 'WUBRG'.indexOf(cs[0]);
   };
+  // Color identity: mono W/U/B/R/G, then each two-color pair together, then three colors and up,
+  // then colorless. Combinations of the same size are ordered by WUBRG (WU, WB, WR, WG, UB, ...).
+  const identityKey = (card) => {
+    const ids = (card.identity || card.colors || []).map((c) => 'WUBRG'.indexOf(c)).sort();
+    return ids.length ? [ids.length, ...ids] : [99];
+  };
+  const byIdentity = (a, b) => {
+    const x = identityKey(a), y = identityKey(b);
+    for (let i = 0; i < Math.max(x.length, y.length); i++) {
+      if ((x[i] ?? -1) !== (y[i] ?? -1)) return (x[i] ?? -1) - (y[i] ?? -1);
+    }
+    return 0;
+  };
   const SORTS = {
     name: byName,
     mv: (a, b) => a.cmc - b.cmc || byName(a, b),
     color: (a, b) => colorRank(a) - colorRank(b) || byName(a, b),
+    identity: (a, b) => byIdentity(a, b) || byName(a, b),
   };
 
   function sortGrid() {
