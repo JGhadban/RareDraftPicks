@@ -170,7 +170,8 @@ input[type=text], input[type=search], select {
 /* ---------------------------------------------------------------- filters + grid */
 
 .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.filters input[type=search] { flex: 1 1 200px; }
+.search-box { display: flex; gap: 4px; flex: 1 1 260px; }
+.search-box input { flex: 1; }
 #shown { font-size: 13px; }
 
 .colors { display: flex; gap: 4px; }
@@ -262,6 +263,18 @@ body.locked .picks .icon { display: none; }
 .thumb { width: 34px; height: 47px; object-fit: cover; border-radius: 3px; flex: none; background: var(--border); }
 .pick-name { flex: 1; min-width: 0; font-size: 14px; overflow-wrap: anywhere; }
 .copy, .alt { color: var(--muted); font-size: 12px; }
+/* A grid tile dragged over the list shows as a slim insertion line. */
+.picks > .tile {
+  display: block; width: 100%; height: 6px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+  box-shadow: none; transform: none;
+}
+.picks > .tile > * { display: none; }
+/* The copy that follows the mouse: no transition, or it lags behind the cursor (Sortable moves it
+   with transform). Faded so the list stays readable underneath; !important beats Sortable's inline opacity. */
+.tile.sortable-fallback { opacity: .4 !important; transition: none; pointer-events: none; box-shadow: none; }
 .icon { padding: 2px 8px; flex: none; }
 .icon.danger { color: var(--error); }
 .empty { color: var(--muted); font-style: italic; }
@@ -277,3 +290,35 @@ dialog#zoom::backdrop { background: rgba(0, 0, 0, .6); }
 .zoom-imgs { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .zoom-imgs img { width: min(80vw, 400px); height: auto; border-radius: 4.75% / 3.4%; }
 dialog#zoom form { text-align: center; margin-top: 12px; }
+
+/* ---------------------------------------------------------------- hover zoom */
+
+.hover-zoom {
+  position: fixed; z-index: 20;
+  display: flex; gap: 8px;
+  pointer-events: none;
+}
+.hover-zoom[hidden] { display: none; }
+.hover-zoom img {
+  width: 300px; height: auto; aspect-ratio: 488 / 680;
+  border-radius: 4.75% / 3.4%;
+  background: var(--border);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+}
+
+/* ---------------------------------------------------------------- syntax help */
+
+dialog#syntax {
+  border: none; border-radius: var(--radius);
+  background: var(--panel); color: var(--text);
+  padding: 16px 20px; max-width: min(96vw, 640px);
+}
+dialog#syntax::backdrop { background: rgba(0, 0, 0, .6); }
+dialog#syntax h2 { margin: 0 0 6px; font-size: 18px; }
+dialog#syntax p { margin: 0 0 10px; font-size: 14px; }
+dialog#syntax a { color: var(--accent); }
+dialog#syntax table { border-collapse: collapse; font-size: 14px; width: 100%; }
+dialog#syntax td { padding: 5px 6px; border-top: 1px solid var(--border); vertical-align: top; }
+dialog#syntax td:last-child { color: var(--muted); }
+dialog#syntax code { font-size: 13px; white-space: nowrap; }
+dialog#syntax form { text-align: center; margin-top: 12px; }

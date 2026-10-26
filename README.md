@@ -23,6 +23,8 @@ A static web page where people choose Magic cards from your list and rank them b
    The script lists any names Scryfall didn't recognise. Fix them and re-run.
 3. **Away from your computer?** Edit `cards.txt` on GitHub (pencil icon → **Commit changes**). The **Build cards** action (Actions tab) rebuilds and commits `cards.json` in about a minute. Its run summary lists any names Scryfall didn't recognise. Once Pages redeploys, reload the page. A draft already in progress keeps its players and picks.
 
+`cards.json` holds each card's images, type, mana cost, Oracle text, stats, keywords and color identity. The search bars use these.
+
 > If you change the card list while people are submitting, existing picks are kept. Cards that were removed still show in people's lists, just without an image. If you lower a card's quantity, the next time someone opens their list the page drops their lowest-ranked extra copies and asks them to save.
 
 ### 3. Set the deadline
@@ -41,6 +43,12 @@ Then open <http://localhost:8080/>.
 
 ### 5. Publish on GitHub Pages
 Push this folder to a GitHub repo. Then go to **Settings → Pages → Deploy from branch → main / root**. Share the resulting `https://<you>.github.io/<repo>/` link.
+
+## Using the picker
+- **Search** takes [Scryfall-style syntax](https://scryfall.com/docs/syntax): `t:creature o:draw mv<=3`, `c:ub`, `id<=esper`, `pow>tou`, `r:mythic`, `kw:flying`, `is:permanent`, `qty>1`, with `or`, `-` and parentheses. The **?** button next to the search box lists everything supported. The color, type and rarity filters still work alongside it. The draft page's **Other card…** search uses the same syntax.
+- **Adding cards:** click a card to add it at the bottom of the list, or (with a mouse) drag it into the list at the spot you want.
+- **Hover** over a card in your list to see it full size.
+- **Download card list** saves every card with its copy count (`3 Codie, Ravenous Codex`), a format Arena, Moxfield and most deck sites can import.
 
 ## Getting the results
 - **All picks:** in Supabase go to **Table Editor → `picks_flat`** and choose **Export → CSV**. You get one row per person per rank, with columns `name, rank, card_name, updated_at, submission_id`. Use `submission_id` to tell apart two people who typed the same name.
@@ -70,6 +78,7 @@ Open `draft.html` (for example <http://localhost:8080/draft.html>, or `/draft.ht
 |---|---|
 | `index.html`, `app.js`, `styles.css` | The picker page |
 | `draft.html`, `draft.js`, `draft.css` | The live draft board (admin only) |
+| `scryfall-search.js` | Search syntax parser shared by both pages |
 | `config.js` | Supabase URL, key and page title |
 | `cards.txt` → `cards.json` | Your card list → card data from Scryfall |
 | `scripts/build-cards.ps1` | Builds `cards.json` |

@@ -43,7 +43,10 @@
   <main class="panes" data-active="browse">
     <section class="pane browse" aria-label="Card list">
       <div class="filters">
-        <input id="search" type="search" placeholder="Search name or type…">
+        <div class="search-box">
+          <input id="search" type="search" placeholder="Search, e.g. t:creature o:draw mv<=3" aria-label="Search cards">
+          <button id="syntax-help" class="icon" type="button" title="Search syntax">?</button>
+        </div>
         <div class="colors" id="colors">
           <button type="button" data-c="W" class="pip W" title="White">W</button>
           <button type="button" data-c="U" class="pip U" title="Blue">U</button>
@@ -56,8 +59,9 @@
         <select id="type"><option value="">All types</option></select>
         <select id="rarity"><option value="">All rarities</option></select>
         <span id="shown" class="muted"></span>
+        <button id="export" type="button" title="Download every card and how many copies are available">Download card list</button>
       </div>
-      <p class="hint">Tap a card to add it to your priorities. Tap again to ask for another copy.</p>
+      <p class="hint">Tap a card to add it to your priorities, or drag it into your list at the spot you want. Tap again to ask for another copy.</p>
       <div id="grid" class="grid"></div>
     </section>
 
@@ -74,7 +78,31 @@
     <form method="dialog"><button class="primary">Close</button></form>
   </dialog>
 
+  <dialog id="syntax">
+    <h2>Search syntax</h2>
+    <p class="muted">Works like <a href="https://scryfall.com/docs/syntax" target="_blank" rel="noopener">Scryfall</a>. Terms are combined with AND; use <code>or</code> and parentheses to group, and <code>-</code> to exclude.</p>
+    <table>
+      <tr><td><code>bolt</code> <code>"lightning bolt"</code> <code>!"Exact Name"</code></td><td>Name</td></tr>
+      <tr><td><code>o:draw</code> <code>o:"~ deals"</code> <code>o:/create.*token/</code></td><td>Rules text (<code>~</code> = this card)</td></tr>
+      <tr><td><code>t:creature</code> <code>t:legendary</code></td><td>Type line</td></tr>
+      <tr><td><code>c:ub</code> <code>c=r</code> <code>c&lt;=esper</code> <code>c:m</code> <code>c:c</code></td><td>Colors</td></tr>
+      <tr><td><code>id&lt;=wu</code></td><td>Color identity</td></tr>
+      <tr><td><code>m:{2}{U}</code> <code>m:uu</code></td><td>Mana cost</td></tr>
+      <tr><td><code>mv&lt;=3</code> <code>mv:even</code></td><td>Mana value</td></tr>
+      <tr><td><code>pow&gt;=4</code> <code>tou&lt;3</code> <code>pow&gt;tou</code> <code>loy:3</code></td><td>Power, toughness, loyalty</td></tr>
+      <tr><td><code>r:mythic</code> <code>r&gt;=r</code></td><td>Rarity</td></tr>
+      <tr><td><code>kw:flying</code></td><td>Keyword</td></tr>
+      <tr><td><code>is:dfc</code> <code>is:permanent</code> <code>not:legendary</code></td><td>Card properties</td></tr>
+      <tr><td><code>qty&gt;1</code></td><td>Copies available</td></tr>
+      <tr><td><code>t:instant or t:sorcery</code> <code>-(c:r or c:g)</code></td><td>Combine</td></tr>
+    </table>
+    <form method="dialog"><button class="primary">Close</button></form>
+  </dialog>
+
+  <div id="hover-zoom" class="hover-zoom" hidden></div>
+
   <script src="config.js"></script>
+  <script src="scryfall-search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
   <script src="app.js"></script>
 </body>

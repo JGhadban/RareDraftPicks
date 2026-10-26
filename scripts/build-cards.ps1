@@ -88,18 +88,54 @@ for ($i = 0; $i -lt $entryList.Count; $i += 75) {
       $colors = @($faces | ForEach-Object { $_.colors } | Where-Object { $_ } | Select-Object -Unique)
     }
 
-    $cards[$c.name] = [ordered]@{
-      name   = $c.name
-      qty    = $qty
-      set    = $c.set.ToUpper()
-      rarity = $c.rarity
-      type   = $c.type_line
-      cmc    = $c.cmc
-      colors = @($colors | Where-Object { $_ })
-      img    = if ($img) { $img.normal } else { $null }
-      small  = if ($img) { $img.small }  else { $null }
-      back   = $back
+    # Card-level fields first, front face as fallback (stats, text and costs live on faces for DFCs).
+    $front = if ($faces.Count) { $faces[0] } else { $null }
+    function Get-Stat($name) {
+      if ($c.PSObject.Properties[$name]) { return $c.$name }
+      if ($front -and $front.PSObject.Properties[$name]) { return $front.$name }
+      return $null
     }
+    $oracle = if ($c.PSObject.Properties['oracle_text']) { $c.oracle_text }
+              else { ($faces | ForEach-Object { $_.oracle_text }) -join "`n//`n" }
+    $mana   = if ($c.PSObject.Properties['mana_cost']) { $c.mana_cost }
+              else { ($faces | ForEach-Object { $_.mana_cost }) -join ' // ' }
+
+    $card = [ordered]@{
+      name      = $c.name
+      qty       = $qty
+      set       = $c.set.ToUpper()
+      rarity    = $c.rarity
+      type      = $c.type_line
+      cmc       = $c.cmc
+      colors    = @($colors | Where-Object { $_ })
+      img       = if ($img) { $img.normal } else { $null }
+      small     = if ($img) { $img.small }  else { $null }
+      back      = $back
+      layout    = $c.layout
+      mana      = $mana
+      oracle    = $oracle
+      power     = Get-Stat 'power'
+      toughness = Get-Stat 'toughness'
+      loyalty   = Get-Stat 'loyalty'
+      defense   = Get-Stat 'defense'
+      identity  = @($c.color_identity)
+      keywords  = @($c.keywords)
+    }
+    if ($faces.Count -gt 1) {
+      $card.faces = @($faces | ForEach-Object {
+        [ordered]@{
+          name      = $_.name
+          type      = $_.type_line
+          mana      = $_.mana_cost
+          oracle    = $_.oracle_text
+          power     = $_.power
+          toughness = $_.toughness
+          loyalty   = $_.loyalty
+          defense   = $_.defense
+        }
+      })
+    }
+    $cards[$c.name] = $card
   }
   Start-Sleep -Milliseconds 120   # Scryfall asks for <= 10 requests/sec
 }

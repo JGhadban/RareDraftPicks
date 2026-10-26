@@ -750,14 +750,14 @@
     $('#more').textContent = state.showAll ? 'Show fewer' : `Show all ${prefs.length} still available`;
 
     // pool search (cards on their list get their rank badge)
-    const q = $('#pool-search').value.trim().toLowerCase();
-    const matches = state.cards.filter((c) => rem.get(c.name) > 0
-      && (!q || c.name.toLowerCase().includes(q) || c.type.toLowerCase().includes(q)));
+    const query = ScryfallSearch.compile($('#pool-search').value);
+    const matches = state.cards.filter((c) => rem.get(c.name) > 0 && query.test(c));
     $('#pool').replaceChildren(...matches.slice(0, POOL_LIMIT).map((c) =>
       tile(c.name, { rank: rankOf.get(c.name), left: rem.get(c.name), small: true })));
-    $('#pool-shown').textContent = matches.length > POOL_LIMIT
+    $('#pool-shown').textContent = (matches.length > POOL_LIMIT
       ? `Showing ${POOL_LIMIT} of ${matches.length} matching cards. Search to narrow it down.`
-      : `${matches.length} matching card${matches.length === 1 ? '' : 's'} left in the pool.`;
+      : `${matches.length} matching card${matches.length === 1 ? '' : 's'} left in the pool.`)
+      + (query.error ? ` (${query.error}; searching names and types.)` : '');
 
     // selection
     const sel = state.selected && rem.get(state.selected) > 0 ? state.selected : null;

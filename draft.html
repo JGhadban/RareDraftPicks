@@ -94,7 +94,7 @@
         <button id="more" type="button" class="link" hidden></button>
 
         <h3>Other card…</h3>
-        <input id="pool-search" type="search" placeholder="Search the remaining pool by name or type…">
+        <input id="pool-search" type="search" placeholder="Search the remaining pool, e.g. t:creature o:draw mv&lt;=3" title="Scryfall-style search: o: t: c: id: m: mv: pow: tou: r: kw: is:, plus or, - and ( )">
         <div id="pool" class="grid pool-grid"></div>
         <p id="pool-shown" class="muted small"></p>
       </section>
@@ -146,6 +146,7 @@
   </dialog>
 
   <script src="config.js"></script>
+  <script src="scryfall-search.js"></script>
   <script src="draft.js"></script>
 </body>
 </html>

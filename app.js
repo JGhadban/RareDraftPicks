@@ -95,6 +95,7 @@
     for (const r of rarities) $('#rarity').append(new Option(r[0].toUpperCase() + r.slice(1), r));
 
     $('#search').addEventListener('input', applyFilters);
+    $('#syntax-help').addEventListener('click', () => $('#syntax').showModal());
     $('#type').addEventListener('change', applyFilters);
     $('#rarity').addEventListener('change', applyFilters);
     $('#colors').addEventListener('click', (e) => {
@@ -119,20 +120,21 @@
   }
 
   function applyFilters() {
-    const q = $('#search').value.trim().toLowerCase();
+    const query = ScryfallSearch.compile($('#search').value);
     const type = $('#type').value;
     const rarity = $('#rarity').value;
     let shown = 0;
     for (const tile of $('#grid').children) {
       const card = state.byName.get(tile.dataset.name);
-      const ok = (!q || card.name.toLowerCase().includes(q) || card.type.toLowerCase().includes(q))
+      const ok = query.test(card)
         && (!type || frontType(card).includes(type))
         && (!rarity || card.rarity === rarity)
         && matchesColor(card);
       tile.hidden = !ok;
       if (ok) shown++;
     }
-    $('#shown').textContent = `${shown} of ${state.cards.length} cards`;
+    $('#shown').textContent = `${shown} of ${state.cards.length} cards`
+      + (query.error ? ` (${query.error}; searching names and types)` : '');
   }
 
   function buildGrid() {
@@ -210,7 +212,7 @@
 
   // ------------------------------------------------------------------ priority list
 
-  function addPick(name) {
+  function addPick(name, index = state.picks.length) {
     if (state.locked) return;
     const qty = qtyOf(name);
     if (countOf(name) >= qty) {
@@ -219,10 +221,10 @@
         : `${frontName(name)} is already in your list (only 1 available).`, 'error');
       return;
     }
-    state.picks.push(name);
+    state.picks.splice(index, 0, name);
     renderPicks();
     markDirty();
-    setStatus(`Added ${frontName(name)} at #${state.picks.length}. Unsaved changes`, 'warn');
+    setStatus(`Added ${frontName(name)} at #${index + 1}. Unsaved changes`, 'warn');
   }
 
   // Drop the lowest-ranked extras if someone holds more copies than exist (list changed).
@@ -251,6 +253,7 @@
       const card = state.byName.get(name);
 
       const li = el('li', 'pick');
+      li.dataset.name = name;
       li.append(el('span', 'rank', `#${i + 1}`));
       const thumb = el('img', 'thumb');
       thumb.src = (card && card.small) || '';
@@ -288,12 +291,15 @@
     });
 
     if (window.Sortable) {
+      // Fallback (mouse-event) dragging on both lists: native drag-and-drop is unreliable on <button> tiles.
+      const common = { delay: 150, delayOnTouchOnly: true, forceFallback: true, fallbackTolerance: 5, fallbackOnBody: true };
       state.sortable = new Sortable(ol, {
+        ...common,
+        group: { name: 'picks', pull: false, put: true },
         animation: 150,
-        delay: 150,
-        delayOnTouchOnly: true,
         filter: 'button',
         preventOnFilter: false,
+        onStart: hideHoverZoom,
         onEnd(e) {
           if (e.oldIndex === e.newIndex) return;
           const [name] = state.picks.splice(e.oldIndex, 1);
@@ -301,8 +307,84 @@
           renderPicks();
           markDirty();
         },
+        // A tile dragged in from the grid: put the tile back in the grid and insert its card here.
+        onAdd(e) {
+          const tile = e.item;
+          if (e.clone && e.clone.parentNode) e.clone.replaceWith(tile);
+          addPick(tile.dataset.name, e.newIndex);
+          renderPicks();
+        },
+      });
+      // Tiles are cloned out of the grid, never moved or reordered within it. Mouse only:
+      // on phones the list is on another tab, and a long-press drag would just get in the way.
+      if (matchMedia('(pointer: fine)').matches) state.gridSortable = new Sortable($('#grid'), {
+        ...common,
+        group: { name: 'picks', pull: 'clone', put: false },
+        sort: false,
+        filter: '.maxed, .zoom',
+        preventOnFilter: false,
+        onStart: hideHoverZoom,
       });
     }
+  }
+
+  // ------------------------------------------------------------------ hover zoom (priority list)
+
+  function setupHoverZoom() {
+    if (!matchMedia('(hover: hover)').matches) return;
+    const ol = $('#picks');
+    ol.addEventListener('mouseover', (e) => {
+      const li = e.target.closest('.pick');
+      if (!li || document.querySelector('.sortable-fallback')) return;
+      showHoverZoom(li);
+    });
+    ol.addEventListener('mouseleave', hideHoverZoom);
+    $('.pane.list').addEventListener('scroll', hideHoverZoom);
+    window.addEventListener('scroll', hideHoverZoom, { passive: true });
+  }
+
+  function showHoverZoom(li) {
+    const box = $('#hover-zoom');
+    const card = state.byName.get(li.dataset.name);
+    if (!card || !card.img) { hideHoverZoom(); return; }
+    if (box.dataset.name !== card.name) {
+      box.dataset.name = card.name;
+      box.replaceChildren(...[card.img, card.back].filter(Boolean).map((src) => {
+        const img = el('img');
+        img.src = src;
+        img.alt = '';
+        return img;
+      }));
+    }
+    box.hidden = false;
+
+    // Beside the list pane (on whichever side has room), level with the row, kept on screen.
+    const pane = $('.pane.list').getBoundingClientRect();
+    const row = li.getBoundingClientRect();
+    const w = box.offsetWidth, h = box.offsetHeight, gap = 12;
+    let left = pane.left - w - gap;
+    if (left < gap) left = Math.min(pane.right + gap, innerWidth - w - gap);
+    const top = Math.max(gap, Math.min(row.top + row.height / 2 - h / 2, innerHeight - h - gap));
+    box.style.left = `${Math.max(gap, left)}px`;
+    box.style.top = `${top}px`;
+  }
+
+  function hideHoverZoom() {
+    $('#hover-zoom').hidden = true;
+  }
+
+  // ------------------------------------------------------------------ export card list
+
+  // One "<copies> <name>" line per card, the usual decklist format (Arena, Moxfield, etc.).
+  function exportCardList() {
+    const text = state.cards.map((c) => `${c.qty || 1} ${frontName(c.name)}`).join('\n') + '\n';
+    const a = el('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'text/plain' }));
+    a.download = 'cards.txt';
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
   // ------------------------------------------------------------------ save / edit link
@@ -393,6 +475,7 @@
     $('#save').disabled = locked;
     $('#name').disabled = locked;
     if (state.sortable) state.sortable.option('disabled', locked);
+    if (state.gridSortable) state.gridSortable.option('disabled', locked);
     if (locked) setStatus('The deadline has passed. Picks can no longer be changed.', 'error');
   }
 
@@ -430,10 +513,13 @@
     buildFilters();
     buildGrid();
     setupList();
+    setupHoverZoom();
     setupTabs();
     applyFilters();
 
     $('#save').addEventListener('click', save);
+    $('#export').addEventListener('click', exportCardList);
+    $('#syntax').addEventListener('click', closeOnBackdrop);
     $('#copy').addEventListener('click', copyLink);
     $('#not-me').addEventListener('click', startFresh);
     $('#zoom').addEventListener('click', closeOnBackdrop);
