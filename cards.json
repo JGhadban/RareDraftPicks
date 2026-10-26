@@ -30,7 +30,7 @@
     },
     {
         "name":  "Bloodline Recollector // Ancestral Craving",
-        "qty":  1,
+        "qty":  2,
         "set":  "FRA",
         "rarity":  "mythic",
         "type":  "Creature — Vampire Warlock // Instant",
@@ -285,7 +285,7 @@
     },
     {
         "name":  "Gideon the Oathless",
-        "qty":  2,
+        "qty":  3,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Legendary Creature — Human Mercenary",
@@ -628,7 +628,7 @@
     },
     {
         "name":  "Rise of the Deathbringer",
-        "qty":  1,
+        "qty":  2,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Instant",
@@ -684,7 +684,7 @@
     },
     {
         "name":  "Samut, Hazoret\u0027s Champion",
-        "qty":  3,
+        "qty":  4,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Legendary Creature — Human Warrior Cleric",
@@ -698,7 +698,7 @@
     },
     {
         "name":  "Samut, Tyrant of Naktamun",
-        "qty":  1,
+        "qty":  2,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Legendary Creature — Human Wizard",
@@ -712,7 +712,7 @@
     },
     {
         "name":  "Shipwreck Marsh",
-        "qty":  2,
+        "qty":  3,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Land",
@@ -857,7 +857,7 @@
     },
     {
         "name":  "Theorist\u0027s Sanctum",
-        "qty":  2,
+        "qty":  3,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Land — Island",
@@ -881,6 +881,20 @@
                    ],
         "img":  "https://cards.scryfall.io/normal/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
         "small":  "https://cards.scryfall.io/small/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
+        "back":  null
+    },
+    {
+        "name":  "Verdant Kraken",
+        "qty":  1,
+        "set":  "FRA",
+        "rarity":  "rare",
+        "type":  "Creature — Plant Kraken",
+        "cmc":  7.0,
+        "colors":  [
+                       "G"
+                   ],
+        "img":  "https://cards.scryfall.io/normal/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
+        "small":  "https://cards.scryfall.io/small/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
         "back":  null
     },
     {
@@ -931,7 +945,7 @@
     },
     {
         "name":  "Vraska\u0027s Final Mercy",
-        "qty":  2,
+        "qty":  3,
         "set":  "FRA",
         "rarity":  "rare",
         "type":  "Sorcery",

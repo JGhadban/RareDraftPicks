@@ -1,7 +1,8 @@
-# Sample list - replace with your own cards, one per line, then run:
+# Replace with your own cards, one per line, then run:
 #   powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
 Ajani's Anguish
 Avatar of Burgeoning Echoes
+Bloodline Recollector
 Bloodline Recollector
 Carnivorous Cultivator
 Carnivorous Cultivator
@@ -58,6 +59,7 @@ Germinate Recruits
 Germinate Recruits
 Gideon the Oathless
 Gideon the Oathless
+Gideon the Oathless
 Gideon's Memorial
 Gideon's Memorial
 Gideon's Memorial
@@ -74,7 +76,7 @@ Jace, Reality Sculptor
 Jace, Reality Sculptor
 Karn, Argent Defender
 Karn, Argent Defender
-karn, Argent Defender
+Karn, Argent Defender
 Karn, Argent Defender
 Karn, Argent Defender
 Karn, Gilded Guardian
@@ -134,6 +136,7 @@ Repurposed Enforcer
 Repurposed Enforcer
 Return to the Light Realms
 Rise of the Deathbringer
+Rise of the Deathbringer
 Rockfall Vale
 Rockfall Vale
 Roiling Canopy
@@ -146,7 +149,10 @@ Root Maze
 Samut, Hazoret's Champion
 Samut, Hazoret's Champion
 Samut, Hazoret's Champion
+Samut, Hazoret's Champion
 Samut, Tyrant of Naktamun
+Samut, Tyrant of Naktamun
+Shipwreck Marsh
 Shipwreck Marsh
 Shipwreck Marsh
 Simulacrum Shaper
@@ -173,8 +179,10 @@ Theorist's Proxy
 Theorist's Proxy
 Theorist's Sanctum
 Theorist's Sanctum
+Theorist's Sanctum
 Variable Chaser
 Variable Chaser
+Verdant Kraken
 Vindictive Triumph
 Vindictive Triumph
 Vraska, Soul of Stone
@@ -185,5 +193,6 @@ Vraska, Soul of Stone
 Vraska, the Cutting Glare
 Vraska, the Cutting Glare
 Vraska, the Cutting Glare
+Vraska's Final Mercy
 Vraska's Final Mercy
 Vraska's Final Mercy
