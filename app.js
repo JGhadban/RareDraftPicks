@@ -24,6 +24,7 @@
   const TYPES = ['Creature', 'Planeswalker', 'Instant', 'Sorcery', 'Artifact', 'Enchantment', 'Battle', 'Land'];
   const RARITIES = ['common', 'uncommon', 'rare', 'mythic', 'special', 'bonus'];
   const TOKEN_KEY = 'rdp_token';
+  const SORT_KEY = 'rdp_sort';
 
   const state = {
     cards: [],
@@ -97,6 +98,12 @@
     $('#search').addEventListener('input', applyFilters);
     $('#syntax-help').addEventListener('click', () => $('#syntax').showModal());
     $('#type').addEventListener('change', applyFilters);
+    const sort = $('#sort');
+    if (SORTS[store.get(SORT_KEY)]) sort.value = store.get(SORT_KEY);
+    sort.addEventListener('change', () => {
+      store.set(SORT_KEY, sort.value);
+      sortGrid();
+    });
     $('#rarity').addEventListener('change', applyFilters);
     $('#colors').addEventListener('click', (e) => {
       const b = e.target.closest('button[data-c]');
@@ -135,6 +142,27 @@
     }
     $('#shown').textContent = `${shown} of ${state.cards.length} cards`
       + (query.error ? ` (${query.error}; searching names and types)` : '');
+  }
+
+  // Sort orders for the grid. Each falls back to A-Z for ties.
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  // White, blue, black, red, green, then multicolor, then colorless.
+  const colorRank = (card) => {
+    const cs = card.colors || [];
+    return cs.length === 0 ? 6 : cs.length > 1 ? 5 : 'WUBRG'.indexOf(cs[0]);
+  };
+  const SORTS = {
+    name: byName,
+    mv: (a, b) => a.cmc - b.cmc || byName(a, b),
+    color: (a, b) => colorRank(a) - colorRank(b) || byName(a, b),
+  };
+
+  function sortGrid() {
+    const grid = $('#grid');
+    const cmp = SORTS[$('#sort').value] || byName;
+    const tiles = [...grid.children].sort((x, y) =>
+      cmp(state.byName.get(x.dataset.name), state.byName.get(y.dataset.name)));
+    grid.append(...tiles);
   }
 
   function buildGrid() {
@@ -512,6 +540,7 @@
 
     buildFilters();
     buildGrid();
+    sortGrid();
     setupList();
     setupHoverZoom();
     setupTabs();
