@@ -22,6 +22,7 @@ Darklight Phoenix
 Denzilore Fatehold
 Deserted Beach
 Deserted Beach
+Deserted Beach
 Diviner of Victory
 Diviner of Victory
 Draconic Visitor
@@ -32,6 +33,7 @@ Entrust the Spark
 Entrust the Spark
 Entrust the Spark
 Entrust the Spark
+Extrapolate the Impossible
 Extrapolate the Impossible
 Extrapolate the Impossible
 Extrapolate the Impossible
@@ -175,6 +177,9 @@ Tam, the Possibility
 Tam, the Possibility
 Tam, the Possibility
 Tam, the Possibility
+Tam, the Possibility
+Tam, the Possibility
+Tarmogoyf
 Tarmogoyf
 Tarmogoyf
 Tenured Tethermage
