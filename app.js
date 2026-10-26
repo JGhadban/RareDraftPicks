@@ -98,6 +98,7 @@
     $('#search').addEventListener('input', applyFilters);
     $('#syntax-help').addEventListener('click', () => $('#syntax').showModal());
     $('#type').addEventListener('change', applyFilters);
+    $('#colors-only').addEventListener('change', applyFilters);
     const sort = $('#sort');
     if (SORTS[store.get(SORT_KEY)]) sort.value = store.get(SORT_KEY);
     sort.addEventListener('change', () => {
@@ -118,6 +119,14 @@
   function matchesColor(card) {
     if (!state.colors.size) return true;
     const cs = card.colors || [];
+    if ($('#colors-only').checked) {
+      // Only the chosen colors: mono-colored cards of a chosen color, or with Multicolor on,
+      // multicolored cards made only of chosen colors (any multicolor card if no color is chosen).
+      const letters = [...state.colors].filter((c) => 'WUBRG'.includes(c));
+      if (cs.length === 0) return state.colors.has('C');
+      if (cs.length === 1) return !state.colors.has('M') && letters.includes(cs[0]);
+      return state.colors.has('M') && (!letters.length || cs.every((c) => letters.includes(c)));
+    }
     for (const c of state.colors) {
       if (c === 'C' && cs.length === 0) return true;
       if (c === 'M' && cs.length > 1) return true;

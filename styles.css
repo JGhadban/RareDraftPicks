@@ -174,7 +174,9 @@ input[type=text], input[type=search], select {
 .search-box input { flex: 1; }
 #shown { font-size: 13px; }
 
-.colors { display: flex; gap: 4px; }
+.colors { display: flex; align-items: center; gap: 4px; }
+.colors-only { display: inline-flex; align-items: center; gap: 4px; margin-left: 4px; font-size: 13px; color: var(--muted); cursor: pointer; }
+.colors-only input { accent-color: var(--accent); margin: 0; }
 .pip {
   width: 30px; height: 30px; padding: 0;
   border-radius: 50%;
