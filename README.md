@@ -21,6 +21,7 @@ A static web page where people choose Magic cards from your list and rank them b
    powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
    ```
    The script lists any names Scryfall didn't recognise. Fix them and re-run.
+3. **Away from your computer?** Edit `cards.txt` on GitHub (pencil icon → **Commit changes**). The **Build cards** action (Actions tab) rebuilds and commits `cards.json` in about a minute. Its run summary lists any names Scryfall didn't recognise. Once Pages redeploys, reload the page. A draft already in progress keeps its players and picks.
 
 > If you change the card list while people are submitting, existing picks are kept. Cards that were removed still show in people's lists, just without an image. If you lower a card's quantity, the next time someone opens their list the page drops their lowest-ranked extra copies and asks them to save.
 
@@ -72,5 +73,6 @@ Open `draft.html` (for example <http://localhost:8080/draft.html>, or `/draft.ht
 | `config.js` | Supabase URL, key and page title |
 | `cards.txt` → `cards.json` | Your card list → card data from Scryfall |
 | `scripts/build-cards.ps1` | Builds `cards.json` |
+| `.github/workflows/build-cards.yml` | Reruns the build when `cards.txt` changes on GitHub |
 | `scripts/serve.ps1` | Local test server |
 | `supabase/schema.sql` | Database tables, access rules and the results view |

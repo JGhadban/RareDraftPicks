@@ -116,3 +116,13 @@ if ($notFound.Count) {
   Write-Warning "$($notFound.Count) not found on Scryfall (fix spelling in cards.txt and re-run):"
   $notFound | ForEach-Object { Write-Host "  - $_" }
 }
+
+# On GitHub Actions, show the result on the run's summary page.
+if ($env:GITHUB_STEP_SUMMARY) {
+  $summary = @("Wrote $($cards.Count) cards ($copies copies total).")
+  if ($notFound.Count) {
+    $summary += '', "**$($notFound.Count) not found on Scryfall** (fix spelling in cards.txt):"
+    $summary += $notFound | ForEach-Object { "- $_" }
+  }
+  Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY -Value $summary -Encoding UTF8
+}

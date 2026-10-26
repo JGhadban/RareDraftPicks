@@ -1,0 +1,36 @@
+# Rebuilds cards.json whenever cards.txt changes on main, so the card list can be
+# edited on github.com without running scripts\build-cards.ps1 locally.
+name: Build cards
+
+on:
+  push:
+    branches: [main]
+    paths: [cards.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: build-cards
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build cards.json
+        shell: pwsh
+        run: ./scripts/build-cards.ps1
+
+      - name: Commit cards.json
+        run: |
+          if git diff --quiet -- cards.json; then
+            echo "cards.json unchanged"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cards.json
+          git commit -m 'Rebuild cards.json'
+          git push
