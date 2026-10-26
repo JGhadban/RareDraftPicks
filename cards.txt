@@ -42,7 +42,6 @@ Face Yourself
 Face Yourself
 Face Yourself
 Face Yourself
-Face Yourself
 Flickering Hound
 Flickering Hound
 Flickering Hound
@@ -184,6 +183,7 @@ Theorist's Proxy
 Theorist's Sanctum
 Theorist's Sanctum
 Theorist's Sanctum
+Variable Chaser
 Variable Chaser
 Variable Chaser
 Verdant Kraken
