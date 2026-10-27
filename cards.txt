@@ -55,6 +55,7 @@ Frostbite Pyromental
 Frostbite Pyromental
 Gardenize
 Gardenize
+Gardenize
 Germinate Recruits
 Germinate Recruits
 Germinate Recruits
@@ -84,6 +85,7 @@ Karn, Argent Defender
 Karn, Argent Defender
 Karn, Argent Defender
 Karn, Argent Defender
+Karn, Gilded Guardian
 Karn, Gilded Guardian
 Karn, Gilded Guardian
 Karn, Gilded Guardian
@@ -162,6 +164,7 @@ Shipwreck Marsh
 Shipwreck Marsh
 Simulacrum Shaper
 Simulacrum Shaper
+Solarium Sentry
 Solarium Sentry
 Solarium Sentry
 Solarium Sentry
