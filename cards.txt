@@ -47,6 +47,7 @@ Face Yourself
 Flickering Hound
 Flickering Hound
 Flickering Hound
+Flickering Hound
 Frostbite Pyromental
 Frostbite Pyromental
 Frostbite Pyromental
@@ -69,6 +70,7 @@ Gideon the Oathless
 Gideon's Memorial
 Gideon's Memorial
 Gideon's Memorial
+Guiding Hydra
 Hall of Echoes
 Hungering Puppetbeast
 Hungering Puppetbeast
@@ -135,6 +137,7 @@ Puppet Crafting
 Puppet Crafting
 Puppet Crafting
 Puppet Crafting
+Puppet Crafting
 Pyre Rhymer
 Pyre Rhymer
 Pyre Rhymer
@@ -195,6 +198,7 @@ Variable Chaser
 Variable Chaser
 Variable Chaser
 Verdant Kraken
+Vindictive Triumph
 Vindictive Triumph
 Vindictive Triumph
 Vraska, Soul of Stone
