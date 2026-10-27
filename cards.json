@@ -1,2015 +1,1925 @@
 [
-    {
-        "name":  "Ajani\u0027s Anguish",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Enchantment",
-        "cmc":  1.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/d/9/d9039a58-2f17-4b8a-b714-3a2f0b46f057.jpg?1789470674",
-        "small":  "https://cards.scryfall.io/small/front/d/9/d9039a58-2f17-4b8a-b714-3a2f0b46f057.jpg?1789470674",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{X}{R}",
-        "oracle":  "When this enchantment enters, it deals X damage to any target.\nCreatures you control have trample.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Avatar of Burgeoning Echoes",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Creature — Avatar",
-        "cmc":  2.0,
-        "colors":  [
-                       "G",
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/5/9/5905995b-7a20-4602-a7cc-90aa5089a082.jpg?1788878208",
-        "small":  "https://cards.scryfall.io/small/front/5/9/5905995b-7a20-4602-a7cc-90aa5089a082.jpg?1788878208",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{G}{U}",
-        "oracle":  "Landfall — Whenever a land you control enters, empower Jace 2. (Put two loyalty counters on a Jace token you control. If you don\u0027t control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")\nPlaneswalkers you control have \"[−10]: Put a +1/+1 counter on target creature for each land you control.\"",
-        "power":  "2",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "U"
-                     ],
-        "keywords":  [
-                         "Surveil",
-                         "Empower Jace",
-                         "Landfall"
-                     ]
-    },
-    {
-        "name":  "Bloodline Recollector // Ancestral Craving",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Creature — Vampire Warlock // Instant",
-        "cmc":  2.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/4/f/4fcc913e-f736-460a-b24b-022fa2e861b9.jpg?1788329264",
-        "small":  "https://cards.scryfall.io/small/front/4/f/4fcc913e-f736-460a-b24b-022fa2e861b9.jpg?1788329264",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{1}{B} // {B}",
-        "oracle":  "At the beginning of each end step, if three or more creatures died this turn, this creature becomes prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nTarget player draws three cards and loses 3 life.",
-        "power":  "2",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Prepared"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Bloodline Recollector",
-                          "type":  "Creature — Vampire Warlock",
-                          "mana":  "{1}{B}",
-                          "oracle":  "At the beginning of each end step, if three or more creatures died this turn, this creature becomes prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)",
-                          "power":  "2",
-                          "toughness":  "2",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Ancestral Craving",
-                          "type":  "Instant",
-                          "mana":  "{B}",
-                          "oracle":  "Target player draws three cards and loses 3 life.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Carnivorous Cultivator // Enroot",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Elf Warlock // Sorcery",
-        "cmc":  2.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/9/79dd5c54-5ea5-47b5-8f9b-50ed57a5ea45.jpg?1789385967",
-        "small":  "https://cards.scryfall.io/small/front/7/9/79dd5c54-5ea5-47b5-8f9b-50ed57a5ea45.jpg?1789385967",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{1}{G} // {G}",
-        "oracle":  "Deathtouch\nThis creature enters prepared.\nWhenever this creature deals combat damage to a player, return target land card from your graveyard to your hand.\n//\nSearch your library for a land card, put it into your graveyard, then shuffle.",
-        "power":  "2",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-                         "Prepared",
-                         "Deathtouch"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Carnivorous Cultivator",
-                          "type":  "Creature — Elf Warlock",
-                          "mana":  "{1}{G}",
-                          "oracle":  "Deathtouch\nThis creature enters prepared.\nWhenever this creature deals combat damage to a player, return target land card from your graveyard to your hand.",
-                          "power":  "2",
-                          "toughness":  "3",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Enroot",
-                          "type":  "Sorcery",
-                          "mana":  "{G}",
-                          "oracle":  "Search your library for a land card, put it into your graveyard, then shuffle.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Codie, Ravenous Codex",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Artifact Creature — Book Construct",
-        "cmc":  3.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
-        "small":  "https://cards.scryfall.io/small/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}",
-        "oracle":  "Whenever you cast a prepared spell, copy it. You may choose new targets for the copy.\n{W}{U}{B}{R}{G}, {T}: Each creature you control becomes prepared. (Only creatures with prepare spells can become prepared.)",
-        "power":  "1",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "G",
-                         "R",
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Prepared"
-                     ]
-    },
-    {
-        "name":  "Cruel Calculations",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  3.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/f/7/f76c4d8e-3e1f-4264-99af-1b8adb9a06be.jpg?1789127482",
-        "small":  "https://cards.scryfall.io/small/front/f/7/f76c4d8e-3e1f-4264-99af-1b8adb9a06be.jpg?1789127482",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{U}",
-        "oracle":  "Draw X cards, where X is the number of cards that were put into target player\u0027s graveyard from their library this turn.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Curse-Marred Demon",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Demon",
-        "cmc":  4.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/8/f/8f827e50-0a08-4bc8-98b1-b26c9af15ef2.jpg?1789470818",
-        "small":  "https://cards.scryfall.io/small/front/8/f/8f827e50-0a08-4bc8-98b1-b26c9af15ef2.jpg?1789470818",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{R}{R}",
-        "oracle":  "Flying, trample\nWhen this creature enters, search your library for a card, put it into your hand, shuffle, then discard a card at random.",
-        "power":  "4",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-                         "Flying",
-                         "Trample"
-                     ]
-    },
-    {
-        "name":  "Dark Matter Manipulator",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Warlock",
-        "cmc":  1.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/4/e/4ec912d5-cbe7-4d07-9ece-b03ac02d3055.jpg?1789385959",
-        "small":  "https://cards.scryfall.io/small/front/4/e/4ec912d5-cbe7-4d07-9ece-b03ac02d3055.jpg?1789385959",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}",
-        "oracle":  "When this creature enters, mill three cards.\nThis creature gets +2/+0 for every seven cards in your graveyard.",
-        "power":  "1",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Mill"
-                     ]
-    },
-    {
-        "name":  "Darklight Phoenix",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Creature — Phoenix",
-        "cmc":  4.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/e/c/ec454979-3839-4be3-a34a-9d25482948ba.jpg?1789470810",
-        "small":  "https://cards.scryfall.io/small/front/e/c/ec454979-3839-4be3-a34a-9d25482948ba.jpg?1789470810",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{B}",
-        "oracle":  "Flying, haste\nAt the beginning of combat on your turn, if two or more creatures died this turn, return this card from your graveyard to the battlefield.",
-        "power":  "3",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Flying",
-                         "Haste"
-                     ]
-    },
-    {
-        "name":  "Denzilore Fatehold",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Legendary Creature — Elder Sphinx",
-        "cmc":  4.0,
-        "colors":  [
-                       "U",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/9/8/986f9e98-9d8d-428b-9187-860745cf3269.jpg?1788878215",
-        "small":  "https://cards.scryfall.io/small/front/9/8/986f9e98-9d8d-428b-9187-860745cf3269.jpg?1788878215",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{W}{U}{U}",
-        "oracle":  "Flash\nFlying\nWhenever you scry or surveil, put a +1/+1 counter on each creature you control.",
-        "power":  "3",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Flying",
-                         "Flash"
-                     ]
-    },
-    {
-        "name":  "Deserted Beach",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/5/6/56dae4c4-3e71-4a32-979b-4e26d9c9e96c.jpg?1788878239",
-        "small":  "https://cards.scryfall.io/small/front/5/6/56dae4c4-3e71-4a32-979b-4e26d9c9e96c.jpg?1788878239",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "This land enters tapped unless you control two or more other lands.\n{T}: Add {W} or {U}.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Diviner of Victory // Unwind History",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Dwarf Wizard // Sorcery",
-        "cmc":  1.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
-        "small":  "https://cards.scryfall.io/small/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{U} // {1}{U}",
-        "oracle":  "This creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\nWhenever you scry or surveil, this creature gets +1/+1 until end of turn.\n//\nReturn target creature an opponent controls with mana value 3 or less to its owner\u0027s hand. Surveil 1.",
-        "power":  "1",
-        "toughness":  "1",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Surveil",
-                         "Prepared"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Diviner of Victory",
-                          "type":  "Creature — Dwarf Wizard",
-                          "mana":  "{U}",
-                          "oracle":  "This creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\nWhenever you scry or surveil, this creature gets +1/+1 until end of turn.",
-                          "power":  "1",
-                          "toughness":  "1",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Unwind History",
-                          "type":  "Sorcery",
-                          "mana":  "{1}{U}",
-                          "oracle":  "Return target creature an opponent controls with mana value 3 or less to its owner\u0027s hand. Surveil 1.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Draconic Visitor",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Dragon",
-        "cmc":  5.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/1/112f8478-bd89-4a14-9721-8ab750613129.jpg?1789470842",
-        "small":  "https://cards.scryfall.io/small/front/1/1/112f8478-bd89-4a14-9721-8ab750613129.jpg?1789470842",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{R}{R}",
-        "oracle":  "Flying\nIf one or more artifact tokens would be created under your control, that many 5/5 red Dragon creature tokens with flying are created instead.",
-        "power":  "5",
-        "toughness":  "5",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-                         "Flying"
-                     ]
-    },
-    {
-        "name":  "Entrust the Spark",
-        "qty":  6,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  5.0,
-        "colors":  [
-                       "G",
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/c/a/ca894d25-b9fc-4cd6-8746-70d8c2868721.jpg?1789614779",
-        "small":  "https://cards.scryfall.io/small/front/c/a/ca894d25-b9fc-4cd6-8746-70d8c2868721.jpg?1789614779",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{G}{U}",
-        "oracle":  "You may sacrifice a planeswalker. If you do, search your library for a planeswalker card, put it onto the battlefield, then shuffle.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "U"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Extrapolate the Impossible",
-        "qty":  7,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  2.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/7/17fb6538-493c-41aa-ad13-3e63d3ad3317.jpg?1789729624",
-        "small":  "https://cards.scryfall.io/small/front/1/7/17fb6538-493c-41aa-ad13-3e63d3ad3317.jpg?1789729624",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{B}",
-        "oracle":  "You may reveal exactly two cards you own with different names from outside the game. An opponent chooses one of them. You put that card into your hand.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Face Yourself",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  7.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/3/c/3ccf8f64-19bd-4fdf-b70a-30a042bacf2f.jpg?1789127528",
-        "small":  "https://cards.scryfall.io/small/front/3/c/3ccf8f64-19bd-4fdf-b70a-30a042bacf2f.jpg?1789127528",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{5}{R}{R}",
-        "oracle":  "For each creature target player controls, create a token that\u0027s a copy of that creature, except it has haste and \"At the beginning of the end step, if you don\u0027t control a planeswalker, sacrifice this creature.\"",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Flickering Hound",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Dog",
-        "cmc":  4.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/6/8/686f3a25-305d-4f02-8972-eba7b8e9635f.jpg?1789470769",
-        "small":  "https://cards.scryfall.io/small/front/6/8/686f3a25-305d-4f02-8972-eba7b8e9635f.jpg?1789470769",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{W}",
-        "oracle":  "Whenever you cast a creature spell, exile up to one other target creature you control, then return that card to the battlefield under its owner\u0027s control.",
-        "power":  "2",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Frostbite Pyromental",
-        "qty":  6,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Elemental",
-        "cmc":  3.0,
-        "colors":  [
-                       "R",
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/a/7a44581f-8fc4-457d-888a-1e211090ee7e.jpg?1789470870",
-        "small":  "https://cards.scryfall.io/small/front/7/a/7a44581f-8fc4-457d-888a-1e211090ee7e.jpg?1789470870",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{U}{R}{R}",
-        "oracle":  "Trample, haste\nWhenever this creature deals combat damage to a player, draw two cards.\nAt the beginning of the end step, sacrifice this creature.",
-        "power":  "4",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R",
-                         "U"
-                     ],
-        "keywords":  [
-                         "Haste",
-                         "Trample"
-                     ]
-    },
-    {
-        "name":  "Gardenize",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Enchantment",
-        "cmc":  3.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/9/3/930b89c3-4433-48de-829f-20fc3dbfced9.jpg?1789644837",
-        "small":  "https://cards.scryfall.io/small/front/9/3/930b89c3-4433-48de-829f-20fc3dbfced9.jpg?1789644837",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{G}{G}",
-        "oracle":  "Whenever a creature you control dies, put a charge counter on this enchantment.\nAt the beginning of your first main phase, add {G} for each charge counter on this enchantment.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Germinate Recruits",
-        "qty":  7,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Instant",
-        "cmc":  3.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/b/1b5d7d19-b32a-4786-ae9a-00da5e6658ad.jpg?1789644810",
-        "small":  "https://cards.scryfall.io/small/front/1/b/1b5d7d19-b32a-4786-ae9a-00da5e6658ad.jpg?1789644810",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{W}",
-        "oracle":  "Create X 2/2 colorless Wizard Soldier creature tokens named Cadet, where X is the amount of life you gained this turn.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Gideon the Oathless",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Human Mercenary",
-        "cmc":  3.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/c/9/c985b0d1-25bd-4069-aab7-a566ff27a8f6.jpg?1789127990",
-        "small":  "https://cards.scryfall.io/small/front/c/9/c985b0d1-25bd-4069-aab7-a566ff27a8f6.jpg?1789127990",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{B}",
-        "oracle":  "Ward—Discard a card.\nWhenever a creature an opponent controls enters, Gideon deals 1 damage to that player.\nWhenever an opponent activates a loyalty ability, Gideon deals 1 damage to that player.",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Ward"
-                     ]
-    },
-    {
-        "name":  "Gideon\u0027s Memorial",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Artifact",
-        "cmc":  2.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/6/768c0e64-9907-417a-a763-c836fdf36883.jpg?1789127685",
-        "small":  "https://cards.scryfall.io/small/front/7/6/768c0e64-9907-417a-a763-c836fdf36883.jpg?1789127685",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{W}",
-        "oracle":  "Creature tokens you control get +1/+0 and have vigilance.\n{T}: Add one mana of any color. Spend this mana only to cast a planeswalker spell.\n{1}{W}, Discard this card: It deals 4 damage to target attacking or blocking creature.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Hall of Echoes",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/4/a/4a771010-b397-4849-ac9b-08e4dd5d6a72.jpg?1789644859",
-        "small":  "https://cards.scryfall.io/small/front/4/a/4a771010-b397-4849-ac9b-08e4dd5d6a72.jpg?1789644859",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "{T}: Add {C}.\n{5}: This land becomes a copy of target creature you control until end of turn. The \"legend rule\" doesn\u0027t apply to permanents you control this turn.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Hungering Puppetbeast",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Artifact Creature — Beast Construct",
-        "cmc":  5.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/3/d/3db2da7a-8088-4117-916b-f9c905d1b45b.jpg?1789127646",
-        "small":  "https://cards.scryfall.io/small/front/3/d/3db2da7a-8088-4117-916b-f9c905d1b45b.jpg?1789127646",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{G}{G}",
-        "oracle":  "When this creature enters, create a Heartwood token. (It\u0027s a red and green artifact with \"{T}: Add {R} or {G}.\")\n{1}, Sacrifice another artifact: Put a +1/+1 counter on this creature. It gains your choice of trample, hexproof, or haste until end of turn.",
-        "power":  "5",
-        "toughness":  "5",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Identity Echo",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Enchantment",
-        "cmc":  3.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/e/6/e600b33b-8916-43dd-95d3-d7cbf874933d.jpg?1789385968",
-        "small":  "https://cards.scryfall.io/small/front/e/6/e600b33b-8916-43dd-95d3-d7cbf874933d.jpg?1789385968",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{R}",
-        "oracle":  "{3}{R}: Exile target creature or planeswalker you control. Reveal cards from the top of your library until you reveal a creature or planeswalker card. Put that card onto the battlefield and the rest on the bottom of your library in a random order. Activate only as a sorcery.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Ingris Stingerquill",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Legendary Creature — Elder Sphinx",
-        "cmc":  3.0,
-        "colors":  [
-                       "B",
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/6/4/6471b135-33a8-4005-9a07-ebb74e0bf145.jpg?1788878212",
-        "small":  "https://cards.scryfall.io/small/front/6/4/6471b135-33a8-4005-9a07-ebb74e0bf145.jpg?1788878212",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}{R}{R}",
-        "oracle":  "Flying\nWhenever a creature you control attacks, that creature deals 1 damage to each opponent.\n{4}: Create a 2/2 colorless Wizard Soldier creature token named Cadet. Then creatures you control gain haste until end of turn.",
-        "power":  "1",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "R"
-                     ],
-        "keywords":  [
-                         "Flying"
-                     ]
-    },
-    {
-        "name":  "Jace, Reality Sculptor",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Planeswalker — Jace",
-        "cmc":  5.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/4/74087795-0b38-4fd2-9841-147583baca41.jpg?1790075861",
-        "small":  "https://cards.scryfall.io/small/front/7/4/74087795-0b38-4fd2-9841-147583baca41.jpg?1790075861",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{3}{U}{U}",
-        "oracle":  "+1: Empower Jace X, where X is the number of Islands you control.\n−3: Until your next turn, whenever a creature attacks you or a planeswalker you control, it gets -5/-0 until end of turn.\n0: Exile all but the bottom card of each opponent\u0027s library. Activate only if there are twenty-five or more loyalty counters among Jaces you control.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  "5",
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Empower Jace"
-                     ]
-    },
-    {
-        "name":  "Karn, Argent Defender",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Artifact Creature — Golem",
-        "cmc":  2.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/e/1ebbbddb-2dc3-4194-b72b-13bcebe2ab89.jpg?1788878301",
-        "small":  "https://cards.scryfall.io/small/front/1/e/1ebbbddb-2dc3-4194-b72b-13bcebe2ab89.jpg?1788878301",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}",
-        "oracle":  "Artifacts and creatures entering the battlefield don\u0027t cause abilities to trigger.",
-        "power":  "1",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Karn, Gilded Guardian",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Artifact Creature — Golem",
-        "cmc":  10.0,
-        "colors":  [
-                       "B",
-                       "G",
-                       "R",
-                       "U",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/3/a/3abcae65-5b21-4c98-adad-34b8bc76ea3a.jpg?1789014541",
-        "small":  "https://cards.scryfall.io/small/front/3/a/3abcae65-5b21-4c98-adad-34b8bc76ea3a.jpg?1789014541",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2/W}{2/U}{2/B}{2/R}{2/G}",
-        "oracle":  "Vigilance, trample\nWhen Karn enters, draw a card for each color among other artifacts you control.",
-        "power":  "5",
-        "toughness":  "5",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "G",
-                         "R",
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Vigilance",
-                         "Trample"
-                     ]
-    },
-    {
-        "name":  "Lich\u0027s Relic",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Artifact — Equipment",
-        "cmc":  1.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/b/1/b105511d-5022-4a84-b6ce-4bb433e93a62.jpg?1789644819",
-        "small":  "https://cards.scryfall.io/small/front/b/1/b105511d-5022-4a84-b6ce-4bb433e93a62.jpg?1789644819",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}",
-        "oracle":  "When this Equipment enters, you may pay {2}. When you do, for each opponent, destroy up to one target creature or planeswalker that player controls.\nEquipped creature gets +2/+1.\nEquip {2}",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Equip"
-                     ]
-    },
-    {
-        "name":  "Liliana the Repentant",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Human Warlock",
-        "cmc":  2.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/e/1eb25a6c-d6b4-465d-990e-f1ab86b26b69.jpg?1788329273",
-        "small":  "https://cards.scryfall.io/small/front/1/e/1eb25a6c-d6b4-465d-990e-f1ab86b26b69.jpg?1788329273",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{B}",
-        "oracle":  "Whenever another creature or planeswalker you control enters, mill two cards.\nExhaust — {5}{B}: Return target creature or planeswalker card from your graveyard to the battlefield. Put a +1/+1 counter on Liliana. Activate only as a sorcery. (Activate each exhaust ability only once.)",
-        "power":  "2",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Exhaust",
-                         "Mill"
-                     ]
-    },
-    {
-        "name":  "Loyal Tutor",
-        "qty":  8,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Instant",
-        "cmc":  1.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/4/9/490dae91-94ce-42a9-a11f-6c5e77c4e486.jpg?1788878096",
-        "small":  "https://cards.scryfall.io/small/front/4/9/490dae91-94ce-42a9-a11f-6c5e77c4e486.jpg?1788878096",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{W}",
-        "oracle":  "Search your library for a planeswalker card, reveal it, then shuffle and put that card on top.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Lyra, Archangel of Dawn",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Angel Knight",
-        "cmc":  3.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/8/6/86a3866e-68a8-402c-baf0-1908e98e3995.jpg?1789127693",
-        "small":  "https://cards.scryfall.io/small/front/8/6/86a3866e-68a8-402c-baf0-1908e98e3995.jpg?1789127693",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{W}",
-        "oracle":  "Flying\nWhenever you gain life, put a +1/+1 counter on each Angel you control.",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-                         "Flying"
-                     ]
-    },
-    {
-        "name":  "Lyra, Tolarian Archangel",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Angel Wizard",
-        "cmc":  3.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/a/5/a5183681-447b-4023-91f7-00e9338f4417.jpg?1789128032",
-        "small":  "https://cards.scryfall.io/small/front/a/5/a5183681-447b-4023-91f7-00e9338f4417.jpg?1789128032",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{U}{U}",
-        "oracle":  "Flying\nAt the beginning of each end step, if you\u0027ve drawn three or more cards this turn, create a 3/3 blue Angel creature token with flying.\n{3}{U}{U}: Until end of turn, whenever Lyra deals combat damage to a player, draw two cards.",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Flying"
-                     ]
-    },
-    {
-        "name":  "Necrodominance",
-        "qty":  1,
-        "set":  "SPG",
-        "rarity":  "mythic",
-        "type":  "Legendary Enchantment",
-        "cmc":  3.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
-        "small":  "https://cards.scryfall.io/small/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}{B}{B}",
-        "oracle":  "Skip your draw step.\nAt the beginning of your end step, you may pay any amount of life. If you do, draw that many cards.\nYour maximum hand size is five.\nIf a card or token would be put into your graveyard from anywhere, exile it instead.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Null Summoner",
-        "qty":  7,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Warlock",
-        "cmc":  4.0,
-        "colors":  [
-                       "B",
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/3/a/3afdc75a-1bf5-4f2f-84eb-d82f77a095cd.jpg?1789127648",
-        "small":  "https://cards.scryfall.io/small/front/3/a/3afdc75a-1bf5-4f2f-84eb-d82f77a095cd.jpg?1789127648",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{U}{B}",
-        "oracle":  "When this creature enters, if you cast it, target opponent reveals their hand. You choose a nonland card from it. Exile that card.\nThreshold — As long as there are seven or more cards in your graveyard, you may cast the exiled card, and mana of any type can be spent to cast that spell.",
-        "power":  "4",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "U"
-                     ],
-        "keywords":  [
-                         "Threshold"
-                     ]
-    },
-    {
-        "name":  "Omnipresence",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Enchantment",
-        "cmc":  8.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/e/a/eaf9dc77-c83b-49cf-84be-6bd791cb925e.jpg?1790558797",
-        "small":  "https://cards.scryfall.io/small/front/e/a/eaf9dc77-c83b-49cf-84be-6bd791cb925e.jpg?1790558797",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{5}{G}{G}{G}",
-        "oracle":  "You may cast spells with mana value less than or equal to the number of creatures you control from your hand without paying their mana costs.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Overgrown Farmland",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/7/178e61e4-472f-42cd-9d3b-4880c2acc527.jpg?1788878246",
-        "small":  "https://cards.scryfall.io/small/front/1/7/178e61e4-472f-42cd-9d3b-4880c2acc527.jpg?1788878246",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "This land enters tapped unless you control two or more other lands.\n{T}: Add {G} or {W}.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Pompous Battlemage // Improvised Act",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Goblin Sorcerer // Sorcery",
-        "cmc":  1.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/a/a/aa0f77ac-741a-444a-8bf0-a42c644726bf.jpg?1788878186",
-        "small":  "https://cards.scryfall.io/small/front/a/a/aa0f77ac-741a-444a-8bf0-a42c644726bf.jpg?1788878186",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{R} // {R}",
-        "oracle":  "Prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nYou may discard a card. If you do, draw a card.",
-        "power":  "1",
-        "toughness":  "1",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-                         "Prowess",
-                         "Prepared"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Pompous Battlemage",
-                          "type":  "Creature — Goblin Sorcerer",
-                          "mana":  "{R}",
-                          "oracle":  "Prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)",
-                          "power":  "1",
-                          "toughness":  "1",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Improvised Act",
-                          "type":  "Sorcery",
-                          "mana":  "{R}",
-                          "oracle":  "You may discard a card. If you do, draw a card.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Proctor of Potential",
-        "qty":  6,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Cleric",
-        "cmc":  2.0,
-        "colors":  [
-                       "U",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/c/f/cf0eec8c-0475-4050-8144-481a9bb13a0f.jpg?1789127661",
-        "small":  "https://cards.scryfall.io/small/front/c/f/cf0eec8c-0475-4050-8144-481a9bb13a0f.jpg?1789127661",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{W}{U}",
-        "oracle":  "Whenever this creature or another creature you control enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{W}{U}: Return this card from your graveyard to the battlefield with a finality counter on it. Activate only if you\u0027ve scried or surveilled this turn. (If a creature with a finality counter on it would die, exile it instead.)",
-        "power":  "3",
-        "toughness":  "1",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Surveil"
-                     ]
-    },
-    {
-        "name":  "Puppet Crafting",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Enchantment — Aura",
-        "cmc":  2.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/6/b/6b8789a6-3b63-4198-af5f-c2f2f49fafd9.jpg?1789470736",
-        "small":  "https://cards.scryfall.io/small/front/6/b/6b8789a6-3b63-4198-af5f-c2f2f49fafd9.jpg?1789470736",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{G}",
-        "oracle":  "Enchant artifact or non-Aura enchantment\nEnchanted permanent is a Construct creature with base power and toughness 5/5 in addition to its other types.\n{4}{G}: Return this card from your graveyard to your hand.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-                         "Enchant"
-                     ]
-    },
-    {
-        "name":  "Pyre Rhymer // Molten Tide",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Elemental Sorcerer // Instant",
-        "cmc":  3.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/2/b/2b0ebea0-86de-4da4-9fe8-dacc1e75c161.jpg?1789470850",
-        "small":  "https://cards.scryfall.io/small/front/2/b/2b0ebea0-86de-4da4-9fe8-dacc1e75c161.jpg?1789470850",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{1}{R}{R} // {R}",
-        "oracle":  "Prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nUntil end of turn, whenever you tap a Mountain for mana, add an additional {R}.",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-                         "Prowess",
-                         "Prepared"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Pyre Rhymer",
-                          "type":  "Creature — Elemental Sorcerer",
-                          "mana":  "{1}{R}{R}",
-                          "oracle":  "Prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)",
-                          "power":  "3",
-                          "toughness":  "3",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Molten Tide",
-                          "type":  "Instant",
-                          "mana":  "{R}",
-                          "oracle":  "Until end of turn, whenever you tap a Mountain for mana, add an additional {R}.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Repurposed Enforcer",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Soldier",
-        "cmc":  2.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/3/5/35000e93-85d3-44f8-976a-5918ee4c71e0.jpg?1788878108",
-        "small":  "https://cards.scryfall.io/small/front/3/5/35000e93-85d3-44f8-976a-5918ee4c71e0.jpg?1788878108",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{W}",
-        "oracle":  "Whenever this creature attacks, empower Jace X, where X is the number of creatures you control. (Put that many loyalty counters on a Jace token you control. If you don\u0027t control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")",
-        "power":  "3",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-                         "Surveil",
-                         "Empower Jace"
-                     ]
-    },
-    {
-        "name":  "Return to the Light Realms",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Sorcery",
-        "cmc":  9.0,
-        "colors":  [
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/9/e/9e72f397-2384-40f1-882b-f627664d97df.jpg?1788878107",
-        "small":  "https://cards.scryfall.io/small/front/9/e/9e72f397-2384-40f1-882b-f627664d97df.jpg?1788878107",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{7}{W}{W}",
-        "oracle":  "Return all nonland permanent cards from your graveyard to the battlefield.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Rise of the Deathbringer",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Instant",
-        "cmc":  5.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/8/1/811719ad-b5a3-4d31-8c6f-5dbdfccf7c1f.jpg?1789470807",
-        "small":  "https://cards.scryfall.io/small/front/8/1/811719ad-b5a3-4d31-8c6f-5dbdfccf7c1f.jpg?1789470807",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{4}{B}",
-        "oracle":  "Choose one —\n• Draw cards equal to the greatest power among creatures you control. You lose life equal to the number of cards drawn this way.\n• All creatures get -3/-3 until end of turn.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Rockfall Vale",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/e/3/e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7.jpg?1788878243",
-        "small":  "https://cards.scryfall.io/small/front/e/3/e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7.jpg?1788878243",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "This land enters tapped unless you control two or more other lands.\n{T}: Add {R} or {G}.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Roiling Canopy",
-        "qty":  6,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/d/b/db61361b-bd12-453e-abc2-bbe09b66e3d9.jpg?1789514074",
-        "small":  "https://cards.scryfall.io/small/front/d/b/db61361b-bd12-453e-abc2-bbe09b66e3d9.jpg?1789514074",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "This land enters tapped.\nWhenever a Forest you control enters, if you control at least five other Forests, target creature you control gets +3/+3 until end of turn.\n{T}: Add {G}.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Root Maze",
-        "qty":  1,
-        "set":  "SPG",
-        "rarity":  "mythic",
-        "type":  "Enchantment",
-        "cmc":  1.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
-        "small":  "https://cards.scryfall.io/small/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{G}",
-        "oracle":  "Artifacts and lands enter tapped.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Samut, Hazoret\u0027s Champion",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Human Warrior Cleric",
-        "cmc":  2.0,
-        "colors":  [
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/b/a/ba920f23-f05c-410e-8516-c93abedf1d4d.jpg?1789729662",
-        "small":  "https://cards.scryfall.io/small/front/b/a/ba920f23-f05c-410e-8516-c93abedf1d4d.jpg?1789729662",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{R}",
-        "oracle":  "Creatures you control have haste.",
-        "power":  "2",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Samut, Tyrant of Naktamun",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Human Wizard",
-        "cmc":  2.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/6/d/6d7d8fa7-ce69-4a8c-9af0-55571393a244.jpg?1789729644",
-        "small":  "https://cards.scryfall.io/small/front/6/d/6d7d8fa7-ce69-4a8c-9af0-55571393a244.jpg?1789729644",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{U}",
-        "oracle":  "Instant and sorcery spells you control have split second. (As long as a spell with split second is on the stack, players can\u0027t cast spells or activate abilities that aren\u0027t mana abilities.)",
-        "power":  "2",
-        "toughness":  "1",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Shipwreck Marsh",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/9/e/9e944c5b-68ac-4a30-bbd4-09a4288319ce.jpg?1788878245",
-        "small":  "https://cards.scryfall.io/small/front/9/e/9e944c5b-68ac-4a30-bbd4-09a4288319ce.jpg?1788878245",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "This land enters tapped unless you control two or more other lands.\n{T}: Add {U} or {B}.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "U"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Simulacrum Shaper",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Elf Druid",
-        "cmc":  3.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/c/7c725702-8696-4e5a-8318-62f5e2616d52.jpg?1789470857",
-        "small":  "https://cards.scryfall.io/small/front/7/c/7c725702-8696-4e5a-8318-62f5e2616d52.jpg?1789470857",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{G}{G}",
-        "oracle":  "When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.\nWhen this creature dies, draw a card.",
-        "power":  "2",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Solarium Sentry",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Cat Soldier",
-        "cmc":  2.0,
-        "colors":  [
-                       "G",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/e/1ef12dcf-df50-4da6-8c4c-e2937ba9698e.jpg?1789127651",
-        "small":  "https://cards.scryfall.io/small/front/1/e/1ef12dcf-df50-4da6-8c4c-e2937ba9698e.jpg?1789127651",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{G}{W}",
-        "oracle":  "Whenever an opponent casts a spell with mana value 2 or less, you gain 2 life.",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Solitary Cell",
-        "qty":  4,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Artifact",
-        "cmc":  2.0,
-        "colors":  [
-                       "R",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/5/1/5142bbb6-194c-4b12-b11a-1a21c9fe81a6.jpg?1790558834",
-        "small":  "https://cards.scryfall.io/small/front/5/1/5142bbb6-194c-4b12-b11a-1a21c9fe81a6.jpg?1790558834",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{R}{W}",
-        "oracle":  "When this artifact enters, exile target nonland permanent an opponent controls with mana value 3 or less until this artifact leaves the battlefield.\n{1}, {T}, Discard a legendary card: Draw a card.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R",
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Sphinx of False Conclusions",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Sphinx Illusion",
-        "cmc":  4.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/0/8/08ffbd51-2bd3-4262-8809-09576ce2b6f5.jpg?1789385594",
-        "small":  "https://cards.scryfall.io/small/front/0/8/08ffbd51-2bd3-4262-8809-09576ce2b6f5.jpg?1789385594",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{2}{U}{U}",
-        "oracle":  "Flash\nFlying\nWhenever this creature attacks, draw a card, then discard a card.\nWhen this creature dies, if it isn\u0027t a token, create a token that\u0027s a copy of it.",
-        "power":  "4",
-        "toughness":  "2",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Flying",
-                         "Flash"
-                     ]
-    },
-    {
-        "name":  "Stinging Vitriol",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  2.0,
-        "colors":  [
-                       "B",
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/a/7/a7d78297-7411-4ec5-8931-a25146869d5b.jpg?1789385971",
-        "small":  "https://cards.scryfall.io/small/front/a/7/a7d78297-7411-4ec5-8931-a25146869d5b.jpg?1789385971",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}{R}",
-        "oracle":  "Stinging Vitriol deals 2 damage to target opponent. That player reveals their hand. You choose a nonland card from it. They discard that card.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Tam, the Possibility",
-        "qty":  7,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Gorgon Wizard",
-        "cmc":  3.0,
-        "colors":  [
-                       "G",
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/6/5/6529d399-677e-45a6-ac3e-12a0b10f6c37.jpg?1789644886",
-        "small":  "https://cards.scryfall.io/small/front/6/5/6529d399-677e-45a6-ac3e-12a0b10f6c37.jpg?1789644886",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{G}{U}",
-        "oracle":  "Planeswalker spells you cast cost {1} less to cast.\n{W}{U}{B}{R}{G}, {T}: Proliferate X times, where X is the number of planeswalker types among planeswalkers you control. (To proliferate, choose any number of permanents and/or players, then give each another counter of each kind already there.)",
-        "power":  "2",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "G",
-                         "R",
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Proliferate"
-                     ]
-    },
-    {
-        "name":  "Tarmogoyf",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "mythic",
-        "type":  "Creature — Lhurgoyf",
-        "cmc":  2.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/8/b/8be5ee47-8f8a-4e3c-b1a1-9ca0e1fdec7f.jpg?1789127270",
-        "small":  "https://cards.scryfall.io/small/front/8/b/8be5ee47-8f8a-4e3c-b1a1-9ca0e1fdec7f.jpg?1789127270",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{G}",
-        "oracle":  "Tarmogoyf\u0027s power is equal to the number of card types among cards in all graveyards and its toughness is equal to that number plus 1.",
-        "power":  "*",
-        "toughness":  "1+*",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Tenured Tethermage",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Artificer",
-        "cmc":  3.0,
-        "colors":  [
-                       "G",
-                       "R"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/1/7/1703306d-6a3d-4ab8-bf58-a9992236ef0f.jpg?1789385792",
-        "small":  "https://cards.scryfall.io/small/front/1/7/1703306d-6a3d-4ab8-bf58-a9992236ef0f.jpg?1789385792",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{R}{G}",
-        "oracle":  "When this creature enters, you may sacrifice a land. If you do, create two tapped Heartwood tokens. (They\u0027re red and green artifacts with \"{T}: Add {R} or {G}.\")\nTap two untapped artifacts you control: Put two +1/+1 counters on this creature.",
-        "power":  "1",
-        "toughness":  "1",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G",
-                         "R"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Theorist\u0027s Proxy",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Illusion",
-        "cmc":  2.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/7/1/710302ca-c4be-4069-8ce1-f531414c74e9.jpg?1788878151",
-        "small":  "https://cards.scryfall.io/small/front/7/1/710302ca-c4be-4069-8ce1-f531414c74e9.jpg?1788878151",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{1}{U}",
-        "oracle":  "Flash\nWhen this creature enters, empower Jace 3. (Put three loyalty counters on a Jace token you control. If you don\u0027t control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")\n{U}, Sacrifice this creature: The next spell you cast this turn can\u0027t be countered.",
-        "power":  "0",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Surveil",
-                         "Empower Jace",
-                         "Flash"
-                     ]
-    },
-    {
-        "name":  "Theorist\u0027s Sanctum",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Land — Island",
-        "cmc":  0.0,
-        "colors":  [
-
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/2/2/22db5bba-46c9-4a26-821d-303ddb386ea4.jpg?1788878256",
-        "small":  "https://cards.scryfall.io/small/front/2/2/22db5bba-46c9-4a26-821d-303ddb386ea4.jpg?1788878256",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "",
-        "oracle":  "({T}: Add {U}.)\nAs this land enters, you may behold a Jace. If you don\u0027t, this land enters tapped. (To behold a Jace, choose a Jace you control or reveal a Jace card from your hand.)\n{2}{U}, {T}: Empower Jace 2.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Empower Jace",
-                         "Behold"
-                     ]
-    },
-    {
-        "name":  "Variable Chaser // Arc of Fortune",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Human Wizard // Sorcery",
-        "cmc":  3.0,
-        "colors":  [
-                       "U"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
-        "small":  "https://cards.scryfall.io/small/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
-        "back":  null,
-        "layout":  "prepare",
-        "mana":  "{2}{U} // {2}{U}",
-        "oracle":  "Flying, prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nEach player may discard their hand and draw seven cards.",
-        "power":  "2",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "U"
-                     ],
-        "keywords":  [
-                         "Flying",
-                         "Prowess",
-                         "Prepared"
-                     ],
-        "faces":  [
-                      {
-                          "name":  "Variable Chaser",
-                          "type":  "Creature — Human Wizard",
-                          "mana":  "{2}{U}",
-                          "oracle":  "Flying, prowess\nThis creature enters prepared. (While it\u0027s prepared, you may cast a copy of its spell. Doing so unprepares it.)",
-                          "power":  "2",
-                          "toughness":  "3",
-                          "loyalty":  null,
-                          "defense":  null
-                      },
-                      {
-                          "name":  "Arc of Fortune",
-                          "type":  "Sorcery",
-                          "mana":  "{2}{U}",
-                          "oracle":  "Each player may discard their hand and draw seven cards.",
-                          "power":  null,
-                          "toughness":  null,
-                          "loyalty":  null,
-                          "defense":  null
-                      }
-                  ]
-    },
-    {
-        "name":  "Verdant Kraken",
-        "qty":  1,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Creature — Plant Kraken",
-        "cmc":  7.0,
-        "colors":  [
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
-        "small":  "https://cards.scryfall.io/small/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{4}{G}{G}{G}",
-        "oracle":  "At the beginning of each player\u0027s upkeep, you create a 3/3 green Forest Tentacle land creature token. (It has \"{T}: Add {G}.\" It\u0027s affected by summoning sickness until your next turn.)",
-        "power":  "6",
-        "toughness":  "6",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "G"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Vindictive Triumph",
-        "qty":  2,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Instant",
-        "cmc":  3.0,
-        "colors":  [
-                       "B",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/a/8/a803dbe7-153a-4e92-ad4d-c2babebe003d.jpg?1790558815",
-        "small":  "https://cards.scryfall.io/small/front/a/8/a803dbe7-153a-4e92-ad4d-c2babebe003d.jpg?1790558815",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{W}{B}{B}",
-        "oracle":  "Exile target creature or planeswalker. If that permanent\u0027s mana value was 3 or less, return it to the battlefield tapped under your control. Exile it at the beginning of the next end step.",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "W"
-                     ],
-        "keywords":  [
-
-                     ]
-    },
-    {
-        "name":  "Vraska, Soul of Stone",
-        "qty":  5,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Gorgon Wizard",
-        "cmc":  3.0,
-        "colors":  [
-                       "R",
-                       "U",
-                       "W"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/f/3/f3869752-eade-4e7a-8dd1-68cafb9e10be.jpg?1789128008",
-        "small":  "https://cards.scryfall.io/small/front/f/3/f3869752-eade-4e7a-8dd1-68cafb9e10be.jpg?1789128008",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{U}{R}{W}",
-        "oracle":  "Artifact creatures you control have vigilance.\nWhenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
-        "power":  "3",
-        "toughness":  "3",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "R",
-                         "U",
-                         "W"
-                     ],
-        "keywords":  [
-                         "Treasure"
-                     ]
-    },
-    {
-        "name":  "Vraska, the Cutting Glare",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Legendary Creature — Gorgon Assassin",
-        "cmc":  3.0,
-        "colors":  [
-                       "B",
-                       "G"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/5/c/5c28b012-5efb-488f-a1c1-09e2dddfd6ee.jpg?1789127776",
-        "small":  "https://cards.scryfall.io/small/front/5/c/5c28b012-5efb-488f-a1c1-09e2dddfd6ee.jpg?1789127776",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}{B}{G}",
-        "oracle":  "Deathtouch\nWhen Vraska enters, if you control six or more lands, destroy target permanent an opponent controls. They create a Treasure token. (It\u0027s an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
-        "power":  "4",
-        "toughness":  "4",
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B",
-                         "G"
-                     ],
-        "keywords":  [
-                         "Treasure",
-                         "Deathtouch"
-                     ]
-    },
-    {
-        "name":  "Vraska\u0027s Final Mercy",
-        "qty":  3,
-        "set":  "FRA",
-        "rarity":  "rare",
-        "type":  "Sorcery",
-        "cmc":  2.0,
-        "colors":  [
-                       "B"
-                   ],
-        "img":  "https://cards.scryfall.io/normal/front/9/9/992bd991-7cfb-459f-bafd-9a44f3c925c5.jpg?1789699369",
-        "small":  "https://cards.scryfall.io/small/front/9/9/992bd991-7cfb-459f-bafd-9a44f3c925c5.jpg?1789699369",
-        "back":  null,
-        "layout":  "normal",
-        "mana":  "{B}{B}",
-        "oracle":  "Choose one —\n• You lose 2 life. Destroy target creature or planeswalker.\n• You lose 2 life. Empower Jace 6. (Put six loyalty counters on a Jace token you control. If you don\u0027t control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")",
-        "power":  null,
-        "toughness":  null,
-        "loyalty":  null,
-        "defense":  null,
-        "identity":  [
-                         "B"
-                     ],
-        "keywords":  [
-                         "Surveil",
-                         "Empower Jace"
-                     ]
-    }
+  {
+    "name": "Ajani's Anguish",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Enchantment",
+    "cmc": 1.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/d/9/d9039a58-2f17-4b8a-b714-3a2f0b46f057.jpg?1789470674",
+    "small": "https://cards.scryfall.io/small/front/d/9/d9039a58-2f17-4b8a-b714-3a2f0b46f057.jpg?1789470674",
+    "back": null,
+    "layout": "normal",
+    "mana": "{X}{R}",
+    "oracle": "When this enchantment enters, it deals X damage to any target.\nCreatures you control have trample.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Avatar of Burgeoning Echoes",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Creature — Avatar",
+    "cmc": 2.0,
+    "colors": [
+      "G",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/9/5905995b-7a20-4602-a7cc-90aa5089a082.jpg?1788878208",
+    "small": "https://cards.scryfall.io/small/front/5/9/5905995b-7a20-4602-a7cc-90aa5089a082.jpg?1788878208",
+    "back": null,
+    "layout": "normal",
+    "mana": "{G}{U}",
+    "oracle": "Landfall — Whenever a land you control enters, empower Jace 2. (Put two loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")\nPlaneswalkers you control have \"[−10]: Put a +1/+1 counter on target creature for each land you control.\"",
+    "power": "2",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "U"
+    ],
+    "keywords": [
+      "Surveil",
+      "Empower Jace",
+      "Landfall"
+    ]
+  },
+  {
+    "name": "Bloodline Recollector // Ancestral Craving",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Creature — Vampire Warlock // Instant",
+    "cmc": 2.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/4/f/4fcc913e-f736-460a-b24b-022fa2e861b9.jpg?1788329264",
+    "small": "https://cards.scryfall.io/small/front/4/f/4fcc913e-f736-460a-b24b-022fa2e861b9.jpg?1788329264",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{1}{B} // {B}",
+    "oracle": "At the beginning of each end step, if three or more creatures died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nTarget player draws three cards and loses 3 life.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Prepared"
+    ],
+    "faces": [
+      {
+        "name": "Bloodline Recollector",
+        "type": "Creature — Vampire Warlock",
+        "mana": "{1}{B}",
+        "oracle": "At the beginning of each end step, if three or more creatures died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",
+        "power": "2",
+        "toughness": "2",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Ancestral Craving",
+        "type": "Instant",
+        "mana": "{B}",
+        "oracle": "Target player draws three cards and loses 3 life.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Carnivorous Cultivator // Enroot",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Elf Warlock // Sorcery",
+    "cmc": 2.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/9/79dd5c54-5ea5-47b5-8f9b-50ed57a5ea45.jpg?1789385967",
+    "small": "https://cards.scryfall.io/small/front/7/9/79dd5c54-5ea5-47b5-8f9b-50ed57a5ea45.jpg?1789385967",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{1}{G} // {G}",
+    "oracle": "Deathtouch\nThis creature enters prepared.\nWhenever this creature deals combat damage to a player, return target land card from your graveyard to your hand.\n//\nSearch your library for a land card, put it into your graveyard, then shuffle.",
+    "power": "2",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": [
+      "Prepared",
+      "Deathtouch"
+    ],
+    "faces": [
+      {
+        "name": "Carnivorous Cultivator",
+        "type": "Creature — Elf Warlock",
+        "mana": "{1}{G}",
+        "oracle": "Deathtouch\nThis creature enters prepared.\nWhenever this creature deals combat damage to a player, return target land card from your graveyard to your hand.",
+        "power": "2",
+        "toughness": "3",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Enroot",
+        "type": "Sorcery",
+        "mana": "{G}",
+        "oracle": "Search your library for a land card, put it into your graveyard, then shuffle.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Codie, Ravenous Codex",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Artifact Creature — Book Construct",
+    "cmc": 3.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
+    "small": "https://cards.scryfall.io/small/front/c/3/c3192390-1518-49fc-8716-f2c7a0384f39.jpg?1789646811",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}",
+    "oracle": "Whenever you cast a prepared spell, copy it. You may choose new targets for the copy.\n{W}{U}{B}{R}{G}, {T}: Each creature you control becomes prepared. (Only creatures with prepare spells can become prepared.)",
+    "power": "1",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Prepared"
+    ]
+  },
+  {
+    "name": "Cruel Calculations",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 3.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/f/7/f76c4d8e-3e1f-4264-99af-1b8adb9a06be.jpg?1789127482",
+    "small": "https://cards.scryfall.io/small/front/f/7/f76c4d8e-3e1f-4264-99af-1b8adb9a06be.jpg?1789127482",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{U}",
+    "oracle": "Draw X cards, where X is the number of cards that were put into target player's graveyard from their library this turn.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Curse-Marred Demon",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Demon",
+    "cmc": 4.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/8/f/8f827e50-0a08-4bc8-98b1-b26c9af15ef2.jpg?1789470818",
+    "small": "https://cards.scryfall.io/small/front/8/f/8f827e50-0a08-4bc8-98b1-b26c9af15ef2.jpg?1789470818",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{R}{R}",
+    "oracle": "Flying, trample\nWhen this creature enters, search your library for a card, put it into your hand, shuffle, then discard a card at random.",
+    "power": "4",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Flying",
+      "Trample"
+    ]
+  },
+  {
+    "name": "Dark Matter Manipulator",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Warlock",
+    "cmc": 1.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/4/e/4ec912d5-cbe7-4d07-9ece-b03ac02d3055.jpg?1789385959",
+    "small": "https://cards.scryfall.io/small/front/4/e/4ec912d5-cbe7-4d07-9ece-b03ac02d3055.jpg?1789385959",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}",
+    "oracle": "When this creature enters, mill three cards.\nThis creature gets +2/+0 for every seven cards in your graveyard.",
+    "power": "1",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Mill"
+    ]
+  },
+  {
+    "name": "Darklight Phoenix",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Creature — Phoenix",
+    "cmc": 4.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/e/c/ec454979-3839-4be3-a34a-9d25482948ba.jpg?1789470810",
+    "small": "https://cards.scryfall.io/small/front/e/c/ec454979-3839-4be3-a34a-9d25482948ba.jpg?1789470810",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{B}",
+    "oracle": "Flying, haste\nAt the beginning of combat on your turn, if two or more creatures died this turn, return this card from your graveyard to the battlefield.",
+    "power": "3",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Flying",
+      "Haste"
+    ]
+  },
+  {
+    "name": "Denzilore Fatehold",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Elder Sphinx",
+    "cmc": 4.0,
+    "colors": [
+      "U",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/9/8/986f9e98-9d8d-428b-9187-860745cf3269.jpg?1788878215",
+    "small": "https://cards.scryfall.io/small/front/9/8/986f9e98-9d8d-428b-9187-860745cf3269.jpg?1788878215",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{W}{U}{U}",
+    "oracle": "Flash\nFlying\nWhenever you scry or surveil, put a +1/+1 counter on each creature you control.",
+    "power": "3",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Flying",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Deserted Beach",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/5/6/56dae4c4-3e71-4a32-979b-4e26d9c9e96c.jpg?1788878239",
+    "small": "https://cards.scryfall.io/small/front/5/6/56dae4c4-3e71-4a32-979b-4e26d9c9e96c.jpg?1788878239",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {W} or {U}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Diviner of Victory // Unwind History",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Dwarf Wizard // Sorcery",
+    "cmc": 1.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
+    "small": "https://cards.scryfall.io/small/front/0/8/0853bb80-8664-432a-8457-600139fd96d5.jpg?1788878145",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{U} // {1}{U}",
+    "oracle": "This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\nWhenever you scry or surveil, this creature gets +1/+1 until end of turn.\n//\nReturn target creature an opponent controls with mana value 3 or less to its owner's hand. Surveil 1.",
+    "power": "1",
+    "toughness": "1",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Surveil",
+      "Prepared"
+    ],
+    "faces": [
+      {
+        "name": "Diviner of Victory",
+        "type": "Creature — Dwarf Wizard",
+        "mana": "{U}",
+        "oracle": "This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\nWhenever you scry or surveil, this creature gets +1/+1 until end of turn.",
+        "power": "1",
+        "toughness": "1",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Unwind History",
+        "type": "Sorcery",
+        "mana": "{1}{U}",
+        "oracle": "Return target creature an opponent controls with mana value 3 or less to its owner's hand. Surveil 1.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Draconic Visitor",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Dragon",
+    "cmc": 5.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/1/112f8478-bd89-4a14-9721-8ab750613129.jpg?1789470842",
+    "small": "https://cards.scryfall.io/small/front/1/1/112f8478-bd89-4a14-9721-8ab750613129.jpg?1789470842",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{R}{R}",
+    "oracle": "Flying\nIf one or more artifact tokens would be created under your control, that many 5/5 red Dragon creature tokens with flying are created instead.",
+    "power": "5",
+    "toughness": "5",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Flying"
+    ]
+  },
+  {
+    "name": "Entrust the Spark",
+    "qty": 6,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 5.0,
+    "colors": [
+      "G",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/a/ca894d25-b9fc-4cd6-8746-70d8c2868721.jpg?1789614779",
+    "small": "https://cards.scryfall.io/small/front/c/a/ca894d25-b9fc-4cd6-8746-70d8c2868721.jpg?1789614779",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{G}{U}",
+    "oracle": "You may sacrifice a planeswalker. If you do, search your library for a planeswalker card, put it onto the battlefield, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Extrapolate the Impossible",
+    "qty": 7,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 2.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/7/17fb6538-493c-41aa-ad13-3e63d3ad3317.jpg?1789729624",
+    "small": "https://cards.scryfall.io/small/front/1/7/17fb6538-493c-41aa-ad13-3e63d3ad3317.jpg?1789729624",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{B}",
+    "oracle": "You may reveal exactly two cards you own with different names from outside the game. An opponent chooses one of them. You put that card into your hand.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Face Yourself",
+    "qty": 4,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 7.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/c/3ccf8f64-19bd-4fdf-b70a-30a042bacf2f.jpg?1789127528",
+    "small": "https://cards.scryfall.io/small/front/3/c/3ccf8f64-19bd-4fdf-b70a-30a042bacf2f.jpg?1789127528",
+    "back": null,
+    "layout": "normal",
+    "mana": "{5}{R}{R}",
+    "oracle": "For each creature target player controls, create a token that's a copy of that creature, except it has haste and \"At the beginning of the end step, if you don't control a planeswalker, sacrifice this creature.\"",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Flickering Hound",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Dog",
+    "cmc": 4.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/8/686f3a25-305d-4f02-8972-eba7b8e9635f.jpg?1789470769",
+    "small": "https://cards.scryfall.io/small/front/6/8/686f3a25-305d-4f02-8972-eba7b8e9635f.jpg?1789470769",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{W}",
+    "oracle": "Whenever you cast a creature spell, exile up to one other target creature you control, then return that card to the battlefield under its owner's control.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Frostbite Pyromental",
+    "qty": 6,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Elemental",
+    "cmc": 3.0,
+    "colors": [
+      "R",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/a/7a44581f-8fc4-457d-888a-1e211090ee7e.jpg?1789470870",
+    "small": "https://cards.scryfall.io/small/front/7/a/7a44581f-8fc4-457d-888a-1e211090ee7e.jpg?1789470870",
+    "back": null,
+    "layout": "normal",
+    "mana": "{U}{R}{R}",
+    "oracle": "Trample, haste\nWhenever this creature deals combat damage to a player, draw two cards.\nAt the beginning of the end step, sacrifice this creature.",
+    "power": "4",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "U"
+    ],
+    "keywords": [
+      "Haste",
+      "Trample"
+    ]
+  },
+  {
+    "name": "Gardenize",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Enchantment",
+    "cmc": 3.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/9/3/930b89c3-4433-48de-829f-20fc3dbfced9.jpg?1789644837",
+    "small": "https://cards.scryfall.io/small/front/9/3/930b89c3-4433-48de-829f-20fc3dbfced9.jpg?1789644837",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{G}{G}",
+    "oracle": "Whenever a creature you control dies, put a charge counter on this enchantment.\nAt the beginning of your first main phase, add {G} for each charge counter on this enchantment.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Germinate Recruits",
+    "qty": 7,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Instant",
+    "cmc": 3.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/b/1b5d7d19-b32a-4786-ae9a-00da5e6658ad.jpg?1789644810",
+    "small": "https://cards.scryfall.io/small/front/1/b/1b5d7d19-b32a-4786-ae9a-00da5e6658ad.jpg?1789644810",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{W}",
+    "oracle": "Create X 2/2 colorless Wizard Soldier creature tokens named Cadet, where X is the amount of life you gained this turn.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Gideon the Oathless",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Human Mercenary",
+    "cmc": 3.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/9/c985b0d1-25bd-4069-aab7-a566ff27a8f6.jpg?1789127990",
+    "small": "https://cards.scryfall.io/small/front/c/9/c985b0d1-25bd-4069-aab7-a566ff27a8f6.jpg?1789127990",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{B}",
+    "oracle": "Ward—Discard a card.\nWhenever a creature an opponent controls enters, Gideon deals 1 damage to that player.\nWhenever an opponent activates a loyalty ability, Gideon deals 1 damage to that player.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Ward"
+    ]
+  },
+  {
+    "name": "Gideon's Memorial",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Artifact",
+    "cmc": 2.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/6/768c0e64-9907-417a-a763-c836fdf36883.jpg?1789127685",
+    "small": "https://cards.scryfall.io/small/front/7/6/768c0e64-9907-417a-a763-c836fdf36883.jpg?1789127685",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{W}",
+    "oracle": "Creature tokens you control get +1/+0 and have vigilance.\n{T}: Add one mana of any color. Spend this mana only to cast a planeswalker spell.\n{1}{W}, Discard this card: It deals 4 damage to target attacking or blocking creature.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Hall of Echoes",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/4/a/4a771010-b397-4849-ac9b-08e4dd5d6a72.jpg?1789644859",
+    "small": "https://cards.scryfall.io/small/front/4/a/4a771010-b397-4849-ac9b-08e4dd5d6a72.jpg?1789644859",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "{T}: Add {C}.\n{5}: This land becomes a copy of target creature you control until end of turn. The \"legend rule\" doesn't apply to permanents you control this turn.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": []
+  },
+  {
+    "name": "Hungering Puppetbeast",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Artifact Creature — Beast Construct",
+    "cmc": 5.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/d/3db2da7a-8088-4117-916b-f9c905d1b45b.jpg?1789127646",
+    "small": "https://cards.scryfall.io/small/front/3/d/3db2da7a-8088-4117-916b-f9c905d1b45b.jpg?1789127646",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{G}{G}",
+    "oracle": "When this creature enters, create a Heartwood token. (It's a red and green artifact with \"{T}: Add {R} or {G}.\")\n{1}, Sacrifice another artifact: Put a +1/+1 counter on this creature. It gains your choice of trample, hexproof, or haste until end of turn.",
+    "power": "5",
+    "toughness": "5",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Identity Echo",
+    "qty": 4,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Enchantment",
+    "cmc": 3.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/e/6/e600b33b-8916-43dd-95d3-d7cbf874933d.jpg?1789385968",
+    "small": "https://cards.scryfall.io/small/front/e/6/e600b33b-8916-43dd-95d3-d7cbf874933d.jpg?1789385968",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{R}",
+    "oracle": "{3}{R}: Exile target creature or planeswalker you control. Reveal cards from the top of your library until you reveal a creature or planeswalker card. Put that card onto the battlefield and the rest on the bottom of your library in a random order. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Ingris Stingerquill",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Elder Sphinx",
+    "cmc": 3.0,
+    "colors": [
+      "B",
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/4/6471b135-33a8-4005-9a07-ebb74e0bf145.jpg?1788878212",
+    "small": "https://cards.scryfall.io/small/front/6/4/6471b135-33a8-4005-9a07-ebb74e0bf145.jpg?1788878212",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}{R}{R}",
+    "oracle": "Flying\nWhenever a creature you control attacks, that creature deals 1 damage to each opponent.\n{4}: Create a 2/2 colorless Wizard Soldier creature token named Cadet. Then creatures you control gain haste until end of turn.",
+    "power": "1",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "R"
+    ],
+    "keywords": [
+      "Flying"
+    ]
+  },
+  {
+    "name": "Jace, Reality Sculptor",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Planeswalker — Jace",
+    "cmc": 5.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/4/74087795-0b38-4fd2-9841-147583baca41.jpg?1790075861",
+    "small": "https://cards.scryfall.io/small/front/7/4/74087795-0b38-4fd2-9841-147583baca41.jpg?1790075861",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{U}{U}",
+    "oracle": "+1: Empower Jace X, where X is the number of Islands you control.\n−3: Until your next turn, whenever a creature attacks you or a planeswalker you control, it gets -5/-0 until end of turn.\n0: Exile all but the bottom card of each opponent's library. Activate only if there are twenty-five or more loyalty counters among Jaces you control.",
+    "power": null,
+    "toughness": null,
+    "loyalty": "5",
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Empower Jace"
+    ]
+  },
+  {
+    "name": "Karn, Argent Defender",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Artifact Creature — Golem",
+    "cmc": 2.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/1/e/1ebbbddb-2dc3-4194-b72b-13bcebe2ab89.jpg?1788878301",
+    "small": "https://cards.scryfall.io/small/front/1/e/1ebbbddb-2dc3-4194-b72b-13bcebe2ab89.jpg?1788878301",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}",
+    "oracle": "Artifacts and creatures entering the battlefield don't cause abilities to trigger.",
+    "power": "1",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": []
+  },
+  {
+    "name": "Karn, Gilded Guardian",
+    "qty": 6,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Artifact Creature — Golem",
+    "cmc": 10.0,
+    "colors": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/a/3abcae65-5b21-4c98-adad-34b8bc76ea3a.jpg?1789014541",
+    "small": "https://cards.scryfall.io/small/front/3/a/3abcae65-5b21-4c98-adad-34b8bc76ea3a.jpg?1789014541",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2/W}{2/U}{2/B}{2/R}{2/G}",
+    "oracle": "Vigilance, trample\nWhen Karn enters, draw a card for each color among other artifacts you control.",
+    "power": "5",
+    "toughness": "5",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Vigilance",
+      "Trample"
+    ]
+  },
+  {
+    "name": "Lich's Relic",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Artifact — Equipment",
+    "cmc": 1.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/b/1/b105511d-5022-4a84-b6ce-4bb433e93a62.jpg?1789644819",
+    "small": "https://cards.scryfall.io/small/front/b/1/b105511d-5022-4a84-b6ce-4bb433e93a62.jpg?1789644819",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}",
+    "oracle": "When this Equipment enters, you may pay {2}. When you do, for each opponent, destroy up to one target creature or planeswalker that player controls.\nEquipped creature gets +2/+1.\nEquip {2}",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Equip"
+    ]
+  },
+  {
+    "name": "Liliana the Repentant",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Human Warlock",
+    "cmc": 2.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/e/1eb25a6c-d6b4-465d-990e-f1ab86b26b69.jpg?1788329273",
+    "small": "https://cards.scryfall.io/small/front/1/e/1eb25a6c-d6b4-465d-990e-f1ab86b26b69.jpg?1788329273",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{B}",
+    "oracle": "Whenever another creature or planeswalker you control enters, mill two cards.\nExhaust — {5}{B}: Return target creature or planeswalker card from your graveyard to the battlefield. Put a +1/+1 counter on Liliana. Activate only as a sorcery. (Activate each exhaust ability only once.)",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Exhaust",
+      "Mill"
+    ]
+  },
+  {
+    "name": "Loyal Tutor",
+    "qty": 8,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Instant",
+    "cmc": 1.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/4/9/490dae91-94ce-42a9-a11f-6c5e77c4e486.jpg?1788878096",
+    "small": "https://cards.scryfall.io/small/front/4/9/490dae91-94ce-42a9-a11f-6c5e77c4e486.jpg?1788878096",
+    "back": null,
+    "layout": "normal",
+    "mana": "{W}",
+    "oracle": "Search your library for a planeswalker card, reveal it, then shuffle and put that card on top.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Lyra, Archangel of Dawn",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Angel Knight",
+    "cmc": 3.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/8/6/86a3866e-68a8-402c-baf0-1908e98e3995.jpg?1789127693",
+    "small": "https://cards.scryfall.io/small/front/8/6/86a3866e-68a8-402c-baf0-1908e98e3995.jpg?1789127693",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{W}",
+    "oracle": "Flying\nWhenever you gain life, put a +1/+1 counter on each Angel you control.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": [
+      "Flying"
+    ]
+  },
+  {
+    "name": "Lyra, Tolarian Archangel",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Angel Wizard",
+    "cmc": 3.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/5/a5183681-447b-4023-91f7-00e9338f4417.jpg?1789128032",
+    "small": "https://cards.scryfall.io/small/front/a/5/a5183681-447b-4023-91f7-00e9338f4417.jpg?1789128032",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}{U}",
+    "oracle": "Flying\nAt the beginning of each end step, if you've drawn three or more cards this turn, create a 3/3 blue Angel creature token with flying.\n{3}{U}{U}: Until end of turn, whenever Lyra deals combat damage to a player, draw two cards.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Flying"
+    ]
+  },
+  {
+    "name": "Necrodominance",
+    "qty": 1,
+    "set": "SPG",
+    "rarity": "mythic",
+    "type": "Legendary Enchantment",
+    "cmc": 3.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
+    "small": "https://cards.scryfall.io/small/front/4/f/4f981c28-9134-45e8-8687-94b3c81ba582.jpg?1790866149",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}{B}{B}",
+    "oracle": "Skip your draw step.\nAt the beginning of your end step, you may pay any amount of life. If you do, draw that many cards.\nYour maximum hand size is five.\nIf a card or token would be put into your graveyard from anywhere, exile it instead.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Null Summoner",
+    "qty": 7,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Warlock",
+    "cmc": 4.0,
+    "colors": [
+      "B",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/a/3afdc75a-1bf5-4f2f-84eb-d82f77a095cd.jpg?1789127648",
+    "small": "https://cards.scryfall.io/small/front/3/a/3afdc75a-1bf5-4f2f-84eb-d82f77a095cd.jpg?1789127648",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{U}{B}",
+    "oracle": "When this creature enters, if you cast it, target opponent reveals their hand. You choose a nonland card from it. Exile that card.\nThreshold — As long as there are seven or more cards in your graveyard, you may cast the exiled card, and mana of any type can be spent to cast that spell.",
+    "power": "4",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "U"
+    ],
+    "keywords": [
+      "Threshold"
+    ]
+  },
+  {
+    "name": "Omnipresence",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Enchantment",
+    "cmc": 8.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/e/a/eaf9dc77-c83b-49cf-84be-6bd791cb925e.jpg?1790558797",
+    "small": "https://cards.scryfall.io/small/front/e/a/eaf9dc77-c83b-49cf-84be-6bd791cb925e.jpg?1790558797",
+    "back": null,
+    "layout": "normal",
+    "mana": "{5}{G}{G}{G}",
+    "oracle": "You may cast spells with mana value less than or equal to the number of creatures you control from your hand without paying their mana costs.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Overgrown Farmland",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/1/7/178e61e4-472f-42cd-9d3b-4880c2acc527.jpg?1788878246",
+    "small": "https://cards.scryfall.io/small/front/1/7/178e61e4-472f-42cd-9d3b-4880c2acc527.jpg?1788878246",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {G} or {W}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Pompous Battlemage // Improvised Act",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Goblin Sorcerer // Sorcery",
+    "cmc": 1.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/a/aa0f77ac-741a-444a-8bf0-a42c644726bf.jpg?1788878186",
+    "small": "https://cards.scryfall.io/small/front/a/a/aa0f77ac-741a-444a-8bf0-a42c644726bf.jpg?1788878186",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{R} // {R}",
+    "oracle": "Prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nYou may discard a card. If you do, draw a card.",
+    "power": "1",
+    "toughness": "1",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Prowess",
+      "Prepared"
+    ],
+    "faces": [
+      {
+        "name": "Pompous Battlemage",
+        "type": "Creature — Goblin Sorcerer",
+        "mana": "{R}",
+        "oracle": "Prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",
+        "power": "1",
+        "toughness": "1",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Improvised Act",
+        "type": "Sorcery",
+        "mana": "{R}",
+        "oracle": "You may discard a card. If you do, draw a card.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Proctor of Potential",
+    "qty": 6,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Cleric",
+    "cmc": 2.0,
+    "colors": [
+      "U",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/f/cf0eec8c-0475-4050-8144-481a9bb13a0f.jpg?1789127661",
+    "small": "https://cards.scryfall.io/small/front/c/f/cf0eec8c-0475-4050-8144-481a9bb13a0f.jpg?1789127661",
+    "back": null,
+    "layout": "normal",
+    "mana": "{W}{U}",
+    "oracle": "Whenever this creature or another creature you control enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{W}{U}: Return this card from your graveyard to the battlefield with a finality counter on it. Activate only if you've scried or surveilled this turn. (If a creature with a finality counter on it would die, exile it instead.)",
+    "power": "3",
+    "toughness": "1",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Surveil"
+    ]
+  },
+  {
+    "name": "Puppet Crafting",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Enchantment — Aura",
+    "cmc": 2.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/b/6b8789a6-3b63-4198-af5f-c2f2f49fafd9.jpg?1789470736",
+    "small": "https://cards.scryfall.io/small/front/6/b/6b8789a6-3b63-4198-af5f-c2f2f49fafd9.jpg?1789470736",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{G}",
+    "oracle": "Enchant artifact or non-Aura enchantment\nEnchanted permanent is a Construct creature with base power and toughness 5/5 in addition to its other types.\n{4}{G}: Return this card from your graveyard to your hand.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": [
+      "Enchant"
+    ]
+  },
+  {
+    "name": "Pyre Rhymer // Molten Tide",
+    "qty": 4,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Elemental Sorcerer // Instant",
+    "cmc": 3.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/2/b/2b0ebea0-86de-4da4-9fe8-dacc1e75c161.jpg?1789470850",
+    "small": "https://cards.scryfall.io/small/front/2/b/2b0ebea0-86de-4da4-9fe8-dacc1e75c161.jpg?1789470850",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{1}{R}{R} // {R}",
+    "oracle": "Prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nUntil end of turn, whenever you tap a Mountain for mana, add an additional {R}.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Prowess",
+      "Prepared"
+    ],
+    "faces": [
+      {
+        "name": "Pyre Rhymer",
+        "type": "Creature — Elemental Sorcerer",
+        "mana": "{1}{R}{R}",
+        "oracle": "Prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",
+        "power": "3",
+        "toughness": "3",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Molten Tide",
+        "type": "Instant",
+        "mana": "{R}",
+        "oracle": "Until end of turn, whenever you tap a Mountain for mana, add an additional {R}.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Repurposed Enforcer",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Soldier",
+    "cmc": 2.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/5/35000e93-85d3-44f8-976a-5918ee4c71e0.jpg?1788878108",
+    "small": "https://cards.scryfall.io/small/front/3/5/35000e93-85d3-44f8-976a-5918ee4c71e0.jpg?1788878108",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{W}",
+    "oracle": "Whenever this creature attacks, empower Jace X, where X is the number of creatures you control. (Put that many loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")",
+    "power": "3",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": [
+      "Surveil",
+      "Empower Jace"
+    ]
+  },
+  {
+    "name": "Return to the Light Realms",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Sorcery",
+    "cmc": 9.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/9/e/9e72f397-2384-40f1-882b-f627664d97df.jpg?1788878107",
+    "small": "https://cards.scryfall.io/small/front/9/e/9e72f397-2384-40f1-882b-f627664d97df.jpg?1788878107",
+    "back": null,
+    "layout": "normal",
+    "mana": "{7}{W}{W}",
+    "oracle": "Return all nonland permanent cards from your graveyard to the battlefield.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Rise of the Deathbringer",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Instant",
+    "cmc": 5.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/8/1/811719ad-b5a3-4d31-8c6f-5dbdfccf7c1f.jpg?1789470807",
+    "small": "https://cards.scryfall.io/small/front/8/1/811719ad-b5a3-4d31-8c6f-5dbdfccf7c1f.jpg?1789470807",
+    "back": null,
+    "layout": "normal",
+    "mana": "{4}{B}",
+    "oracle": "Choose one —\n• Draw cards equal to the greatest power among creatures you control. You lose life equal to the number of cards drawn this way.\n• All creatures get -3/-3 until end of turn.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Rockfall Vale",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/e/3/e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7.jpg?1788878243",
+    "small": "https://cards.scryfall.io/small/front/e/3/e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7.jpg?1788878243",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {R} or {G}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Roiling Canopy",
+    "qty": 6,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/d/b/db61361b-bd12-453e-abc2-bbe09b66e3d9.jpg?1789514074",
+    "small": "https://cards.scryfall.io/small/front/d/b/db61361b-bd12-453e-abc2-bbe09b66e3d9.jpg?1789514074",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped.\nWhenever a Forest you control enters, if you control at least five other Forests, target creature you control gets +3/+3 until end of turn.\n{T}: Add {G}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Root Maze",
+    "qty": 1,
+    "set": "SPG",
+    "rarity": "mythic",
+    "type": "Enchantment",
+    "cmc": 1.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
+    "small": "https://cards.scryfall.io/small/front/0/7/07bf6e66-b146-4db3-b2ab-f7b199acbe27.jpg?1790866150",
+    "back": null,
+    "layout": "normal",
+    "mana": "{G}",
+    "oracle": "Artifacts and lands enter tapped.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Samut, Hazoret's Champion",
+    "qty": 4,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Human Warrior Cleric",
+    "cmc": 2.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/b/a/ba920f23-f05c-410e-8516-c93abedf1d4d.jpg?1789729662",
+    "small": "https://cards.scryfall.io/small/front/b/a/ba920f23-f05c-410e-8516-c93abedf1d4d.jpg?1789729662",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{R}",
+    "oracle": "Creatures you control have haste.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Samut, Tyrant of Naktamun",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Human Wizard",
+    "cmc": 2.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/d/6d7d8fa7-ce69-4a8c-9af0-55571393a244.jpg?1789729644",
+    "small": "https://cards.scryfall.io/small/front/6/d/6d7d8fa7-ce69-4a8c-9af0-55571393a244.jpg?1789729644",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}",
+    "oracle": "Instant and sorcery spells you control have split second. (As long as a spell with split second is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)",
+    "power": "2",
+    "toughness": "1",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Shipwreck Marsh",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/9/e/9e944c5b-68ac-4a30-bbd4-09a4288319ce.jpg?1788878245",
+    "small": "https://cards.scryfall.io/small/front/9/e/9e944c5b-68ac-4a30-bbd4-09a4288319ce.jpg?1788878245",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {U} or {B}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Simulacrum Shaper",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Elf Druid",
+    "cmc": 3.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/c/7c725702-8696-4e5a-8318-62f5e2616d52.jpg?1789470857",
+    "small": "https://cards.scryfall.io/small/front/7/c/7c725702-8696-4e5a-8318-62f5e2616d52.jpg?1789470857",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{G}{G}",
+    "oracle": "When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.\nWhen this creature dies, draw a card.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Solarium Sentry",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Cat Soldier",
+    "cmc": 2.0,
+    "colors": [
+      "G",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/e/1ef12dcf-df50-4da6-8c4c-e2937ba9698e.jpg?1789127651",
+    "small": "https://cards.scryfall.io/small/front/1/e/1ef12dcf-df50-4da6-8c4c-e2937ba9698e.jpg?1789127651",
+    "back": null,
+    "layout": "normal",
+    "mana": "{G}{W}",
+    "oracle": "Whenever an opponent casts a spell with mana value 2 or less, you gain 2 life.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Solitary Cell",
+    "qty": 4,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Artifact",
+    "cmc": 2.0,
+    "colors": [
+      "R",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/1/5142bbb6-194c-4b12-b11a-1a21c9fe81a6.jpg?1790558834",
+    "small": "https://cards.scryfall.io/small/front/5/1/5142bbb6-194c-4b12-b11a-1a21c9fe81a6.jpg?1790558834",
+    "back": null,
+    "layout": "normal",
+    "mana": "{R}{W}",
+    "oracle": "When this artifact enters, exile target nonland permanent an opponent controls with mana value 3 or less until this artifact leaves the battlefield.\n{1}, {T}, Discard a legendary card: Draw a card.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Sphinx of False Conclusions",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Sphinx Illusion",
+    "cmc": 4.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/0/8/08ffbd51-2bd3-4262-8809-09576ce2b6f5.jpg?1789385594",
+    "small": "https://cards.scryfall.io/small/front/0/8/08ffbd51-2bd3-4262-8809-09576ce2b6f5.jpg?1789385594",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{U}{U}",
+    "oracle": "Flash\nFlying\nWhenever this creature attacks, draw a card, then discard a card.\nWhen this creature dies, if it isn't a token, create a token that's a copy of it.",
+    "power": "4",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Flying",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Stinging Vitriol",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 2.0,
+    "colors": [
+      "B",
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/7/a7d78297-7411-4ec5-8931-a25146869d5b.jpg?1789385971",
+    "small": "https://cards.scryfall.io/small/front/a/7/a7d78297-7411-4ec5-8931-a25146869d5b.jpg?1789385971",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}{R}",
+    "oracle": "Stinging Vitriol deals 2 damage to target opponent. That player reveals their hand. You choose a nonland card from it. They discard that card.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Tam, the Possibility",
+    "qty": 7,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Gorgon Wizard",
+    "cmc": 3.0,
+    "colors": [
+      "G",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/5/6529d399-677e-45a6-ac3e-12a0b10f6c37.jpg?1789644886",
+    "small": "https://cards.scryfall.io/small/front/6/5/6529d399-677e-45a6-ac3e-12a0b10f6c37.jpg?1789644886",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{G}{U}",
+    "oracle": "Planeswalker spells you cast cost {1} less to cast.\n{W}{U}{B}{R}{G}, {T}: Proliferate X times, where X is the number of planeswalker types among planeswalkers you control. (To proliferate, choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+    "power": "2",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Proliferate"
+    ]
+  },
+  {
+    "name": "Tarmogoyf",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Creature — Lhurgoyf",
+    "cmc": 2.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/8/b/8be5ee47-8f8a-4e3c-b1a1-9ca0e1fdec7f.jpg?1789127270",
+    "small": "https://cards.scryfall.io/small/front/8/b/8be5ee47-8f8a-4e3c-b1a1-9ca0e1fdec7f.jpg?1789127270",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{G}",
+    "oracle": "Tarmogoyf's power is equal to the number of card types among cards in all graveyards and its toughness is equal to that number plus 1.",
+    "power": "*",
+    "toughness": "1+*",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Tenured Tethermage",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Artificer",
+    "cmc": 3.0,
+    "colors": [
+      "G",
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/7/1703306d-6a3d-4ab8-bf58-a9992236ef0f.jpg?1789385792",
+    "small": "https://cards.scryfall.io/small/front/1/7/1703306d-6a3d-4ab8-bf58-a9992236ef0f.jpg?1789385792",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{R}{G}",
+    "oracle": "When this creature enters, you may sacrifice a land. If you do, create two tapped Heartwood tokens. (They're red and green artifacts with \"{T}: Add {R} or {G}.\")\nTap two untapped artifacts you control: Put two +1/+1 counters on this creature.",
+    "power": "1",
+    "toughness": "1",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Theorist's Proxy",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Illusion",
+    "cmc": 2.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/1/710302ca-c4be-4069-8ce1-f531414c74e9.jpg?1788878151",
+    "small": "https://cards.scryfall.io/small/front/7/1/710302ca-c4be-4069-8ce1-f531414c74e9.jpg?1788878151",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}",
+    "oracle": "Flash\nWhen this creature enters, empower Jace 3. (Put three loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")\n{U}, Sacrifice this creature: The next spell you cast this turn can't be countered.",
+    "power": "0",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Surveil",
+      "Empower Jace",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Theorist's Sanctum",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land — Island",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/2/2/22db5bba-46c9-4a26-821d-303ddb386ea4.jpg?1788878256",
+    "small": "https://cards.scryfall.io/small/front/2/2/22db5bba-46c9-4a26-821d-303ddb386ea4.jpg?1788878256",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "({T}: Add {U}.)\nAs this land enters, you may behold a Jace. If you don't, this land enters tapped. (To behold a Jace, choose a Jace you control or reveal a Jace card from your hand.)\n{2}{U}, {T}: Empower Jace 2.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Empower Jace",
+      "Behold"
+    ]
+  },
+  {
+    "name": "Variable Chaser // Arc of Fortune",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Human Wizard // Sorcery",
+    "cmc": 3.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
+    "small": "https://cards.scryfall.io/small/front/e/3/e3afedb1-bf9d-4e31-9700-433514cc29b1.jpg?1789470807",
+    "back": null,
+    "layout": "prepare",
+    "mana": "{2}{U} // {2}{U}",
+    "oracle": "Flying, prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\n//\nEach player may discard their hand and draw seven cards.",
+    "power": "2",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Flying",
+      "Prowess",
+      "Prepared"
+    ],
+    "faces": [
+      {
+        "name": "Variable Chaser",
+        "type": "Creature — Human Wizard",
+        "mana": "{2}{U}",
+        "oracle": "Flying, prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",
+        "power": "2",
+        "toughness": "3",
+        "loyalty": null,
+        "defense": null
+      },
+      {
+        "name": "Arc of Fortune",
+        "type": "Sorcery",
+        "mana": "{2}{U}",
+        "oracle": "Each player may discard their hand and draw seven cards.",
+        "power": null,
+        "toughness": null,
+        "loyalty": null,
+        "defense": null
+      }
+    ]
+  },
+  {
+    "name": "Verdant Kraken",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Plant Kraken",
+    "cmc": 7.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
+    "small": "https://cards.scryfall.io/small/front/2/b/2bb7a8eb-227f-410b-859f-750ef0aea2f0.jpg?1789644841",
+    "back": null,
+    "layout": "normal",
+    "mana": "{4}{G}{G}{G}",
+    "oracle": "At the beginning of each player's upkeep, you create a 3/3 green Forest Tentacle land creature token. (It has \"{T}: Add {G}.\" It's affected by summoning sickness until your next turn.)",
+    "power": "6",
+    "toughness": "6",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Vindictive Triumph",
+    "qty": 2,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Instant",
+    "cmc": 3.0,
+    "colors": [
+      "B",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/8/a803dbe7-153a-4e92-ad4d-c2babebe003d.jpg?1790558815",
+    "small": "https://cards.scryfall.io/small/front/a/8/a803dbe7-153a-4e92-ad4d-c2babebe003d.jpg?1790558815",
+    "back": null,
+    "layout": "normal",
+    "mana": "{W}{B}{B}",
+    "oracle": "Exile target creature or planeswalker. If that permanent's mana value was 3 or less, return it to the battlefield tapped under your control. Exile it at the beginning of the next end step.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Vraska, Soul of Stone",
+    "qty": 5,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Gorgon Wizard",
+    "cmc": 3.0,
+    "colors": [
+      "R",
+      "U",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/f/3/f3869752-eade-4e7a-8dd1-68cafb9e10be.jpg?1789128008",
+    "small": "https://cards.scryfall.io/small/front/f/3/f3869752-eade-4e7a-8dd1-68cafb9e10be.jpg?1789128008",
+    "back": null,
+    "layout": "normal",
+    "mana": "{U}{R}{W}",
+    "oracle": "Artifact creatures you control have vigilance.\nWhenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  {
+    "name": "Vraska, the Cutting Glare",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Legendary Creature — Gorgon Assassin",
+    "cmc": 3.0,
+    "colors": [
+      "B",
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/c/5c28b012-5efb-488f-a1c1-09e2dddfd6ee.jpg?1789127776",
+    "small": "https://cards.scryfall.io/small/front/5/c/5c28b012-5efb-488f-a1c1-09e2dddfd6ee.jpg?1789127776",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}{B}{G}",
+    "oracle": "Deathtouch\nWhen Vraska enters, if you control six or more lands, destroy target permanent an opponent controls. They create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+    "power": "4",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "G"
+    ],
+    "keywords": [
+      "Treasure",
+      "Deathtouch"
+    ]
+  },
+  {
+    "name": "Vraska's Final Mercy",
+    "qty": 3,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 2.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/9/9/992bd991-7cfb-459f-bafd-9a44f3c925c5.jpg?1789699369",
+    "small": "https://cards.scryfall.io/small/front/9/9/992bd991-7cfb-459f-bafd-9a44f3c925c5.jpg?1789699369",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}{B}",
+    "oracle": "Choose one —\n• You lose 2 life. Destroy target creature or planeswalker.\n• You lose 2 life. Empower Jace 6. (Put six loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[−1]: Surveil 1\" and \"[−3]: Draw a card.\")",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Surveil",
+      "Empower Jace"
+    ]
+  }
 ]
