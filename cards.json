@@ -501,7 +501,7 @@
   },
   {
     "name": "Flickering Hound",
-    "qty": 3,
+    "qty": 4,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Dog",
@@ -649,6 +649,31 @@
     "oracle": "Creature tokens you control get +1/+0 and have vigilance.\n{T}: Add one mana of any color. Spend this mana only to cast a planeswalker spell.\n{1}{W}, Discard this card: It deals 4 damage to target attacking or blocking creature.",
     "power": null,
     "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Guiding Hydra",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Creature — Hydra Horror",
+    "cmc": 1.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/5/a53eb840-039d-4c45-b701-d58cb26b1a6c.jpg?1789644816",
+    "small": "https://cards.scryfall.io/small/front/a/5/a53eb840-039d-4c45-b701-d58cb26b1a6c.jpg?1789644816",
+    "back": null,
+    "layout": "normal",
+    "mana": "{X}{W}",
+    "oracle": "This creature enters with X +1/+1 counters on it.\nAt the beginning of combat on your turn, you may remove a +1/+1 counter from this creature. If you do, put a +1/+1 counter on each other creature you control.",
+    "power": "1",
+    "toughness": "0",
     "loyalty": null,
     "defense": null,
     "identity": [
@@ -1158,7 +1183,7 @@
   },
   {
     "name": "Puppet Crafting",
-    "qty": 5,
+    "qty": 6,
     "set": "FRA",
     "rarity": "rare",
     "type": "Enchantment — Aura",
@@ -1808,7 +1833,7 @@
   },
   {
     "name": "Vindictive Triumph",
-    "qty": 2,
+    "qty": 3,
     "set": "FRA",
     "rarity": "rare",
     "type": "Instant",
