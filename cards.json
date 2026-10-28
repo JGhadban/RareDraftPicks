@@ -26,7 +26,7 @@
   },
   {
     "name": "Avatar of Burgeoning Echoes",
-    "qty": 1,
+    "qty": 2,
     "set": "FRA",
     "rarity": "mythic",
     "type": "Creature — Avatar",
@@ -424,7 +424,7 @@
   },
   {
     "name": "Entrust the Spark",
-    "qty": 6,
+    "qty": 7,
     "set": "FRA",
     "rarity": "rare",
     "type": "Sorcery",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Flickering Hound",
-    "qty": 4,
+    "qty": 5,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Dog",
@@ -556,7 +556,7 @@
   },
   {
     "name": "Gardenize",
-    "qty": 3,
+    "qty": 4,
     "set": "FRA",
     "rarity": "rare",
     "type": "Enchantment",
@@ -700,6 +700,30 @@
     "loyalty": null,
     "defense": null,
     "identity": [],
+    "keywords": []
+  },
+  {
+    "name": "Haunted Ridge",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/a/4/a4e4966b-8963-4fac-a8bf-e778e063c7dd.jpg?1788878241",
+    "small": "https://cards.scryfall.io/small/front/a/4/a4e4966b-8963-4fac-a8bf-e778e063c7dd.jpg?1788878241",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "R"
+    ],
     "keywords": []
   },
   {
@@ -1459,6 +1483,31 @@
     "keywords": []
   },
   {
+    "name": "Seasoned Cryomancer",
+    "qty": 1,
+    "set": "FRA",
+    "rarity": "mythic",
+    "type": "Creature — Human Wizard",
+    "cmc": 3.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/1/51d86875-420d-4e82-b69c-4feeb99c9428.jpg?1789470781",
+    "small": "https://cards.scryfall.io/small/front/5/1/51d86875-420d-4e82-b69c-4feeb99c9428.jpg?1789470781",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}{U}",
+    "oracle": "When this creature enters, draw two cards, then discard two cards. When you discard one or more nonland cards this way, tap up to that many target creatures and put a stun counter on each of them.\n{3}{U}{U}, Exile this card from your graveyard: Draw two cards.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": []
+  },
+  {
     "name": "Shipwreck Marsh",
     "qty": 3,
     "set": "FRA",
@@ -1860,7 +1909,7 @@
   },
   {
     "name": "Vraska, Soul of Stone",
-    "qty": 5,
+    "qty": 6,
     "set": "FRA",
     "rarity": "rare",
     "type": "Legendary Creature — Gorgon Wizard",
