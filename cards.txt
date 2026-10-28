@@ -2,6 +2,7 @@
 #   powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
 Ajani's Anguish
 Avatar of Burgeoning Echoes
+Avatar of Burgeoning Echoes
 Bloodline Recollector
 Bloodline Recollector
 Carnivorous Cultivator
@@ -33,6 +34,7 @@ Entrust the Spark
 Entrust the Spark
 Entrust the Spark
 Entrust the Spark
+Entrust the Spark
 Extrapolate the Impossible
 Extrapolate the Impossible
 Extrapolate the Impossible
@@ -48,12 +50,14 @@ Flickering Hound
 Flickering Hound
 Flickering Hound
 Flickering Hound
+Flickering Hound
 Frostbite Pyromental
 Frostbite Pyromental
 Frostbite Pyromental
 Frostbite Pyromental
 Frostbite Pyromental
 Frostbite Pyromental
+Gardenize
 Gardenize
 Gardenize
 Gardenize
@@ -72,6 +76,7 @@ Gideon's Memorial
 Gideon's Memorial
 Guiding Hydra
 Hall of Echoes
+Haunted Ridge
 Hungering Puppetbeast
 Hungering Puppetbeast
 Identity Echo
@@ -162,6 +167,7 @@ Samut, Hazoret's Champion
 Samut, Hazoret's Champion
 Samut, Tyrant of Naktamun
 Samut, Tyrant of Naktamun
+Seasoned Cryomancer
 Shipwreck Marsh
 Shipwreck Marsh
 Shipwreck Marsh
@@ -201,6 +207,7 @@ Verdant Kraken
 Vindictive Triumph
 Vindictive Triumph
 Vindictive Triumph
+Vraska, Soul of Stone
 Vraska, Soul of Stone
 Vraska, Soul of Stone
 Vraska, Soul of Stone
