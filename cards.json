@@ -1666,6 +1666,31 @@
     "keywords": []
   },
   {
+    "name": "Sublime Epiphany",
+    "qty": 1,
+    "set": "SPG",
+    "rarity": "mythic",
+    "type": "Instant",
+    "cmc": 6.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/b/1bf992ff-b7a1-48d9-a7e1-89a48d743fc2.jpg?1790866177",
+    "small": "https://cards.scryfall.io/small/front/1/b/1bf992ff-b7a1-48d9-a7e1-89a48d743fc2.jpg?1790866177",
+    "back": null,
+    "layout": "normal",
+    "mana": "{4}{U}{U}",
+    "oracle": "Choose one or more —\n• Counter target spell.\n• Counter target activated or triggered ability.\n• Return target nonland permanent to its owner's hand.\n• Create a token that's a copy of target creature you control.\n• Target player draws a card.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": []
+  },
+  {
     "name": "Tam, the Possibility",
     "qty": 7,
     "set": "FRA",
