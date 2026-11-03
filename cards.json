@@ -1128,7 +1128,7 @@
   },
   {
     "name": "Pompous Battlemage // Improvised Act",
-    "qty": 3,
+    "qty": 4,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Goblin Sorcerer // Sorcery",
@@ -1509,7 +1509,7 @@
   },
   {
     "name": "Shipwreck Marsh",
-    "qty": 3,
+    "qty": 2,
     "set": "FRA",
     "rarity": "rare",
     "type": "Land",
