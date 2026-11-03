@@ -606,7 +606,7 @@
   },
   {
     "name": "Gideon the Oathless",
-    "qty": 3,
+    "qty": 2,
     "set": "FRA",
     "rarity": "rare",
     "type": "Legendary Creature — Human Mercenary",
@@ -1585,7 +1585,7 @@
   },
   {
     "name": "Solitary Cell",
-    "qty": 4,
+    "qty": 5,
     "set": "FRA",
     "rarity": "rare",
     "type": "Artifact",
