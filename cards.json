@@ -1234,7 +1234,7 @@
   },
   {
     "name": "Pyre Rhymer // Molten Tide",
-    "qty": 4,
+    "qty": 5,
     "set": "FRA",
     "rarity": "rare",
     "type": "Creature — Elemental Sorcerer // Instant",
@@ -1434,7 +1434,7 @@
   },
   {
     "name": "Samut, Hazoret's Champion",
-    "qty": 4,
+    "qty": 3,
     "set": "FRA",
     "rarity": "rare",
     "type": "Legendary Creature — Human Warrior Cleric",
