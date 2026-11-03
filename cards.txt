@@ -70,7 +70,6 @@ Germinate Recruits
 Germinate Recruits
 Gideon the Oathless
 Gideon the Oathless
-Gideon the Oathless
 Gideon's Memorial
 Gideon's Memorial
 Gideon's Memorial
@@ -177,6 +176,7 @@ Solarium Sentry
 Solarium Sentry
 Solarium Sentry
 Solarium Sentry
+Solitary Cell
 Solitary Cell
 Solitary Cell
 Solitary Cell
