@@ -130,6 +130,7 @@ Overgrown Farmland
 Pompous Battlemage
 Pompous Battlemage
 Pompous Battlemage
+Pompous Battlemage
 Proctor of Potential
 Proctor of Potential
 Proctor of Potential
@@ -167,7 +168,6 @@ Samut, Hazoret's Champion
 Samut, Tyrant of Naktamun
 Samut, Tyrant of Naktamun
 Seasoned Cryomancer
-Shipwreck Marsh
 Shipwreck Marsh
 Shipwreck Marsh
 Simulacrum Shaper
