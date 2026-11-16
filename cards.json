@@ -1,20 +1,200 @@
 [
   {
-    "name": "Totally Lost",
+    "name": "Blood Crypt",
     "qty": 1,
-    "set": "GTC",
-    "rarity": "common",
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Land — Swamp Mountain",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/1/b/1b7eb998-3ec0-4cbc-a416-5a1e3e5a7316.jpg?1784036817",
+    "small": "https://cards.scryfall.io/small/front/1/b/1b7eb998-3ec0-4cbc-a416-5a1e3e5a7316.jpg?1784036817",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Brazen Bluff",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
     "type": "Instant",
-    "cmc": 5.0,
+    "cmc": 2.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/b/5b306901-1bba-488b-866e-83aa162dab5a.jpg?1793274251",
+    "small": "https://cards.scryfall.io/small/front/5/b/5b306901-1bba-488b-866e-83aa162dab5a.jpg?1793274251",
+    "back": null,
+    "layout": "normal",
+    "mana": "{R}{R}",
+    "oracle": "Choose target noncreature spell an opponent controls. That player may exile it. If they don't, you may cast a noncreature spell from your hand without paying its mana cost.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Captain Jonathan Archer",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Human Officer",
+    "cmc": 3.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/4/a4518ea3-5f56-4f1d-9024-2bf06ac98786.jpg?1792508262",
+    "small": "https://cards.scryfall.io/small/front/a/4/a4518ea3-5f56-4f1d-9024-2bf06ac98786.jpg?1792508262",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{G}",
+    "oracle": "When Captain Archer enters, create Porthos, a legendary 1/1 green Dog creature token.\nFederation — {G}, {T}: Target creature you control gets +X/+X until end of turn, where X is the number of creature types among non-Borg creatures you control. Activate only as a sorcery.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": [
+      "Federation"
+    ]
+  },
+  {
+    "name": "Captain Kathryn Janeway",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Human Officer",
+    "cmc": 4.0,
+    "colors": [
+      "G"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/d/1/d17ea45c-7f9c-411f-b7d3-ca7100ffe53b.jpg?1784036788",
+    "small": "https://cards.scryfall.io/small/front/d/1/d17ea45c-7f9c-411f-b7d3-ca7100ffe53b.jpg?1784036788",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{G}",
+    "oracle": "You may play an additional land on each of your turns.\nWhenever Captain Janeway or another creature you control enters, that creature explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the creature, then put the card back or put it into your graveyard.)",
+    "power": "2",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G"
+    ],
+    "keywords": [
+      "Explore"
+    ]
+  },
+  {
+    "name": "Dathon, His Heart Open",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Tamarian Officer",
+    "cmc": 3.0,
+    "colors": [
+      "G",
+      "R",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/f/2/f2fe4663-eaaf-42c3-90f9-07e68129352c.jpg?1793187171",
+    "small": "https://cards.scryfall.io/small/front/f/2/f2fe4663-eaaf-42c3-90f9-07e68129352c.jpg?1793187171",
+    "back": null,
+    "layout": "normal",
+    "mana": "{G}{U}{R}",
+    "oracle": "Whenever you cast an enchantment spell, draw a card. If it's a Saga spell, Dathon deals 2 damage to each opponent.\n{2}: Choose a counter on target enchantment you control. Put another counter of that kind on it. Activate only as a sorcery.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "R",
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Deanna Troi, Psychic Counsel",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Betazoid Human Advisor",
+    "cmc": 2.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/1/a/1a027761-84e7-4cbf-a629-ae9bd3d8467b.jpg?1793100632",
+    "small": "https://cards.scryfall.io/small/front/1/a/1a027761-84e7-4cbf-a629-ae9bd3d8467b.jpg?1793100632",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{W}",
+    "oracle": "Other creatures you control enter with an additional +1/+1 counter on them.",
+    "power": "2",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Deep Space 9",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Artifact — Spacecraft",
+    "cmc": 9.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/7/6/76b039c5-e0a1-410a-954b-52f304e31f7f.jpg?1792508419",
+    "small": "https://cards.scryfall.io/small/front/7/6/76b039c5-e0a1-410a-954b-52f304e31f7f.jpg?1792508419",
+    "back": null,
+    "layout": "normal",
+    "mana": "{9}",
+    "oracle": "When Deep Space 9 enters and at the beginning of your upkeep, exile the top four cards of your library. Put all permanent cards exiled this way onto the battlefield.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery.)\n9+ | Creatures you control get +3/+3.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": [
+      "Station"
+    ]
+  },
+  {
+    "name": "Deep Space Scan",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 6.0,
     "colors": [
       "U"
     ],
-    "img": "https://cards.scryfall.io/normal/front/e/c/ec8e4142-7c46-4d2f-aaa6-6410f323d9f0.jpg?1783940133",
-    "small": "https://cards.scryfall.io/small/front/e/c/ec8e4142-7c46-4d2f-aaa6-6410f323d9f0.jpg?1783940133",
+    "img": "https://cards.scryfall.io/normal/front/1/5/15ffeda3-28ac-4adf-9844-d7b051aae227.jpg?1792508172",
+    "small": "https://cards.scryfall.io/small/front/1/5/15ffeda3-28ac-4adf-9844-d7b051aae227.jpg?1792508172",
     "back": null,
     "layout": "normal",
-    "mana": "{4}{U}",
-    "oracle": "Put target nonland permanent on top of its owner's library.",
+    "mana": "{4}{U}{U}",
+    "oracle": "Strange new worlds — Draw X cards, where X is the number of differently named lands you control. You have no maximum hand size until your next turn.",
     "power": null,
     "toughness": null,
     "loyalty": null,
@@ -22,6 +202,654 @@
     "identity": [
       "U"
     ],
+    "keywords": [
+      "Strange new worlds"
+    ]
+  },
+  {
+    "name": "Engineered Explosives",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Artifact",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/e/f/ef2d8db7-3f86-4d87-97ca-368444dc7f16.jpg?1792508441",
+    "small": "https://cards.scryfall.io/small/front/e/f/ef2d8db7-3f86-4d87-97ca-368444dc7f16.jpg?1792508441",
+    "back": null,
+    "layout": "normal",
+    "mana": "{X}",
+    "oracle": "Sunburst (This artifact enters with a charge counter on it for each color of mana spent to cast it.)\n{2}, Sacrifice this artifact: Destroy each nonland permanent with mana value equal to the number of charge counters on this artifact.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": [
+      "Sunburst"
+    ]
+  },
+  {
+    "name": "Ertai Resurrected",
+    "qty": 1,
+    "set": "SDS",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Phyrexian Human Wizard",
+    "cmc": 4.0,
+    "colors": [
+      "B",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/5/2/528f2bfb-c09f-4bb9-a92f-6fcf23525046.jpg?1793187451",
+    "small": "https://cards.scryfall.io/small/front/5/2/528f2bfb-c09f-4bb9-a92f-6fcf23525046.jpg?1793187451",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{U}{B}",
+    "oracle": "Flash\nWhen Ertai Resurrected enters, choose up to one —\n• Counter target spell, activated ability, or triggered ability. Its controller draws a card.\n• Destroy another target creature or planeswalker. Its controller draws a card.",
+    "power": "3",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "U"
+    ],
+    "keywords": [
+      "Flash"
+    ]
+  },
+  {
+    "name": "Federation Outpost",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/0/2/02e368bd-ece8-4201-8d1a-4c5287d5cfee.jpg?1792632946",
+    "small": "https://cards.scryfall.io/small/front/0/2/02e368bd-ece8-4201-8d1a-4c5287d5cfee.jpg?1792632946",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• You gain 2 life.\n• Surveil 1.\n{T}: Add {W}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": [
+      "Surveil"
+    ]
+  },
+  {
+    "name": "General Chang, Cold Warrior",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Klingon Warrior Officer",
+    "cmc": 1.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/4/c46a0910-215c-4757-8bfe-7eca479157a5.jpg?1786396042",
+    "small": "https://cards.scryfall.io/small/front/c/4/c46a0910-215c-4757-8bfe-7eca479157a5.jpg?1786396042",
+    "back": null,
+    "layout": "normal",
+    "mana": "{B}",
+    "oracle": "{1}, Sacrifice a creature: Put a +1/+1 counter on each Klingon you control.",
+    "power": "1",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
     "keywords": []
+  },
+  {
+    "name": "Georgiou, Terran Emperor",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Human Rogue Noble",
+    "cmc": 6.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/6/a68361a3-83fa-44b5-92b5-b7905866fc99.jpg?1792753873",
+    "small": "https://cards.scryfall.io/small/front/a/6/a68361a3-83fa-44b5-92b5-b7905866fc99.jpg?1792753873",
+    "back": null,
+    "layout": "normal",
+    "mana": "{4}{B}{B}",
+    "oracle": "You don't lose the game for having 0 or less life.\nAt the beginning of your end step, you lose 3 life and draw a card. Then if your life total is 0 or less, create ten 1/1 red Officer creature tokens.",
+    "power": "4",
+    "toughness": "6",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "H.M.S. Bounty, Unlikely Timeship",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Artifact — Spacecraft",
+    "cmc": 5.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/d/7/d75f0991-39a3-474e-8c01-9b3363c41a9f.jpg?1793013750",
+    "small": "https://cards.scryfall.io/small/front/d/7/d75f0991-39a3-474e-8c01-9b3363c41a9f.jpg?1793013750",
+    "back": null,
+    "layout": "normal",
+    "mana": "{4}{U}",
+    "oracle": "When H.M.S. Bounty enters, you may search your library for a Whale card, reveal it, put it into your hand, then shuffle.\nStation\n8+ | Flying\nWhenever H.M.S. Bounty deals combat damage to a player, draw a card. If you control a Whale and haven't begun an extra turn this game, take an extra turn after this one.",
+    "power": "3",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Station"
+    ]
+  },
+  {
+    "name": "Hit It!",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Enchantment",
+    "cmc": 3.0,
+    "colors": [
+      "G",
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/2/6266506f-fabf-4b53-8f93-6e2115a3e5a4.jpg?1793146963",
+    "small": "https://cards.scryfall.io/small/front/6/2/6266506f-fabf-4b53-8f93-6e2115a3e5a4.jpg?1793146963",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{R}{G}",
+    "oracle": "Creatures you control have haste.\nWhen this enchantment enters, look at the top five cards of your library. Put a land card from among them onto the battlefield tapped and the rest into your graveyard.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "G",
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Infinite Diversity",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Sorcery",
+    "cmc": 9.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/3/33ade614-3593-4055-8ecc-2d9e4858ba19.jpg?1793273819",
+    "small": "https://cards.scryfall.io/small/front/3/3/33ade614-3593-4055-8ecc-2d9e4858ba19.jpg?1793273819",
+    "back": null,
+    "layout": "normal",
+    "mana": "{7}{R}{R}",
+    "oracle": "Federation — Exile target instant or sorcery card from your graveyard. Copy that card X times, where X is the number of creature types among non-Borg creatures you control. You may cast the copies without paying their mana costs. Exile Infinite Diversity.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Federation"
+    ]
+  },
+  {
+    "name": "Kira Nerys, Firebrand",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Bajoran Soldier",
+    "cmc": 3.0,
+    "colors": [
+      "R",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/8/1/81ad6427-e730-47c9-8310-6d3ca4b10c82.jpg?1793013295",
+    "small": "https://cards.scryfall.io/small/front/8/1/81ad6427-e730-47c9-8310-6d3ca4b10c82.jpg?1793013295",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{R}{W}",
+    "oracle": "Trample\nIf a creature you control would enter while you control an attacking creature, instead it enters tapped and attacking.\nWhenever another creature you control enters, it gets +1/+1 until end of turn.",
+    "power": "4",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "W"
+    ],
+    "keywords": [
+      "Trample"
+    ]
+  },
+  {
+    "name": "Live Long and Prosper",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 7.0,
+    "colors": [
+      "U",
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/0/f/0fc50ffc-3b4d-4fb3-898f-c308a63eb6e9.jpg?1792508356",
+    "small": "https://cards.scryfall.io/small/front/0/f/0fc50ffc-3b4d-4fb3-898f-c308a63eb6e9.jpg?1792508356",
+    "back": null,
+    "layout": "normal",
+    "mana": "{5}{W}{U}",
+    "oracle": "This spell can't be countered.\nDouble your life total. Draw cards equal to the number of cards in your hand. You have no maximum hand size until your next turn.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U",
+      "W"
+    ],
+    "keywords": [
+      "Double"
+    ]
+  },
+  {
+    "name": "Mirror Universe Intrusion",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Sorcery",
+    "cmc": 3.0,
+    "colors": [
+      "B",
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/3/5/3507f99b-15fb-4f66-9484-8e8115e7f5de.jpg?1792668526",
+    "small": "https://cards.scryfall.io/small/front/3/5/3507f99b-15fb-4f66-9484-8e8115e7f5de.jpg?1792668526",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}{B}",
+    "oracle": "Kicker {4}{U}{B} (You may pay an additional {4}{U}{B} as you cast this spell.)\nCreate a token that's a copy of target creature an opponent controls, except it has menace. If this spell was kicked, instead for each creature target opponent controls, create a token that's a copy of that creature, except it has menace.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B",
+      "U"
+    ],
+    "keywords": [
+      "Kicker"
+    ]
+  },
+  {
+    "name": "Overflow Submatrix",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Artifact Creature — Borg",
+    "cmc": 3.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/7/e/7e5654a7-ce83-4801-8978-7294a39dbef8.jpg?1793100705",
+    "small": "https://cards.scryfall.io/small/front/7/e/7e5654a7-ce83-4801-8978-7294a39dbef8.jpg?1793100705",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{B}",
+    "oracle": "Once during each of your turns, you may cast an artifact creature spell from your graveyard. If you cast a spell this way, that artifact creature enters with a finality counter on it. (If a creature with a finality counter on it would die, exile it instead.)",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Primary Unimatrix Adjunct",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Artifact Creature — Borg",
+    "cmc": 4.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/b/9/b94a582c-11bb-4463-a826-bd0c79366752.jpg?1792753859",
+    "small": "https://cards.scryfall.io/small/front/b/9/b94a582c-11bb-4463-a826-bd0c79366752.jpg?1792753859",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{W}",
+    "oracle": "Artifact creatures you control have double strike.",
+    "power": "2",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Quark, Humble Proprietor",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Creature — Ferengi Rogue",
+    "cmc": 3.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/9/6/96104754-57e2-46e9-948d-628aab2aa0ad.jpg?1792508242",
+    "small": "https://cards.scryfall.io/small/front/9/6/96104754-57e2-46e9-948d-628aab2aa0ad.jpg?1792508242",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{R}",
+    "oracle": "You can't sacrifice Treasure tokens.\nAt the beginning of each upkeep, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+    "power": "1",
+    "toughness": "2",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  {
+    "name": "Replicator",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Artifact",
+    "cmc": 2.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/a/e/ae846f45-d87b-47d4-87f6-2d9aa19c3c40.jpg?1792508444",
+    "small": "https://cards.scryfall.io/small/front/a/e/ae846f45-d87b-47d4-87f6-2d9aa19c3c40.jpg?1792508444",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}",
+    "oracle": "When this artifact enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\n{2}, {T}: Create a tapped token that's a copy of target token you control.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": [
+      "Food"
+    ]
+  },
+  {
+    "name": "Romulan Bird-of-Prey",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Artifact — Spacecraft",
+    "cmc": 2.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/6/a/6a461d90-6b7b-4777-958a-8a5d8365ad8c.jpg?1792508202",
+    "small": "https://cards.scryfall.io/small/front/6/a/6a461d90-6b7b-4777-958a-8a5d8365ad8c.jpg?1792508202",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}",
+    "oracle": "Cloaking Device — As long as this Spacecraft isn't a creature, it has hexproof.\nWhenever you cast a noncreature spell, if this Spacecraft isn't a creature, put two charge counters on it.\nStation\n8+ | Flying",
+    "power": "4",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": [
+      "Station",
+      "Cloaking Device"
+    ]
+  },
+  {
+    "name": "Sacred Foundry",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Land — Mountain Plains",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/a/7/a7758cc6-4e18-48a5-8720-5f42b5cd9d31.jpg?1784036842",
+    "small": "https://cards.scryfall.io/small/front/a/7/a7758cc6-4e18-48a5-8720-5f42b5cd9d31.jpg?1784036842",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Sela, Tal Shiar Paradox",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Creature — Romulan Human Rogue",
+    "cmc": 4.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/b/cb680a44-3395-4c96-a73d-af1e0b7b8a9f.jpg?1793101376",
+    "small": "https://cards.scryfall.io/small/front/c/b/cb680a44-3395-4c96-a73d-af1e0b7b8a9f.jpg?1793101376",
+    "back": null,
+    "layout": "normal",
+    "mana": "{3}{B}",
+    "oracle": "Whenever Sela attacks, exile up to one target card from a graveyard.\nWhenever one or more cards leave your graveyard, create a tapped 2/2 black Romulan creature token.",
+    "power": "3",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Seven of Nine, Unassimilated",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Artifact Creature — Human Officer",
+    "cmc": 2.0,
+    "colors": [
+      "U"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/d/d/ddc517bd-27e1-4688-8941-a41c312bd782.jpg?1792508210",
+    "small": "https://cards.scryfall.io/small/front/d/d/ddc517bd-27e1-4688-8941-a41c312bd782.jpg?1792508210",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{U}",
+    "oracle": "At the beginning of your first main phase, draw a card. Then discard a card unless you control five or more differently named lands.\n{6}{U}: Seven of Nine's base power and toughness become 7/9. Activate only if you control seven or more differently named lands.",
+    "power": "0",
+    "toughness": "4",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "Starfleet Academy",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "mythic",
+    "type": "Legendary Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/2/d/2da8d3bf-4397-4844-90d6-dd888becc804.jpg?1792508542",
+    "small": "https://cards.scryfall.io/small/front/2/d/2da8d3bf-4397-4844-90d6-dd888becc804.jpg?1792508542",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "{T}: Add {C}.\nFederation — {5}, {T}: Choose a color. Add an amount of mana of that color equal to the number of creature types among non-Borg creatures you control.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [],
+    "keywords": [
+      "Federation"
+    ]
+  },
+  {
+    "name": "Steam Vents",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Land — Island Mountain",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/a/8/a83903c7-fd51-4526-aed2-359e946fea36.jpg?1784036844",
+    "small": "https://cards.scryfall.io/small/front/a/8/a83903c7-fd51-4526-aed2-359e946fea36.jpg?1784036844",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R",
+      "U"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "The Needs of the Many",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Instant",
+    "cmc": 2.0,
+    "colors": [
+      "W"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/c/7/c779279f-681b-4107-b62c-5202c544d3e8.jpg?1793187981",
+    "small": "https://cards.scryfall.io/small/front/c/7/c779279f-681b-4107-b62c-5202c544d3e8.jpg?1793187981",
+    "back": null,
+    "layout": "normal",
+    "mana": "{1}{W}",
+    "oracle": "As an additional cost to cast this spell, sacrifice a creature.\nCreatures you control gain hexproof and indestructible until end of turn. You gain hexproof until end of turn. Prevent all damage that would be dealt to you this turn. Exile The Needs of the Many.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "W"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "The Unicomplex",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Land",
+    "cmc": 0.0,
+    "colors": [],
+    "img": "https://cards.scryfall.io/normal/front/4/c/4c881efb-d55b-45fe-9e5a-8a61aec6fbbb.jpg?1792632978",
+    "small": "https://cards.scryfall.io/small/front/4/c/4c881efb-d55b-45fe-9e5a-8a61aec6fbbb.jpg?1792632978",
+    "back": null,
+    "layout": "normal",
+    "mana": "",
+    "oracle": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• Put target creature card from your graveyard on top of your library.\n• Surveil 1.\n{T}: Add {B}.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Surveil"
+    ]
+  },
+  {
+    "name": "The Wrath of Khan",
+    "qty": 1,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Enchantment — Saga",
+    "cmc": 3.0,
+    "colors": [
+      "R"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/4/2/426d627e-bb88-4879-8d9f-db1babf22b15.jpg?1792510667",
+    "small": "https://cards.scryfall.io/small/front/4/2/426d627e-bb88-4879-8d9f-db1babf22b15.jpg?1792510667",
+    "back": null,
+    "layout": "saga",
+    "mana": "{2}{R}",
+    "oracle": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — This Saga deals 4 damage to target creature an opponent controls. At the beginning of the next combat this turn, gain control of that creature until end of turn. Untap it. It gains haste until end of turn.\nII — You may exile a card from your hand. If you do, draw a card.\nIII — Each opponent sacrifices a nontoken permanent of their choice.",
+    "power": null,
+    "toughness": null,
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "R"
+    ],
+    "keywords": []
+  },
+  {
+    "name": "U.S.S. Reliant, From Hell's Heart",
+    "qty": 2,
+    "set": "TRK",
+    "rarity": "rare",
+    "type": "Legendary Artifact — Spacecraft",
+    "cmc": 4.0,
+    "colors": [
+      "B"
+    ],
+    "img": "https://cards.scryfall.io/normal/front/a/4/a4c6fc55-f585-4529-b549-31d4d838c9af.jpg?1792551037",
+    "small": "https://cards.scryfall.io/small/front/a/4/a4c6fc55-f585-4529-b549-31d4d838c9af.jpg?1792551037",
+    "back": null,
+    "layout": "normal",
+    "mana": "{2}{B}{B}",
+    "oracle": "Whenever U.S.S. Reliant enters or deals combat damage to a player, return target creature card with mana value 4 or less from your graveyard to the battlefield with a finality counter on it.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+    "power": "4",
+    "toughness": "3",
+    "loyalty": null,
+    "defense": null,
+    "identity": [
+      "B"
+    ],
+    "keywords": [
+      "Station"
+    ]
   }
 ]
