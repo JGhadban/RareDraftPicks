@@ -1,3 +1,42 @@
 # Replace with your own cards, one per line, then run:
 #   powershell -ExecutionPolicy Bypass -File scripts\build-cards.ps1
-Totally Lost (GTC)
+Blood Crypt
+Brazen Bluff
+Captain Jonathan Archer
+Captain Kathryn Janeway
+Dathon, His Heart Open
+Deanna Troi, Psychic Counsel
+Deep Space 9
+Deep Space Scan
+Engineered Explosives
+Ertai Resurrected (SDS)
+Federation Outpost
+General Chang, Cold Warrior
+General Chang, Cold Warrior
+Georgiou, Terran Emperor
+H.M.S. Bounty, Unlikely Timeship
+H.M.S. Bounty, Unlikely Timeship
+Hit It!
+Infinite Diversity
+Kira Nerys, Firebrand
+Kira Nerys, Firebrand
+Live Long and Prosper
+Live Long and Prosper
+Mirror Universe Intrusion
+Overflow Submatrix
+Primary Unimatrix Adjunct
+Quark, Humble Proprietor
+Replicator
+Romulan Bird-of-Prey
+Sacred Foundry
+Sela, Tal Shiar Paradox
+Seven of Nine, Unassimilated
+Seven of Nine, Unassimilated
+Starfleet Academy
+Steam Vents
+Steam Vents
+The Needs of the Many
+The Unicomplex
+The Wrath of Khan
+U.S.S. Reliant, From Hell's Heart
+U.S.S. Reliant, From Hell's Heart
